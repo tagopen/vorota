@@ -1,0 +1,21 @@
+section.implement
+  .container.implement__container
+    .row
+      .col-22.offset-1.col-md-20.offset-md-2.col-lg-13.col-xl-12
+        .implement__box
+          .row
+            .col-24
+              .implement__heading!=content.index.implement.heading
+          .row
+            .col-24
+              .row
+                each item, i in content.index.implement.content   
+                  .col-12.col-md-8
+                    .implement__item
+                      .implement__image.d-flex.align-items-center
+                        img.img-fluid(src!=item.img.src, alt!=item.img.alt)
+                      .implement__hover.d-flex.align-items-center 
+                        .implement__text!=item.text 
+      .col-lg-9.hidden-md-down
+        .implement__icon
+          img(src="img/implementimg.png")                    

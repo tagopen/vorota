@@ -120,6 +120,37 @@
   vertical-align: middle;
 }
 
+.ic--header1:before {
+  width: 25px;
+  height: 18px;
+  background: url(../img/sprite.png) -31px 0px no-repeat;
+}
+
+.ic--header2:before {
+  width: 21px;
+  height: 26px;
+  background: url(../img/sprite.png) 0px 0px no-repeat;
+}
+
+.ic--phone:before {
+  width: 18px;
+  height: 18px;
+  background: url(../img/sprite.png) 0px -36px no-repeat;
+}
+
+.ic {
+  vertical-align: top;
+}
+
+a {
+  outline: none;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
 /* form */
 .text-danger {
   color: #b94a48;
@@ -156,6 +187,13 @@
   }
 }
 
+/* modal */
+.modal {
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+
 .body {
   display: -webkit-box;
   display: -webkit-flex;
@@ -180,5 +218,292 @@
 /* H O M E    P A G E    S T Y L E          */
 /* ---------------------------------------- */
 .header {
-  font-size: 10px;
+  padding: 25px 0 85px;
+  background: url(../img/headerbg.jpg) no-repeat;
+  background-size: cover;
+}
+
+.header__image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.header__point {
+  margin-bottom: 35px;
+}
+
+.header__point--icon {
+  height: 40px;
+  width: 40px;
+  background-color: #36539b;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  line-height: 36px;
+  text-align: center;
+}
+
+.header__point--text {
+  color: #212121;
+  font: 300 18px/21px "Circe", sans-serif;
+}
+
+.header__text {
+  text-align: center;
+  color: #212121;
+  font: 400 18px/27px "Circe", sans-serif;
+}
+
+.header__text--link {
+  color: #212121;
+  font: 700 18px/27px "Circe", sans-serif;
+}
+
+.header__text--link:hover, .header__text--link:focus {
+  text-decoration: none;
+  color: #00c170;
+}
+
+.logo {
+  margin-bottom: 20px;
+}
+
+.logo__link {
+  display: inline-block;
+}
+
+.logo__text {
+  color: #212121;
+  font: 300 14px/21px "Circe", sans-serif;
+  text-align: center;
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact__box {
+  margin-bottom: 10px;
+}
+
+.contact__phone {
+  display: inline-block;
+}
+
+.contact__phone .ic {
+  margin-right: 10px;
+  line-height: 30px;
+}
+
+.contact__number {
+  display: inline-block;
+  color: #212121;
+  font: 300 29px/30px "Circe", sans-serif;
+}
+
+.contact__btn {
+  border: 2px solid #00c170;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  cursor: pointer;
+  font: 400 16px/18px "Circe", sans-serif;
+  color: #212121;
+  padding: 8px 15px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.contact__btn:hover, .contact__btn:focus {
+  color: #fff;
+  background-color: #00c170;
+}
+
+.title {
+  color: #212121;
+  font: 700 30px/45px "Circe", sans-serif;
+  text-transform: uppercase;
+  margin: 25px 0 20px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 760px) {
+  .header {
+    min-height: 100vh;
+  }
+  .header__image {
+    position: relative;
+  }
+  .header__image img {
+    position: absolute;
+    top: -55px;
+    right: 0;
+    max-width: none;
+  }
+  .header__point {
+    margin-bottom: 20px;
+  }
+  .header__point--icon {
+    height: 56px;
+    width: 56px;
+    line-height: 52px;
+  }
+  .header__info {
+    padding-top: 40px;
+  }
+  .header__text {
+    text-align: left;
+  }
+  .logo {
+    margin-bottom: 0;
+  }
+  .logo__text {
+    text-align: left;
+  }
+  .contact {
+    text-align: right;
+  }
+  .title {
+    font: 700 36px/45px "Circe", sans-serif;
+    margin: 65px 0 50px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .header__point {
+    margin-bottom: 0;
+  }
+  .header__point--text {
+    position: relative;
+    left: -15px;
+  }
+  .header__info {
+    padding-top: 45px;
+  }
+  .header__text {
+    font: 400 20px/30px "Circe", sans-serif;
+  }
+  .header__text--link {
+    font: 700 20px/30px "Circe", sans-serif;
+  }
+  .title {
+    font: 700 45px/55px "Circe", sans-serif;
+  }
+}
+
+/* ---------------------------------------- */
+/* I M P L E M E N T    S T Y L E           */
+/* ---------------------------------------- */
+.implement {
+  overflow: hidden;
+  margin-bottom: 80px;
+}
+
+.implement__container {
+  padding-top: 50px;
+  padding-bottom: 40px;
+  position: relative;
+  -webkit-box-shadow: 10px 17.3px 50px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px 17.3px 50px rgba(0, 0, 0, 0.1);
+  background: url(../img/implementbg.png) no-repeat;
+  background-size: cover;
+}
+
+.implement__container:before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  -webkit-box-shadow: inset 0px 0px 0px 15px #3a96d6;
+          box-shadow: inset 0px 0px 0px 15px #3a96d6;
+}
+
+.implement__heading {
+  color: #212121;
+  font: 400 22px/33px "Circe", sans-serif;
+  margin-bottom: 15px;
+}
+
+.implement__heading--big {
+  display: block;
+  font: 700 22px/33px "Circe", sans-serif;
+  text-transform: uppercase;
+}
+
+.implement__item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.implement__item:hover .implement__hover, .implement__item:focus .implement__hover {
+  bottom: 0;
+}
+
+.implement__hover {
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(54, 83, 155, 0.9);
+  text-align: center;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.implement__image img {
+  margin: 0 auto;
+}
+
+.implement__text {
+  margin: 0 auto;
+  font: 400 14px/16px "Circe", sans-serif;
+  color: #fff;
+}
+
+@media only screen and (min-width: 760px) {
+  .implement__container:before {
+    -webkit-box-shadow: inset 0px 0px 0px 15px #3a96d6;
+            box-shadow: inset 0px 0px 0px 15px #3a96d6;
+  }
+  .implement__heading {
+    font: 400 24px/36px "Circe", sans-serif;
+    margin-bottom: 25px;
+  }
+  .implement__heading--big {
+    font: 700 24px/36px "Circe", sans-serif;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .implement__icon {
+    position: relative;
+  }
+  .implement__icon img {
+    position: absolute;
+    top: -20px;
+    left: -90px;
+    -webkit-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .implement__icon img {
+    left: 0;
+    -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .implement__icon img {
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+  }
 }
