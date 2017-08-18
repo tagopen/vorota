@@ -1,0 +1,19 @@
+section.price
+  .container
+    .row.justify-content-center
+      .col-24.text-center
+        h2.heading.price__heading!=content.index.price.heading
+    .row.flex-md-row-reverse
+      .col-24.col-md-12
+        .price__image
+          img(src="img/price1200.png")
+      .col-24.col-md-12
+        .price__box
+          each item, i in content.index.price.content   
+            .price__item  
+              .row
+                .col-6.col-lg-4.col-xl-3.align-self-center
+                  .price__icon
+                    i.ic(class="ic--price"+(i+1))
+                .col-18
+                  .price__text!=item.text
