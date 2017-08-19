@@ -310,7 +310,6 @@ a
       font: 400 18px/27px $font-circe     
 +comment("product style") 
 .product
-  margin-bottom: 90px
   overflow: hidden
   &__heading
     margin-bottom: 50px
@@ -333,6 +332,7 @@ a
     transform: rotate(-45deg) 
     text-align: center 
     padding-bottom: 20px
+    z-index: 25
   &__text
     font: 400 14px/21px $font-circe  
   &__image
@@ -385,7 +385,7 @@ a
       box-shadow: 0px 1px 0px #25A05A
       position: relative
       top: 2px
-      outline: none
+      outline: none         
 +r(760)
   .product  
     padding-bottom: 50px
@@ -410,4 +410,103 @@ a
 +r(992)
   .product
     &__cost
-      margin-top: 20px        
+      margin-top: 20px 
++comment("cost style")        
+.cost
+  padding: 170px 0 80px
+  background: url(../img/costbg.png) no-repeat
+  background-size: cover    
+  background-position: 100% center  
+  &__heading
+    margin-bottom: 20px
+  &__text
+    color: #fff
+    font: 400 20px/30px $font-circe 
+    margin-bottom: 30px
+  &__btn
+    position: relative
+    background-color: white
+    border-radius: 5px
+    box-shadow: 5px 8.7px 20px rgba(0, 0, 0, 0.2)  
+    font: 700 18px/30px $font-circe 
+    color: $color-dark
+    padding: 16px 12px
+    border: 0
+    transition: all .3s ease
+    overflow: hidden
+    &:hover,
+    &:focus
+      outline: none
+      box-shadow: 5px 15px 30px rgba(0, 0, 0, 0.2)
+      .ic
+        bottom: -35px
+        right: -35px
+    .ic
+      position: absolute
+      bottom: -40px
+      right: -40px  
+      transition: all .15s ease
++r(760)
+  .cost
+    padding: 140px 0 110px
+    background-position: 66% center
+    &__heading
+      margin-bottom: 30px
+    &__text
+      margin-bottom: 35px 
+    &__btn
+      padding: 16px 80px 16px 25px   
++r(992)    
+  .cost
+    padding: 175px 0 150px
+    background-position: center
+    &__heading
+      margin-bottom: 35px
++comment("fail style")       
+.fail
+  padding: 70px 0 100px
+  &__heading
+    margin-bottom: 45px
+  &__title
+    font: 700 20px/30px $font-circe 
+    color: $color-dark
+    text-transform: uppercase
+    margin-bottom: 25px
+  &__text
+    font: 400 18px/27px $font-circe  
+    color: $color-dark
+    margin-bottom: 30px
+  &__btn
+    position: relative
+    background-color: #00c170
+    border-radius: 5px
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2)  
+    color: #fff
+    font: 700 18px/30px $font-circe 
+    padding: 16px 12px
+    border: 0
+    overflow: hidden
+    &:hover,
+    &:focus
+      outline: none
+      .ic
+          bottom: -10px
+          right: -30px
+    .ic
+      position: absolute
+      bottom: -15px
+      right: -35px  
+      transition: all .15s ease  
++r(760)
+  .fail
+    padding: 90px 0 200px 
+    &__title
+      font: 700 24px/36px $font-circe 
+    &__btn
+      padding: 16px 67px 16px 25px 
+      &:hover,
+      &:focus
+        .ic
+          right: -15px
+      .ic
+        right: -20px
