@@ -120,6 +120,12 @@
   vertical-align: middle;
 }
 
+.ic--apple:before {
+  width: 91px;
+  height: 90px;
+  background: url(../img/sprite.png) 0px -94px no-repeat;
+}
+
 .ic--calc:before {
   width: 120px;
   height: 84px;
@@ -129,7 +135,7 @@
 .ic--check:before {
   width: 18px;
   height: 18px;
-  background: url(../img/sprite.png) -63px -150px no-repeat;
+  background: url(../img/sprite.png) -185px -84px no-repeat;
 }
 
 .ic--fail:before {
@@ -141,49 +147,49 @@
 .ic--header1:before {
   width: 25px;
   height: 18px;
-  background: url(../img/sprite.png) 0px -150px no-repeat;
+  background: url(../img/sprite.png) -220px -126px no-repeat;
 }
 
 .ic--header2:before {
   width: 21px;
   height: 26px;
-  background: url(../img/sprite.png) -156px -94px no-repeat;
+  background: url(../img/sprite.png) -220px -56px no-repeat;
 }
 
 .ic--phone:before {
   width: 18px;
   height: 18px;
-  background: url(../img/sprite.png) -35px -150px no-repeat;
+  background: url(../img/sprite.png) -220px -154px no-repeat;
 }
 
 .ic--play:before {
   width: 20px;
   height: 24px;
-  background: url(../img/sprite.png) -187px -94px no-repeat;
+  background: url(../img/sprite.png) -220px -92px no-repeat;
 }
 
 .ic--price1:before {
   width: 45px;
   height: 35px;
-  background: url(../img/sprite.png) -101px -94px no-repeat;
+  background: url(../img/sprite.png) -130px -140px no-repeat;
 }
 
 .ic--price2:before {
   width: 45px;
   height: 46px;
-  background: url(../img/sprite.png) 0px -94px no-repeat;
+  background: url(../img/sprite.png) -130px -84px no-repeat;
 }
 
 .ic--price3:before {
   width: 36px;
   height: 46px;
-  background: url(../img/sprite.png) -55px -94px no-repeat;
+  background: url(../img/sprite.png) -220px 0px no-repeat;
 }
 
 .ic--question:before {
   width: 15px;
   height: 15px;
-  background: url(../img/sprite.png) -91px -150px no-repeat;
+  background: url(../img/sprite.png) -185px -112px no-repeat;
 }
 
 .ic {
@@ -1321,4 +1327,185 @@ a:hover, a:focus {
           animation-name: zoomInSlow;
   -webkit-animation-duration: 4s;
           animation-duration: 4s;
+}
+
+/* ---------------------------------------- */
+/* S E L F    S T Y L E                     */
+/* ---------------------------------------- */
+.self {
+  padding: 140px 0;
+  background: url(../img/selfbg.png) no-repeat;
+  background-size: cover;
+}
+
+.self__box {
+  text-align: center;
+}
+
+.self__heading {
+  margin-bottom: 20px;
+}
+
+.self__text {
+  color: #fff;
+  font: 400 18px/30px "Circe", sans-serif;
+  margin-bottom: 25px;
+}
+
+.self__text--span {
+  font: 700 18px/30px "Circe", sans-serif;
+}
+
+.form__group {
+  margin-bottom: 10px;
+}
+
+.form__input {
+  background-color: #FFF;
+  color: #212121;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  padding: 18px 20px 18px 50px;
+  font: 300 14px/16px "Circe", sans-serif;
+  letter-spacing: 1px;
+}
+
+.form__input:-ms-input-placeholder {
+  font: 400 14px/16px "Circe", sans-serif;
+  color: #212121;
+  letter-spacing: 1px;
+}
+
+.form__input::-moz-placeholder {
+  font: 400 14px/16px "Circe", sans-serif;
+  color: #212121;
+  letter-spacing: 1px;
+}
+
+.form__input::-webkit-input-placeholder {
+  font: 400 14px/16px "Circe", sans-serif;
+  color: #212121;
+  letter-spacing: 1px;
+}
+
+.form__input::placeholder {
+  font: 400 14px/16px "Circe", sans-serif;
+  color: #212121;
+  letter-spacing: 1px;
+}
+
+.form__btn {
+  position: relative;
+  color: #212121;
+  font: 700 18px/20px "Circe", sans-serif;
+  border: 0;
+  padding: 17px 20px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: #FFF;
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+}
+
+.form__btn--span {
+  font: 300 18px/20px "Circe", sans-serif;
+}
+
+.form__btn:hover .ic, .form__btn:focus .ic {
+  -webkit-transform: rotate(-35deg);
+      -ms-transform: rotate(-35deg);
+          transform: rotate(-35deg);
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.form__btn .ic {
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.form__confident {
+  margin-top: 10px;
+  color: #fff;
+  font: 300 13px/21px "Circe", sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+.form__confident--link {
+  color: #fff;
+  font: 400 13px/21px "Circe", sans-serif;
+  text-decoration: underline;
+}
+
+.form__confident--link:hover, .form__confident--link:focus {
+  color: #fff;
+}
+
+@media only screen and (min-width: 760px) {
+  .self {
+    padding: 140px 0;
+    overflow: hidden;
+  }
+  .self__box {
+    text-align: left;
+  }
+  .self__image img {
+    max-width: 380px;
+  }
+  .self__text {
+    font: 400 18px/27px "Circe", sans-serif;
+  }
+  .self__text--span {
+    font: 700 18px/27px "Circe", sans-serif;
+  }
+  .form__group {
+    margin-bottom: 0;
+  }
+  .form__btn {
+    text-align: left;
+  }
+  .form__btn .ic {
+    bottom: -35px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .self {
+    padding: 180px 0 200px;
+  }
+  .self__image {
+    position: relative;
+  }
+  .self__image img {
+    max-width: none;
+    position: absolute;
+    left: 0;
+    top: -100px;
+  }
+  .self__text {
+    font: 400 20px/30px "Circe", sans-serif;
+  }
+  .self__text--span {
+    font: 700 20px/30px "Circe", sans-serif;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .self__image img {
+    top: -120px;
+    left: 50px;
+  }
+  .form__confident {
+    font: 300 14px/21px "Circe", sans-serif;
+  }
+  .form__confident--link {
+    font: 400 14px/21px "Circe", sans-serif;
+  }
 }

@@ -704,3 +704,114 @@ a
 .zoomInSlow
   animation-name: zoomInSlow 
   animation-duration: 4s   
++comment("self style")   
+.self
+  padding: 140px 0
+  background: url(../img/selfbg.png) no-repeat
+  background-size: cover
+  &__box
+    text-align: center
+  &__heading
+    margin-bottom: 20px
+  &__text
+    color: #fff
+    font: 400 18px/30px $font-circe 
+    margin-bottom: 25px 
+    &--span       
+      font: 700 18px/30px $font-circe 
+.form
+  &__group
+    margin-bottom: 10px
+  &__input
+    background-color: #FFF
+    color: $color-dark
+    border-radius: 5px
+    padding: 18px 20px 18px 50px
+    font: 300 14px/16px $font-circe 
+    letter-spacing: 1px
+    +placeholder     
+      font: 400 14px/16px $font-circe 
+      color: $color-dark
+      letter-spacing: 1px
+  &__btn  
+    position: relative
+    color: $color-dark  
+    font: 700 18px/20px $font-circe 
+    border: 0
+    padding: 17px 20px
+    border-radius: 5px
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2)
+    background-color: #FFF
+    overflow: hidden
+    width: 100%
+    text-align: center
+    &--span
+      font: 300 18px/20px $font-circe 
+    &:hover,
+    &:focus
+      .ic
+        transform: rotate(-35deg)  
+        transition: all .3s ease
+    .ic
+      position: absolute
+      right: 0
+      bottom: -50px
+      transition: all .3s ease
+  &__confident
+    margin-top: 10px
+    color: #fff
+    font: 300 13px/21px $font-circe
+    color: #fff 
+    text-align: center
+    &--link
+      color: #fff
+      font: 400 13px/21px $font-circe 
+      text-decoration: underline
+      &:hover,
+      &:focus
+        color: #fff
++r(760)
+  .self
+    padding: 140px 0 
+    overflow: hidden
+    &__box
+      text-align: left
+    &__image
+      img
+        max-width: 380px 
+    &__text
+      font: 400 18px/27px $font-circe
+      &--span       
+        font: 700 18px/27px $font-circe  
+  .form
+    &__group
+      margin-bottom: 0  
+    &__btn
+      text-align: left 
+      .ic
+        bottom: -35px     
++r(992)
+  .self
+    padding: 180px 0 200px
+    &__image
+      position: relative
+      img
+        max-width: none
+        position: absolute
+        left: 0
+        top: -100px
+    &__text
+      font: 400 20px/30px $font-circe 
+      &--span       
+        font: 700 20px/30px $font-circe
++r(1200)
+  .self
+    &__image
+      img
+        top: -120px    
+        left: 50px   
+  .form
+    &__confident   
+      font: 300 14px/21px $font-circe
+      &--link
+        font: 400 14px/21px $font-circe 
