@@ -71,6 +71,7 @@ gulp.task('scripts', () => {
     'node_modules/jquery/dist/jquery.js',
     'node_modules/slick-carousel/slick/slick.js',
     'node_modules/select2/dist/js/select2.js',
+    'node_modules/bootstrap-slider/dist/bootstrap-slider.js',
     'node_modules/bootstrap-validator/dist/validator.js',
   ])
   .pipe($.plumber())
