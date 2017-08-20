@@ -1691,3 +1691,14 @@ a:hover, a:focus {
   -webkit-animation-duration: 4s;
           animation-duration: 4s;
 }
+
+/* ---------------------------------------- */
+/* M O D A L S    S T Y L E                 */
+/* ---------------------------------------- */
+.tabs__item {
+  display: none;
+}
+
+.tabs__item--active {
+  display: block;
+}
