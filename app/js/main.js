@@ -44,6 +44,44 @@ $(window).scroll(function (){
     $(this).addClass($(this).data('animation')); 
     } 
   }); 
-});﻿
+  })();
+
+  $(function($) {
+    var currentMousePos = { x: -1, y: -1 },
+        prevMousePos    = {x: -1, y: -1},
+        documentTop     = $(document).scrollTop();
+
+    $(document).on('mousemove, mouseout', function(event) {
+      currentMousePos.x = event.pageX;
+      currentMousePos.y = event.pageY;
+      documentTop = $(document).scrollTop();
+        // ELSEWHERE, your code that needs to know the mouse position without an event
+        if ((currentMousePos.y < prevMousePos.y) && (currentMousePos.y < documentTop + 21)) {
+          $('#sibassa__modal').modal("show");
+          $(document).unbind('mousemove, mouseout');
+        }
+        prevMousePos.x = currentMousePos.x;
+        prevMousePos.y = currentMousePos.y;
+      });
+  });
+
+
+  $(function() {
+    $("[data-tab-prev]").on('click', function(e) {
+      let control = $(this).data('tab-prev'),
+          $tabs = $(this).siblings('.tabs'),
+          $item = $tabs.find('.tabs__item')
+          activeItem = $item.index( this );
+
+      if (control === 'prev') {
+        $item.removeClass('tabs__item--active').eq(activeItem - 1).addClass('tabs__item--active');
+
+      } else if (control === 'next') {
+        $item.removeClass('tabs__item--active').eq(activeItem + 1).addClass('tabs__item--active');
+
+      }
+    e.preventDefault();
+    });
+  });
 
 })(jQuery); // End of use strict

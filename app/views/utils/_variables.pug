@@ -37,6 +37,125 @@
               displayName: "Link 4"
             },
           ]
+        },
+        modal: {
+          test1: {
+            heading: "Осталось времени:",
+            icon: "ic ic--scheme",
+            time: {
+              hour: "04",
+              minute: "59",
+              delimeter: ":"
+            },
+            tabs: {
+              items: [
+                {
+                  heading: "Чертеж для каких-то ворот",
+                  descr: "Вы получите Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, nam.",
+                  btns: {
+                    next: {
+                      text: "Указать размер и Lorem ipsum dolor.",
+                      icon: "ic ic--fail"
+                    }
+                  }
+                },
+                {
+                  heading: "Какой проем ворот (длина)?",
+                  icon: "ic ic--length",
+                  slides: {
+                    minPosition: "2.5",
+                    maxPostion: "8.5",
+                    value: "4",
+                    step: "0.5",
+                    name: "range[]"
+                  },
+                  btns: {
+                    prev: {
+                      text: "Назад"
+                    },
+                    next: {
+                      text: "Далее"
+                    }
+                  }
+                },
+                {
+                  heading: "Какая высота от земли?",
+                  icon: "ic ic--height",
+                  slides: {
+                    minPosition: "0.5",
+                    maxPostion: "4.5",
+                    value: "1.5",
+                    step: "0.5",
+                    name: "range[]"
+                  },
+                  btns: {
+                    prev: {
+                      text: "Назад"
+                    },
+                    next: {
+                      text: "Далее"
+                    }
+                  }
+                },
+                {
+                  heading: "Чем зашивать?",
+                  radiobtns: [
+                    {
+                      img: {
+                        src: "img/item-1.jpg",
+                        alt: "Профнастил"
+                      },
+                      name: "period[]",
+                      value: "Профнастил"
+                    },
+                    {
+                      img: {
+                        src: "img/item-2.jpg",
+                        alt: "Дерево"
+                      },
+                      name: "period[]",
+                      value: "Дерево"
+                    },
+                    {
+                      img: {
+                        src: "img/item-3.jpg",
+                        alt: "Ковка"
+                      },
+                      name: "period[]",
+                      value: "Ковка"
+                    },
+                  ],
+                  btns: {
+                    prev: {
+                      text: "Назад"
+                    },
+                    next: {
+                      text: "Далее"
+                    }
+                  }
+                },
+                {
+                  heading: "Ваш мобилкен",
+                  descr: "Оставьте свой телефон и мы будем вам звонить в 1:23 без вашего согласия Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, nam.",
+                  formGroup: {
+                    select: {
+                      name: "method"
+                    },
+                    inputs: [
+                      {
+                        name: "phone",
+                        placeholder: "Телефон"
+                      }
+                    ],
+                    submit: {
+                      text: "Получить чертеж",
+                      icon: "ic ic--phone"
+                    }
+                  }
+                },
+              ],
+            }
+          }
         }
       }, //- site
       index: {
