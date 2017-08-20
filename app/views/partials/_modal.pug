@@ -23,11 +23,11 @@
                   if (item.btns)
                     .button-group
                       if (item.btns.prev)
-                        button.button.fail__btn(data-tabs-control="prev")!= item.btns.prev.text
+                        button.button.fail__btn(href="#", data-tabs-control="prev")!= item.btns.prev.text
                           if (item.btns.prev.icon)
                             i(class=item.btns.prev.icon)
                       if (item.btns.next)
-                        button.button.fail__btn(data-tabs-control="next")!= item.btns.next.text
+                        button.button.fail__btn(href="#", data-tabs-control="next")!= item.btns.next.text
                           if (item.btns.next.icon)
                             i(class=item.btns.next.icon)
                   if (item.radiobtns)

@@ -67,11 +67,12 @@ $(window).scroll(function (){
 
 
   $(function() {
-    $("[data-tab-prev]").on('click', function(e) {
-      let control = $(this).data('tab-prev'),
-          $tabs = $(this).siblings('.tabs'),
-          $item = $tabs.find('.tabs__item')
-          activeItem = $item.index( this );
+    $("[data-tabs-control]").on('click', function(e) {
+      let control = $(this).data('tabs-control'),
+          $tabs = $(this).closest('.tabs'),
+          $item = $tabs.find('.tabs__item'),
+          $currentItem = $(this).closest('.tabs__item'),
+          activeItem = $currentItem.index();
 
       if (control === 'prev') {
         $item.removeClass('tabs__item--active').eq(activeItem - 1).addClass('tabs__item--active');
