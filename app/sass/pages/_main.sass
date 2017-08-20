@@ -11,7 +11,9 @@ a
   &:hover,
   &:focus
     text-decoration: none
-    outline: none      
+    outline: none     
+* 
+  outline: 0 !important    
 +cm('form')
 .text-danger
   color: $text-danger
@@ -92,6 +94,8 @@ a
     color: $color-dark
     font: 300 14px/21px $font-circe
     text-align: center
+    &--fff
+      color: #fff
 .contact
   text-align: center
   &__box
@@ -105,6 +109,8 @@ a
     display: inline-block   
     color: $color-dark
     font: 300 29px/30px $font-circe
+    &--fff
+      color: #fff
   &__btn
     border: 2px solid $color-green
     border-radius: 5px  
@@ -118,6 +124,8 @@ a
     &:focus
       color: #fff
       background-color: $color-green
+    &--fff
+      color: #fff  
 .title
   color: $color-dark
   font: 700 30px/45px $font-circe
@@ -558,8 +566,8 @@ a
       font: 700 18px/27px $font-circe
 +comment("delivery style") 
 .delivery
-  padding-top: 60px
-  padding-bottom: 320px
+  padding-top: 10px
+  padding-bottom: 240px
   overflow: hidden
   &__heading
     margin-bottom: 50px
@@ -588,6 +596,7 @@ a
     color: $color-dark
     font: 300 14px/20px $font-circe    
     border-bottom: 1px dotted #212121
+    margin-bottom: 20px
     .ic
       position: absolute
       right: -25px
@@ -631,6 +640,7 @@ a
   &__krug
     position: absolute
     top: -50px
+    transform: scale(0)
     img
       transform: scale(0.7)
     &--1
@@ -645,7 +655,7 @@ a
     &__heading
       margin-bottom: 0
     &__row
-      height: 612px
+      height: 460px
     &__box
       text-align: left
     &__text
@@ -654,6 +664,8 @@ a
       .ic
         top: 0
         left: -25px
+    &__subtext
+      margin-bottom: 0    
     &__image
       position: relative
       img
@@ -667,7 +679,6 @@ a
       left: auto
       right: -207px   
     &__krug    
-      transform: scale(0)
       img
         transform: scale(0.8)
 +r(992)
@@ -819,10 +830,85 @@ a
       font: 300 14px/21px $font-circe
       &--link
         font: 400 14px/21px $font-circe 
++comment("result style")
+.result
+  padding: 70px 0
+  &__heading
+    margin-bottom: 40px
+  &__subheading
+    color: $color-dark
+    font: 400 16px/24px $font-circe  
+    margin-bottom: 15px 
+  &__col
+    background-color: #f0f0f0
+  &__slider
+    padding-bottom: 40px
+  &__item
+    text-align: center
+    outline: none
+  &__video
+    margin-bottom: 30px
+    img
+      display: inline-block  
+  &__dots
+    text-align: center
+    .slick
+      &-prev,
+      &-next
+        position: static
+        display: inline-block
+        background-color: #dfdfdf
+        border-radius: 4px
+        height: 44px
+        width: 44px
+        margin: 0 2px
+        transition: all .6s ease
+        .fa
+          font-size: 18px
+          color: $color-dark
+          transition: all .6s ease
+        &:hover,
+        &:focus
+          transition: all .6s ease
+          background-color: #36539b
+          .fa
+            color: #fff  
+            transition: all .6s ease
++r(760)
+  .result
+    &__subheading     
+      font: 400 24px/37px $font-circe 
+    &__slider
+      padding-bottom: 60px 
+    &__dots
+      position: relative
+      .slick
+        &-prev,
+        &-next
+          position: absolute
+          top: 22px     
+        &-prev
+          left: 0
+          margin-left: -28px 
+        &-next
+          right: 0
+          margin-right: -15px   
++r(992)
+  .result
+    &__dots
+      .slick
+        &-prev
+          left: auto
+          right: 30px
++comment("footer style")
+.footer
+  padding: 40px 0 50px
+  background-color: #4f4f4f
 +comment("modals style")
 .tabs
   &__item
     display: none
     &--active
       display: block
+
         

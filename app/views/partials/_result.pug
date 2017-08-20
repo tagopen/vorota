@@ -1,0 +1,19 @@
+section.result
+  .container
+    .row.justify-content-center.text-center
+      .col-24.col-md-16.col-lg-20
+        h2.heading.result__heading!=content.index.result.heading
+      .col-24.col-md-18.col-lg-22
+        .result__subheading!=content.index.result.subheading 
+    .row.justify-content-center
+      .col-24.col-lg-20.result__col  
+        .row
+          .col-24.col-md-18.offset-md-3
+            .result__slider
+              each item, i in content.index.result.slides 
+                .result__item
+                  .result__video
+                    img.img-fluid(src!=item.video)
+                  .result__text!=item.text 
+          .col-24.col-md-3
+            .result__dots
