@@ -538,102 +538,117 @@
     <div class="modal fade" id="sibassa__modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
-          <div class="row justify-content-center align-items-stretch">
-            <div class="col align-self-end"></div>
-            <div class="col">
-              <form class="contactForm" method="POST" action="mail/mail.php">
-                <div class="tabs">
-                  <div class="tabs__item tabs__item--active">
-                    <h2>Чертеж для каких-то ворот</h2>
-                    <div class="progressbar">
-                      <div class="progresbar__status"><span class="progressbar__value">0</span></div>
-                    </div>
-                    <div class="tabs__text">Вы получите Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, nam.</div>
-                    <div class="button-group">
-                      <button class="button fail__btn" href="#" data-tabs-control="next">Указать размер и Lorem ipsum dolor.<i class="ic ic--fail"></i>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="tabs__item"><i class="ic ic--length"></i>
-                    <h2>Какой проем ворот (длина)?</h2>
-                    <div class="progressbar">
-                      <div class="progresbar__status"><span class="progressbar__value">25</span></div>
-                    </div>
-                    <div class="slides">
-                      <div class="slides__item">
-                        <input class="slides__control" type="text" name="range1" data-provide="slider" data-slider-max="8.5" data-slider-step="0.5" data-slider-value="4" data-slider-tooltip="hide">
+          <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewbox="0 0 30 30">
+              <metadata>
+                <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+                  <rdf:rdf xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:description rdf:about=""></rdf:description>
+                  </rdf:rdf>
+                </x:xmpmeta>
+              </metadata>
+              <defs></defs>
+              <path class="modal__close--icon" d="M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z" transform="translate(-1169 -156)"></path>
+            </svg>
+          </button>
+          <div class="test">
+            <div class="row justify-content-center align-items-stretch">
+              <div class="col align-self-end"></div>
+              <div class="col col-16">
+                <form class="contactForm" method="POST" action="mail/mail.php">
+                  <div class="tabs">
+                    <div class="tabs__item tabs__item--active">
+                      <h2 class="test__heading">Чертеж для откатных ворот бесплатно?</h2>
+                      <div class="progressbar">
+                        <div class="progresbar__status"><span class="progressbar__value">0</span></div>
+                      </div>
+                      <div class="tabs__text">Вы получите Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, nam.</div>
+                      <div class="button-group text-center">
+                        <button class="button modal__btn" href="#" data-tabs-control="next">Указать размер и Lorem ipsum dolor.<i class="ic ic--fail"></i>
+                        </button>
                       </div>
                     </div>
-                    <div class="button-group">
-                      <button class="button fail__btn" href="#" data-tabs-control="prev">Назад
-                      </button>
-                      <button class="button fail__btn" href="#" data-tabs-control="next">Далее
-                      </button>
-                    </div>
-                  </div>
-                  <div class="tabs__item"><i class="ic ic--height"></i>
-                    <h2>Какая высота от земли?</h2>
-                    <div class="progressbar">
-                      <div class="progresbar__status"><span class="progressbar__value">50</span></div>
-                    </div>
-                    <div class="slides">
-                      <div class="slides__item">
-                        <input class="slides__control" type="text" name="range2" data-provide="slider" data-slider-max="4.5" data-slider-step="0.5" data-slider-value="1.5" data-slider-tooltip="hide">
+                    <div class="tabs__item"><i class="ic ic--length"></i>
+                      <h2 class="test__heading">Какой проем ворот (длина)?</h2>
+                      <div class="progressbar">
+                        <div class="progresbar__status"><span class="progressbar__value">25</span></div>
                       </div>
-                    </div>
-                    <div class="button-group">
-                      <button class="button fail__btn" href="#" data-tabs-control="prev">Назад
-                      </button>
-                      <button class="button fail__btn" href="#" data-tabs-control="next">Далее
-                      </button>
-                    </div>
-                  </div>
-                  <div class="tabs__item">
-                    <h2>Чем зашивать?</h2>
-                    <div class="progressbar">
-                      <div class="progresbar__status"><span class="progressbar__value">75</span></div>
-                    </div>
-                    <div class="button-group">
-                      <button class="button fail__btn" href="#" data-tabs-control="prev">Назад
-                      </button>
-                      <button class="button fail__btn" href="#" data-tabs-control="next">Далее
-                      </button>
-                    </div>
-                    <div class="row">
-                      <div class="col"><img class="radiobtns__img img-fluid" src="img/item-1.jpg" alt="Профнастил">
-                        <div class="radiobtns">
-                          <input class="radiobtns__control" id="radio1" type="radio" name="period[]" value="Профнастил">
-                          <label class="radiobtns__label" for="radio1">Профнастил</label>
+                      <div class="slides">
+                        <div class="slides__item">
+                          <input class="slides__control" type="text" name="range1" data-provide="slider" data-slider-max="8.5" data-slider-step="0.5" data-slider-value="4" data-slider-tooltip="hide">
                         </div>
                       </div>
-                      <div class="col"><img class="radiobtns__img img-fluid" src="img/item-2.jpg" alt="Дерево">
-                        <div class="radiobtns">
-                          <input class="radiobtns__control" id="radio2" type="radio" name="period[]" value="Дерево">
-                          <label class="radiobtns__label" for="radio2">Дерево</label>
-                        </div>
-                      </div>
-                      <div class="col"><img class="radiobtns__img img-fluid" src="img/item-3.jpg" alt="Ковка">
-                        <div class="radiobtns">
-                          <input class="radiobtns__control" id="radio3" type="radio" name="period[]" value="Ковка">
-                          <label class="radiobtns__label" for="radio3">Ковка</label>
-                        </div>
+                      <div class="button-group text-center">
+                        <button class="button modal__btn" href="#" data-tabs-control="prev">Назад
+                        </button>
+                        <button class="button modal__btn" href="#" data-tabs-control="next">Далее
+                        </button>
                       </div>
                     </div>
-                  </div>
-                  <div class="tabs__item">
-                    <h2>Ваш мобилкен</h2>
-                    <div class="progressbar">
-                      <div class="progresbar__status"><span class="progressbar__value">100</span></div>
+                    <div class="tabs__item"><i class="ic ic--height"></i>
+                      <h2 class="test__heading">Какая высота от земли?</h2>
+                      <div class="progressbar">
+                        <div class="progresbar__status"><span class="progressbar__value">50</span></div>
+                      </div>
+                      <div class="slides">
+                        <div class="slides__item">
+                          <input class="slides__control" type="text" name="range2" data-provide="slider" data-slider-max="4.5" data-slider-step="0.5" data-slider-value="1.5" data-slider-tooltip="hide">
+                        </div>
+                      </div>
+                      <div class="button-group text-center">
+                        <button class="button modal__btn" href="#" data-tabs-control="prev">Назад
+                        </button>
+                        <button class="button modal__btn" href="#" data-tabs-control="next">Далее
+                        </button>
+                      </div>
                     </div>
-                    <div class="tabs__text">Оставьте свой телефон и мы будем вам звонить в 1:23 без вашего согласия Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, nam.</div>
-                    <select name="method"></select>
-                    <div class="form-group">
-                      <input name="phone" placeholder="Телефон">
+                    <div class="tabs__item">
+                      <h2 class="test__heading">Чем зашивать?</h2>
+                      <div class="progressbar">
+                        <div class="progresbar__status"><span class="progressbar__value">75</span></div>
+                      </div>
+                      <div class="button-group text-center">
+                        <button class="button modal__btn" href="#" data-tabs-control="prev">Назад
+                        </button>
+                        <button class="button modal__btn" href="#" data-tabs-control="next">Далее
+                        </button>
+                      </div>
+                      <div class="row">
+                        <div class="col"><img class="radiobtns__img img-fluid" src="img/item-1.jpg" alt="Профнастил">
+                          <div class="radiobtns">
+                            <input class="radiobtns__control" id="radio1" type="radio" name="period[]" value="Профнастил">
+                            <label class="radiobtns__label" for="radio1">Профнастил</label>
+                          </div>
+                        </div>
+                        <div class="col"><img class="radiobtns__img img-fluid" src="img/item-2.jpg" alt="Дерево">
+                          <div class="radiobtns">
+                            <input class="radiobtns__control" id="radio2" type="radio" name="period[]" value="Дерево">
+                            <label class="radiobtns__label" for="radio2">Дерево</label>
+                          </div>
+                        </div>
+                        <div class="col"><img class="radiobtns__img img-fluid" src="img/item-3.jpg" alt="Ковка">
+                          <div class="radiobtns">
+                            <input class="radiobtns__control" id="radio3" type="radio" name="period[]" value="Ковка">
+                            <label class="radiobtns__label" for="radio3">Ковка</label>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <button type="submit">Получить чертеж<i class="ic ic--phone"></i></button>
+                    <div class="tabs__item">
+                      <h2 class="test__heading">Ваш мобилкен</h2>
+                      <div class="progressbar">
+                        <div class="progresbar__status"><span class="progressbar__value">100</span></div>
+                      </div>
+                      <div class="tabs__text">Оставьте свой телефон и мы будем вам звонить в 1:23 без вашего согласия Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, nam.</div>
+                      <select name="method"></select>
+                      <div class="form-group">
+                        <input name="phone" placeholder="Телефон">
+                      </div>
+                      <button type="submit">Получить чертеж<i class="ic ic--phone"></i></button>
+                    </div>
                   </div>
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
           </div>
         </div>

@@ -2308,3 +2308,64 @@ a:hover, a:focus {
 .tabs__item--active {
   display: block;
 }
+
+.tabs__text {
+  color: #fff;
+  margin-bottom: 30px;
+  text-align: center;
+  font: 400 18px/27px "Circe", sans-serif;
+}
+
+.modal-content {
+  position: relative;
+  padding: 70px 0;
+  -webkit-box-shadow: 0 0 60px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 60px rgba(0, 0, 0, 0.15);
+  background: #00c170 url(../img/modalbg.png) no-repeat;
+  background-size: cover;
+  border: 0;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+}
+
+.modal__close {
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  fill: #fff;
+  opacity: 1;
+}
+
+.modal__btn {
+  background-color: white;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  font: 700 18px/20px "Circe", sans-serif;
+  padding: 16px 35px 16px 35px;
+  color: #212121;
+  border: 0;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.modal__btn .ic {
+  position: absolute;
+  right: 0;
+  bottom: -30px;
+}
+
+.test {
+  padding: 0 15px;
+}
+
+.test__heading {
+  color: #fff;
+  font: 700 42px/62px "Circe", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-align: center;
+}
