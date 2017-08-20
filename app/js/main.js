@@ -44,7 +44,7 @@ $(window).scroll(function (){
     $(this).addClass($(this).data('animation')); 
     } 
   }); 
-  })();
+  });
 
   $(function($) {
     var currentMousePos = { x: -1, y: -1 },
