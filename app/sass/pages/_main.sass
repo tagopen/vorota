@@ -667,6 +667,7 @@ a
       left: auto
       right: -207px   
     &__krug    
+      transform: scale(0)
       img
         transform: scale(0.8)
 +r(992)
@@ -689,21 +690,24 @@ a
 @keyframes zoomIn 
   from 
     opacity: 0
-    transform: scale3d(.1, .1, .1)
-  50% 
+  100%
     opacity: 1
+    transform: scale(1)
 .zoomIn 
   animation-name: zoomIn 
-  animation-duration: 3s 
+  animation-duration: 1.5s 
+  animation-fill-mode: forwards
 @keyframes zoomInSlow
   from 
     opacity: 0
-    transform: scale3d(.1, .1, .1)
-  50% 
+  100%
     opacity: 1
+    transform: scale(1)
 .zoomInSlow
   animation-name: zoomInSlow 
-  animation-duration: 4s   
+  animation-duration: 1.5s 
+  animation-fill-mode: forwards  
+  animation-delay: 1s
 +comment("self style")   
 .self
   padding: 140px 0

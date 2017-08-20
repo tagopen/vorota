@@ -1589,6 +1589,11 @@ a:hover, a:focus {
     left: auto;
     right: -207px;
   }
+  .delivery__krug {
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+  }
   .delivery__krug img {
     -webkit-transform: scale(0.8);
         -ms-transform: scale(0.8);
@@ -1643,59 +1648,65 @@ a:hover, a:focus {
 @-webkit-keyframes zoomIn {
   from {
     opacity: 0;
-    -webkit-transform: scale3d(0.1, 0.1, 0.1);
-            transform: scale3d(0.1, 0.1, 0.1);
   }
-  50% {
+  100% {
     opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
 @keyframes zoomIn {
   from {
     opacity: 0;
-    -webkit-transform: scale3d(0.1, 0.1, 0.1);
-            transform: scale3d(0.1, 0.1, 0.1);
   }
-  50% {
+  100% {
     opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
 .zoomIn {
   -webkit-animation-name: zoomIn;
           animation-name: zoomIn;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes zoomInSlow {
   from {
     opacity: 0;
-    -webkit-transform: scale3d(0.1, 0.1, 0.1);
-            transform: scale3d(0.1, 0.1, 0.1);
   }
-  50% {
+  100% {
     opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
 @keyframes zoomInSlow {
   from {
     opacity: 0;
-    -webkit-transform: scale3d(0.1, 0.1, 0.1);
-            transform: scale3d(0.1, 0.1, 0.1);
   }
-  50% {
+  100% {
     opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
 .zoomInSlow {
   -webkit-animation-name: zoomInSlow;
           animation-name: zoomInSlow;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 /* ---------------------------------------- */
