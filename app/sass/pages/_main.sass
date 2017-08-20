@@ -464,7 +464,25 @@ a
       margin-bottom: 35px
 +comment("fail style")       
 .fail
-  padding: 70px 0 100px
+  padding: 70px 0 0
+  overflow: hidden
+  &__container
+    position: relative
+    padding-bottom: 100px
+    transition: all 1s ease
+    &--padding
+      padding-bottom: 350px
+  &__row
+    position: absolute
+    padding: 0 15px
+    left: 0
+    transition: all 1s ease
+    height: 100%
+    &--hidden  
+      top: -152%
+    &--visible
+      top: 0
+      background-color: rgba(247, 247, 247, .95)
   &__heading
     margin-bottom: 45px
   &__title
@@ -496,17 +514,193 @@ a
       position: absolute
       bottom: -15px
       right: -35px  
-      transition: all .15s ease  
+      transition: all .15s ease 
+  &__box
+    margin-bottom: 25px
+  &__icon
+    margin-bottom: 25px 
+    text-align: center
+    img
+      display: inline-block     
+  &__descr
+    color: $color-dark
+    font: 700 13px/21px $font-circe     
+    text-align: center 
 +r(760)
   .fail
     padding: 90px 0 200px 
+    &__container
+      padding-bottom: 0
+    &__row
+      height: 100%
+      &--hidden  
+        top: -120%
+      &--visible
+        top: 0  
+    &__info
+      padding-top: 30px
     &__title
       font: 700 24px/36px $font-circe 
     &__btn
       padding: 16px 67px 16px 25px 
+      margin-bottom: 15px
       &:hover,
       &:focus
         .ic
           right: -15px
       .ic
         right: -20px
+    &__box
+      margin-bottom: 40px
+    &__icon
+      margin-bottom: 25px      
+    &__descr
+      font: 700 18px/27px $font-circe
++comment("delivery style") 
+.delivery
+  padding-top: 60px
+  padding-bottom: 320px
+  overflow: hidden
+  &__heading
+    margin-bottom: 50px
+  &__image
+    text-align: center
+    img
+      display: inline-block
+      max-width: 100%
+  &__box
+    text-align: center    
+  &__text
+    position: relative
+    color: $color-dark
+    font: 400 14px/21px $font-circe  
+    margin-bottom: 20px  
+    text-align: center
+    .ic
+      position: absolute
+      left: 50%
+      top: -30px
+      margin-left: -10px  
+  &__subtext
+    cursor: pointer
+    position: relative
+    display: inline-block
+    color: $color-dark
+    font: 300 14px/20px $font-circe    
+    border-bottom: 1px dotted #212121
+    .ic
+      position: absolute
+      right: -25px
+      top: 0
+      cursor: pointer
+    &:hover,
+    &:focus
+      .delivery__help
+        opacity: 1
+        visibility: visible
+        transition: all .3s ease  
+  &__help
+    opacity: 0
+    visibility: hidden
+    position: absolute
+    bottom: 30px
+    left: -40px
+    width: 320px
+    color: $color-dark
+    font: 300 14px/21px $font-circe  
+    padding: 20px 15px
+    background-color: #fff
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.1)
+    transition: all .3s ease 
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      bottom: -20px
+      left: 50%
+      margin-left: -20px
+      width: 0
+      height: 0
+      border-left: 20px solid transparent
+      border-right: 20px solid transparent
+      border-top: 20px solid #fff
+  &__detail
+    position: relative
+    width: 320px
+    margin: 0 auto   
+  &__krug
+    position: absolute
+    top: -50px
+    img
+      transform: scale(0.7)
+    &--1
+      left: -100px
+    &--2
+      left: 18px  
+      top: -40px 
++r(760)
+  .delivery
+    padding-top: 0
+    padding-bottom: 160px
+    &__heading
+      margin-bottom: 0
+    &__row
+      height: 612px
+    &__box
+      text-align: left
+    &__text
+      font: 400 18px/27px $font-circe   
+      text-align: left
+      .ic
+        top: 0
+        left: -25px
+    &__image
+      position: relative
+      img
+        max-width: none
+        position: absolute
+        right: 0
+        top: 0     
+    &__help
+      width: 380px
+      bottom: 50px
+      left: auto
+      right: -207px   
+    &__krug    
+      img
+        transform: scale(0.8)
++r(992)
+  .delivery
+    &__text
+      font: 400 22px/33px $font-circe   
+    &__krug    
+      img
+        transform: scale(1)       
+@keyframes fadeInLeftBig 
+  from 
+    opacity: 0
+    transform: translate3d(-2000px, 0, 0)
+  to 
+    opacity: 1
+    transform: none
+.fadeInLeftBig 
+  animation-name: fadeInLeftBig
+  animation-duration: 1.5s    
+@keyframes zoomIn 
+  from 
+    opacity: 0
+    transform: scale3d(.1, .1, .1)
+  50% 
+    opacity: 1
+.zoomIn 
+  animation-name: zoomIn 
+  animation-duration: 3s 
+@keyframes zoomInSlow
+  from 
+    opacity: 0
+    transform: scale3d(.1, .1, .1)
+  50% 
+    opacity: 1
+.zoomInSlow
+  animation-name: zoomInSlow 
+  animation-duration: 4s   

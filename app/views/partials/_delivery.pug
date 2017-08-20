@@ -1,0 +1,27 @@
+section.delivery
+  .container
+    .row.justify-content-center
+      .col-24.col-md-14.col-lg-18.text-center
+        h2.heading.delivery__heading!=content.index.delivery.heading
+    .row.flex-md-row-reverse.delivery__row
+      .col-24.col-md-12.align-self-center
+        .delivery__box
+          .delivery__text!=content.index.delivery.text1
+            i.ic.ic--check
+          .delivery__subtext!=content.index.delivery.subtext  
+            i.ic.ic--question  
+            .delivery__help!=content.index.delivery.help
+      .col-24.col-md-12
+        .delivery__image.animate(data-animation="fadeInLeftBig")
+          img(src!=content.index.delivery.img.src, alt!=content.index.delivery.img.alt)
+    .row
+      .col-24.col-md-12
+        .delivery__info
+          .delivery__text!=content.index.delivery.text2
+          .delivery__text!=content.index.delivery.text3
+      .col-24.col-md-12  
+        .delivery__detail
+          .delivery__krug.delivery__krug--1.animate(data-animation="zoomIn")
+            img(src="img/deliverykrug1.png")
+          .delivery__krug.delivery__krug--2.animate(data-animation="zoomInSlow")
+            img(src="img/deliverykrug2.png")  
