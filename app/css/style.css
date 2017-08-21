@@ -2607,6 +2607,7 @@ a:hover, a:focus {
   background: rgba(255, 255, 255, 0.73);
 }
 
+.progressbar__value {
   position: absolute;
   margin-top: 5px;
   top: 100%;
@@ -2616,6 +2617,8 @@ a:hover, a:focus {
           transform: translateX(-100%);
   font: 400 16px/18px "Circe", sans-serif;
   color: #fff;
+}
+
 .slides {
   margin-bottom: 60px;
 }
@@ -2695,29 +2698,24 @@ a:hover, a:focus {
 }
 
 .product__modal--size {
+  width: 1000px;
+  max-width: none;
   overflow: hidden;
-  margin: 0 auto;
 }
 
 .product__modal--size .modal__close {
   fill: #202020;
 }
 
-.product__modal--input {
-  border: 1px solid #00c170;
-  -webkit-box-shadow: 0 0 60px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 0 60px rgba(0, 0, 0, 0.15);
-}
-
 .product__modal--heading {
   color: #202020;
-  font: 900 20px/30px "Circe", sans-serif;
+  font: 900 36px/40px "Circe", sans-serif;
   text-align: center;
   margin-bottom: 30px;
 }
 
 .product__modal--box {
-  padding: 0 15px;
+  padding: 0 60px;
   margin-bottom: 25px;
 }
 
@@ -2750,7 +2748,7 @@ a:hover, a:focus {
 }
 
 .product__modal--row {
-  padding: 0 20px;
+  padding: 0 120px;
 }
 
 .product__modal--row:nth-child(odd) {
@@ -2797,7 +2795,7 @@ a:hover, a:focus {
 }
 
 .product__modal--form {
-  padding: 0 15px;
+  padding: 0 120px;
 }
 
 .product__modal--btn {
@@ -2807,38 +2805,4 @@ a:hover, a:focus {
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   color: #fff;
-}
-
-@media only screen and (min-width: 760px) {
-  .product__modal--size {
-    width: 760px;
-    max-width: none;
-  }
-  .product__modal--heading {
-    font: 900 36px/40px "Circe", sans-serif;
-  }
-  .product__modal--box {
-    padding: 0 60px;
-  }
-  .product__modal--row {
-    padding: 0 120px;
-  }
-  .product__modal--form {
-    padding: 0 50px;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .product__modal--size {
-    width: 900px;
-  }
-  .product__modal--form {
-    padding: 0 120px;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .product__modal--size {
-    width: 1000px;
-  }
 }
