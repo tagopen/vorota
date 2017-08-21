@@ -29,16 +29,6 @@
                             input.slides__control(type="text", name=item.slides.name, data-provide="slider", data-slider-min=item.slides.minPostion, data-slider-max=item.slides.maxPostion, data-slider-step=item.slides.step, data-slider-value=item.slides.value, data-slider-tooltip="hide")
                     if (item.descr)
                       .tabs__text!= item.descr
-                    if (item.btns)
-                      .button-group.text-center
-                        if (item.btns.prev)
-                          button.button.modal__btn(href="#", data-tabs-control="prev")!= item.btns.prev.text
-                            if (item.btns.prev.icon)
-                              i(class=item.btns.prev.icon)
-                        if (item.btns.next)
-                          button.button.modal__btn(href="#", data-tabs-control="next")!= item.btns.next.text
-                            if (item.btns.next.icon)
-                              i(class=item.btns.next.icon)
                     if (item.radiobtns)
                       .row
                         each radio, i in item.radiobtns
@@ -47,6 +37,16 @@
                             .radiobtns
                               input.radiobtns__control(id="radio" + (i + 1), type="radio", name=radio.name, value=radio.value)
                               label.radiobtns__label(for="radio" + (i + 1))!= radio.value
+                    if (item.btns)
+                      .button-group.text-center
+                        if (item.btns.prev)
+                          button.button.modal__btn(class="item.btns.prev.class", href="#", data-tabs-control="prev")!= item.btns.prev.text
+                            if (item.btns.prev.icon)
+                              i(class=item.btns.prev.icon)
+                        if (item.btns.next)
+                          button.button.modal__btn(class="item.btns.next.class", href="#", data-tabs-control="next")!= item.btns.next.text
+                            if (item.btns.next.icon)
+                              i(class=item.btns.next.icon)
                     if (item.formGroup)
                       if (item.formGroup.select)
                         select(name=item.formGroup.select.name)
