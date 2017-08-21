@@ -72,12 +72,19 @@ $(window).scroll(function (){
           $tabs = $(this).closest('.tabs'),
           $item = $tabs.find('.tabs__item'),
           $currentItem = $(this).closest('.tabs__item'),
-          activeItem = $currentItem.index();
+          activeItem = $currentItem.index(),
+          $progressbarStatus = $tabs.find('.progressbar__status');
+          console.log(activeItem);
 
       if (control === 'prev') {
+        $progressbarStatus.css({
+          width: (100 - ~~(100 / ($item.length - 1) * (activeItem - 1))) + "%"
+        });
         $item.removeClass('tabs__item--active').eq(activeItem - 1).addClass('tabs__item--active');
-
       } else if (control === 'next') {
+        $progressbarStatus.css({
+          width: (100 - ~~(100 / ($item.length - 1) * (activeItem + 1))) + "%"
+        });
         $item.removeClass('tabs__item--active').eq(activeItem + 1).addClass('tabs__item--active');
 
       }

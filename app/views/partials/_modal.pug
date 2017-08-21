@@ -14,15 +14,15 @@
           .col.align-self-end
           .col.col-16
             form.contactForm(method="POST", action="mail/mail.php")
-              .tabs
+              .tabs.test__tabs
                 each item, i in content.site.modal.test1.tabs.items
                   .tabs__item(class={"tabs__item--active" : i === 0})
                     if (item.icon)
                       i(class=item.icon)
                     h2.test__heading!= item.heading
                     .progressbar
-                      .progresbar__status
-                        span.progressbar__value!= ~~(100 / (content.site.modal.test1.tabs.items.length - 1) * i)
+                      .progressbar__status
+                        span.progressbar__value!= ~~(100 / (content.site.modal.test1.tabs.items.length - 1) * i) + "%"
                     if (item.slides)
                       .slides
                         .slides__item
@@ -76,15 +76,15 @@
           .col.align-self-end
           .col.col-16
             form.contactForm(method="POST", action="mail/mail.php")
-              .tabs
+              .tabs.test__tabs
                 each item, i in content.site.modal.test2.tabs.items
                   .tabs__item(class={"tabs__item--active" : i === 0})
                     if (item.icon)
                       i(class=item.icon)
                     h2.test__heading!= item.heading
                     .progressbar
-                      .progresbar__status
-                        span.progressbar__value!= ~~(100 / (content.site.modal.test2.tabs.items.length - 1) * i)
+                      .progressbar__status
+                        span.progressbar__value!= ~~(100 / (content.site.modal.test2.tabs.items.length - 1) * i) + "%"
                     if (item.slides)
                       .slides
                         .slides__item

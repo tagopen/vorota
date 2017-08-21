@@ -1011,8 +1011,27 @@ a
       &:focus
         background-color: #2dca88
 .progressbar
+  position: relative
+  height: 15px
+  border-radius: 20px
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.36) 25%, rgba(255, 255, 255, 0) 25%, transparent 50%, rgba(255, 255, 255, 0.36) 50%, rgba(255, 255, 255, 0.36) 75%, transparent 75%, transparent)
+  background-size: 10px 10px
+  &__status
+    position: absolute
+    top: 0
+    right: 0
+    width: 100%
+    height: 100%
+    border-radius: inherit
+    background: rgba(255, 255, 255, 0.73)
   &__value
-    display: none              
+    position: absolute
+    margin-top: 5px
+    top: 100%
+    left: 0
+    transform: translateX(-100%)
+    font: 400 16px/18px $font-circe 
+    color: #fff         
 .slides
   margin-bottom: 60px  
 .slider  
