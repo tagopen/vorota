@@ -6,17 +6,18 @@ section.product
     .row
       each item, i in content.index.product.content    
         .col-24
-          .product__item
-            .product__garant.d-flex.align-items-end.justify-content-center
-              .product__text!=item.text
-            .row
-              .col-24.col-md-13.offset-md-1.col-lg-15.offset-lg-2
-                .product__image
-                  img.img-fluid(src!=item.img.src, alt!=item.img.alt)
-              .col-22.offset-1.col-md-8.offset-md-1.col-lg-5.offset-lg-1
-                .product__box
-                  .product__cost!=item.cost
-                  .product__name!=item.name
-                  .product__weight!=item.weight
-                  button.button.product__btn
-                    !=item.btn 
+          .product__info
+            .product__item
+              .product__garant.d-flex.align-items-end.justify-content-center
+                .product__text!=item.text
+              .row
+                .col-24.col-md-13.offset-md-1.col-lg-15.offset-lg-2
+                  .product__image
+                    img.img-fluid(src!=item.img.src, alt!=item.img.alt)
+                .col-22.offset-1.col-md-8.offset-md-1.col-lg-5.offset-lg-1
+                  .product__box
+                    .product__cost!=item.cost
+                    .product__name!=item.name
+                    .product__weight!=item.weight
+                    button.button.product__btn
+                      !=item.btn 

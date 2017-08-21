@@ -1,6 +1,6 @@
 #sibassa__modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel', aria-hidden='true')
   .modal-dialog.modal-lg
-    .modal-content
+    .modal-content.modal__test
       button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
         svg(xmlns='http://www.w3.org/2000/svg', width='30', height='30', viewbox='0 0 30 30')
           metadata
@@ -32,11 +32,13 @@
                     if (item.radiobtns)
                       .row
                         each radio, i in item.radiobtns
-                          .col
+                          .col-8.text-center
                             img.radiobtns__img.img-fluid(src=radio.img.src, alt=radio.img.alt)
                             .radiobtns
                               input.radiobtns__control(id="radio" + (i + 1), type="radio", name=radio.name, value=radio.value)
-                              label.radiobtns__label(for="radio" + (i + 1))!= radio.value
+                              label.radiobtns__label(for="radio" + (i + 1))
+                                span.radiobtns__check
+                                != radio.value  
                     if (item.btns)
                       .button-group.text-center
                         if (item.btns.prev)
@@ -52,15 +54,16 @@
                         select(name=item.formGroup.select.name)
                       if (item.formGroup.inputs)
                         each input in item.formGroup.inputs
-                          .form-group
+                          .form-group.col-12
                             input(type=input.type, name=input.name, placeholder=input.placeholder)
                       if (item.formGroup.submit)
-                        button(type="submit")!= item.formGroup.submit.text
-                          i(class=item.formGroup.submit.icon)
+                        .form-group.col-12
+                          button.test__btn.form__btn.test__btn--submit(type="submit")!= item.formGroup.submit.text
+                            i(class=item.formGroup.submit.icon)
 
 #estimate.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel', aria-hidden='true')
   .modal-dialog.modal-lg
-    .modal-content
+    .modal-content.modal__test
       button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
         svg(xmlns='http://www.w3.org/2000/svg', width='30', height='30', viewbox='0 0 30 30')
           metadata
@@ -95,8 +98,10 @@
                           .col
                             img.radiobtns__img.img-fluid(src=radio.img.src, alt=radio.img.alt)
                             .radiobtns
-                              input.radiobtns__control(id="radio" + (i + 1), type="radio", name=radio.name, value=radio.value)
-                              label.radiobtns__label(for="radio" + (i + 1))!= radio.value
+                              input.radiobtns__control(id="radio1" + (i + 1), type="radio", name=radio.name, value=radio.value)
+                              label.radiobtns__label(for="radio1" + (i + 1))
+                                span.radiobtns__check
+                                != radio.value
                     if (item.btns)
                       .button-group.text-center
                         if (item.btns.prev)
@@ -115,6 +120,6 @@
                           .form-group
                             input(type=input.type, name=input.name, placeholder=input.placeholder)
                       if (item.formGroup.submit)
-                        button(type="submit")!= item.formGroup.submit.text
+                        button.test__btn.form__btn.test__btn--submit(type="submit")!= item.formGroup.submit.text
                           i(class=item.formGroup.submit.icon)
 

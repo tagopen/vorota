@@ -763,79 +763,85 @@
 .ic--apple:before {
   width: 91px;
   height: 90px;
-  background: url(../img/sprite.png) 0px -94px no-repeat;
+  background: url(../img/sprite.png) 0px -160px no-repeat;
 }
 
 .ic--calc:before {
   width: 120px;
   height: 84px;
-  background: url(../img/sprite.png) 0px 0px no-repeat;
+  background: url(../img/sprite.png) -238px 0px no-repeat;
 }
 
 .ic--check:before {
   width: 18px;
   height: 18px;
-  background: url(../img/sprite.png) -220px -154px no-repeat;
+  background: url(../img/sprite.png) -339px -94px no-repeat;
 }
 
 .ic--fail:before {
   width: 80px;
   height: 74px;
-  background: url(../img/sprite.png) -130px 0px no-repeat;
+  background: url(../img/sprite.png) -101px -160px no-repeat;
 }
 
 .ic--header1:before {
   width: 25px;
   height: 18px;
-  background: url(../img/sprite.png) -220px -126px no-repeat;
+  background: url(../img/sprite.png) -307px -160px no-repeat;
 }
 
 .ic--header2:before {
   width: 21px;
   height: 26px;
-  background: url(../img/sprite.png) -220px -56px no-repeat;
+  background: url(../img/sprite.png) -246px -160px no-repeat;
 }
 
 .ic--phone:before {
   width: 18px;
   height: 18px;
-  background: url(../img/sprite.png) -185px -112px no-repeat;
+  background: url(../img/sprite.png) -339px -122px no-repeat;
 }
 
 .ic--phonefff:before {
   width: 18px;
   height: 18px;
-  background: url(../img/sprite.png) -185px -84px no-repeat;
+  background: url(../img/sprite.png) -191px -205px no-repeat;
 }
 
 .ic--play:before {
   width: 20px;
   height: 24px;
-  background: url(../img/sprite.png) -220px -92px no-repeat;
+  background: url(../img/sprite.png) -277px -160px no-repeat;
 }
 
 .ic--price1:before {
   width: 45px;
   height: 35px;
-  background: url(../img/sprite.png) -130px -140px no-repeat;
+  background: url(../img/sprite.png) -191px -160px no-repeat;
 }
 
 .ic--price2:before {
   width: 45px;
   height: 46px;
-  background: url(../img/sprite.png) -130px -84px no-repeat;
+  background: url(../img/sprite.png) -238px -94px no-repeat;
 }
 
 .ic--price3:before {
   width: 36px;
   height: 46px;
-  background: url(../img/sprite.png) -220px 0px no-repeat;
+  background: url(../img/sprite.png) -293px -94px no-repeat;
 }
 
 .ic--question:before {
   width: 15px;
   height: 15px;
-  background: url(../img/sprite.png) -185px -140px no-repeat;
+  background: url(../img/sprite.png) -342px -160px no-repeat;
+}
+
+.ic--start:before {
+  width: 228px;
+  height: 150px;
+  background: url(../img/sprite.png) 0px 0px no-repeat;
 }
 
 .ic {
@@ -921,7 +927,7 @@ a:hover, a:focus {
 
 .heading {
   color: #212121;
-  font: 700 24px/36px "Circe", sans-serif;
+  font: 900 24px/36px "Circe", sans-serif;
   text-transform: uppercase;
 }
 
@@ -931,13 +937,13 @@ a:hover, a:focus {
 
 @media only screen and (min-width: 760px) {
   .heading {
-    font: 700 30px/45px "Circe", sans-serif;
+    font: 900 30px/45px "Circe", sans-serif;
   }
 }
 
 @media only screen and (min-width: 992px) {
   .heading {
-    font: 700 36px/48px "Circe", sans-serif;
+    font: 900 36px/48px "Circe", sans-serif;
   }
 }
 
@@ -1060,7 +1066,7 @@ a:hover, a:focus {
 
 .title {
   color: #212121;
-  font: 700 30px/45px "Circe", sans-serif;
+  font: 900 30px/45px "Circe", sans-serif;
   text-transform: uppercase;
   margin: 25px 0 20px;
   text-align: center;
@@ -1069,6 +1075,7 @@ a:hover, a:focus {
 @media only screen and (min-width: 760px) {
   .header {
     min-height: 100vh;
+    padding-bottom: 250px;
   }
   .header__image {
     position: relative;
@@ -1103,7 +1110,7 @@ a:hover, a:focus {
     text-align: right;
   }
   .title {
-    font: 700 36px/45px "Circe", sans-serif;
+    font: 900 36px/45px "Circe", sans-serif;
     margin: 65px 0 50px;
   }
 }
@@ -1126,7 +1133,7 @@ a:hover, a:focus {
     font: 700 20px/30px "Circe", sans-serif;
   }
   .title {
-    font: 700 45px/55px "Circe", sans-serif;
+    font: 900 45px/55px "Circe", sans-serif;
   }
 }
 
@@ -1477,11 +1484,21 @@ a:hover, a:focus {
   .product__item:hover, .product__item:focus {
     -webkit-box-shadow: inset 0px 0px 0px 2px #36539b;
             box-shadow: inset 0px 0px 0px 2px #36539b;
-    padding: 120px 15px 130px;
+    padding: 120px 13px 130px;
     margin-top: -50px;
     margin-bottom: -50px;
     position: relative;
     z-index: 20;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+  }
+  .product__info {
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+  }
+  .product__info:hover, .product__info:focus {
+    -webkit-box-shadow: 0 20px 80px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 20px 80px rgba(0, 0, 0, 0.2);
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
   }
@@ -1651,13 +1668,13 @@ a:hover, a:focus {
 
 .fail__btn:hover .ic, .fail__btn:focus .ic {
   bottom: -10px;
-  right: -30px;
+  right: -10px;
 }
 
 .fail__btn .ic {
   position: absolute;
   bottom: -15px;
-  right: -35px;
+  right: -15px;
   -webkit-transition: all .15s ease;
   transition: all .15s ease;
 }
@@ -1683,7 +1700,7 @@ a:hover, a:focus {
 
 @media only screen and (min-width: 760px) {
   .fail {
-    padding: 90px 0 200px;
+    padding: 90px 0 60px;
   }
   .fail__container {
     padding-bottom: 0;
@@ -1706,12 +1723,13 @@ a:hover, a:focus {
   .fail__btn {
     padding: 16px 67px 16px 25px;
     margin-bottom: 15px;
+    z-index: 30;
   }
   .fail__btn:hover .ic, .fail__btn:focus .ic {
-    right: -15px;
+    right: 5px;
   }
   .fail__btn .ic {
-    right: -20px;
+    right: 0px;
   }
   .fail__box {
     margin-bottom: 40px;
@@ -1721,6 +1739,27 @@ a:hover, a:focus {
   }
   .fail__descr {
     font: 700 18px/27px "Circe", sans-serif;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .fail {
+    padding-bottom: 150px;
+  }
+  .fail__row--hidden {
+    top: -140%;
+  }
+  .fail__row--visible {
+    top: 0;
+  }
+  .fail__btn {
+    width: 550px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .fail__btn {
+    width: 650px;
   }
 }
 
@@ -2000,8 +2039,8 @@ a:hover, a:focus {
           animation-duration: 1.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
 }
 
 /* ---------------------------------------- */
@@ -2368,4 +2407,115 @@ a:hover, a:focus {
   text-transform: uppercase;
   margin-bottom: 20px;
   text-align: center;
+}
+
+.test__btn {
+  background-color: white;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  color: #212121;
+  font: 700 18px/20px "Circe", sans-serif;
+  padding: 16px 50px 16px 25px;
+  position: relative;
+  overflow: hidden;
+  border: 0;
+}
+
+.test__btn .ic {
+  position: absolute;
+  bottom: -65px;
+  right: -110px;
+}
+
+.test__btn--submit {
+  padding: 16px 60px 16px 25px;
+}
+
+.test__btn--submit .ic {
+  bottom: -35px;
+  right: 0;
+}
+
+.test__btn--prev, .test__btn--next {
+  padding: 16px;
+  width: 130px;
+  text-align: center;
+}
+
+.test__btn--prev:hover, .test__btn--prev:focus, .test__btn--next:hover, .test__btn--next:focus {
+  background-color: #2dca88;
+}
+
+.progressbar__value {
+  display: none;
+}
+
+.slides {
+  margin-bottom: 60px;
+}
+
+.slider-horizontal {
+  width: 100% !important;
+}
+
+.slider-handle {
+  background-color: white !important;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25) !important;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25) !important;
+  background-image: none;
+}
+
+.radiobtns {
+  margin-bottom: 30px;
+}
+
+.radiobtns__img {
+  display: inline-block;
+  margin-bottom: 25px;
+}
+
+.radiobtns__control {
+  display: none;
+}
+
+.radiobtns__control:checked + .radiobtns__label .radiobtns__check:before {
+  content: '';
+  position: absolute;
+  background: #00c170;
+  display: block;
+  left: 3px;
+  top: 3px;
+  color: #c00013;
+  width: 14px;
+  height: 14px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+
+.radiobtns__check {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  top: 1px;
+  left: -3px;
+  margin-bottom: -4px;
+  margin-right: 3px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background: #fff;
+}
+
+.radiobtns__label {
+  color: #fff;
+  font: 700 14px/21px "Circe", sans-serif;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 992px) {
+  .modal__test {
+    min-height: 550px;
+  }
 }
