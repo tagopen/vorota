@@ -1755,6 +1755,7 @@ a:hover, a:focus {
 .fail__row--visible {
   top: 0;
   background-color: rgba(247, 247, 247, 0.95);
+  z-index: 40;
 }
 
 .fail__heading {
