@@ -541,7 +541,7 @@
         </div>
       </div>
     </footer>
-    <div class="modal fade" id="1sibassa__modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal fade" id="sibassa__modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
         <div class="modal-content modal__test">
           <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true">
@@ -566,7 +566,7 @@
                     <div class="tabs__item tabs__item--active">
                       <h2 class="test__heading">Чертеж для откатных ворот бесплатно?</h2>
                       <div class="progressbar">
-                        <div class="progresbar__status"><span class="progressbar__value">0</span></div>
+                        <div class="progresbar__status"><span class="progressbar__value">0%</span></div>
                       </div>
                       <div class="tabs__text">Вы получите Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, nam.</div>
                       <div class="button-group text-center">
@@ -577,11 +577,11 @@
                     <div class="tabs__item"><i class="ic ic--length"></i>
                       <h2 class="test__heading">Какой проем ворот (длина)?</h2>
                       <div class="progressbar">
-                        <div class="progresbar__status"><span class="progressbar__value">25</span></div>
+                        <div class="progresbar__status"><span class="progressbar__value">25%</span></div>
                       </div>
                       <div class="slides">
                         <div class="slides__item">
-                          <input class="slides__control" type="text" name="range1" data-provide="slider" data-slider-max="8.5" data-slider-step="0.5" data-slider-value="4" data-slider-tooltip="hide">
+                          <input class="slides__control" id="progressbar" type="text" name="range1" data-provide="slider" data-slider-tooltip="hide">
                         </div>
                       </div>
                       <div class="button-group text-center">
@@ -594,11 +594,11 @@
                     <div class="tabs__item"><i class="ic ic--height"></i>
                       <h2 class="test__heading">Какая высота от земли?</h2>
                       <div class="progressbar">
-                        <div class="progresbar__status"><span class="progressbar__value">50</span></div>
+                        <div class="progresbar__status"><span class="progressbar__value">50%</span></div>
                       </div>
                       <div class="slides">
                         <div class="slides__item">
-                          <input class="slides__control" type="text" name="range2" data-provide="slider" data-slider-max="4.5" data-slider-step="0.5" data-slider-value="1.5" data-slider-tooltip="hide">
+                          <input class="slides__control" id="progressbar" type="text" name="range2" data-provide="slider" data-slider-tooltip="hide">
                         </div>
                       </div>
                       <div class="button-group text-center">
@@ -611,7 +611,7 @@
                     <div class="tabs__item">
                       <h2 class="test__heading">Чем зашивать?</h2>
                       <div class="progressbar">
-                        <div class="progresbar__status"><span class="progressbar__value">75</span></div>
+                        <div class="progresbar__status"><span class="progressbar__value">75%</span></div>
                       </div>
                       <div class="row">
                         <div class="col-8 text-center"><img class="radiobtns__img img-fluid" src="img/item-1.jpg" alt="Профнастил">
@@ -646,15 +646,17 @@
                     <div class="tabs__item">
                       <h2 class="test__heading">Ваш мобилкен</h2>
                       <div class="progressbar">
-                        <div class="progresbar__status"><span class="progressbar__value">100</span></div>
+                        <div class="progresbar__status"><span class="progressbar__value">100%</span></div>
                       </div>
                       <div class="tabs__text">Оставьте свой телефон и мы вышлем точный до миллиметра чертеж под Ваши ворота. Никаких звонков! Чертеж придет в удобный Вам мессенджер: Viber, Telegram, Facebook Messenger или WhatsApp.</div>
-                      <select name="method"></select>
-                      <div class="form-group col-12">
-                        <input name="phone" placeholder="Телефон">
-                      </div>
-                      <div class="form-group col-12">
-                        <button class="test__btn form__btn test__btn--submit" type="submit">Получить чертеж<i class="ic ic--apple"></i></button>
+                      <div class="row">
+                        <div class="form-group col-12">
+                          <select name="method"></select>
+                          <input name="phone" placeholder="Телефон">
+                        </div>
+                        <div class="form-group col-12">
+                          <button class="test__btn form__btn test__btn--submit" type="submit">Получить чертеж<i class="ic ic--apple"></i></button>
+                        </div>
                       </div>
                     </div>
                   </div>
