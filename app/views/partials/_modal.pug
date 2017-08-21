@@ -160,14 +160,14 @@ each item, i in content.index.product.modals
           .product__modal--images
             .row.justify-content-center
               each image, i in item.images
-                .col-8.col-md-6
+                .col-24.col-md-7.col-lg-6
                   .product__modal--image
                     i.ic(class!=image.icon)
                   .product__modal--subtext!=image.text
           form.contact__form.contactForm.product__modal--form(method='post', action='./mail/mail.php')
             .row
               .col-24.col-md-12.form__group
-                input.form-control.form__input.form__phone(aria-invalid='false', placeholder="Телефон", name='phone', type='tel', data-error='Введите телефон', required)
+                input.form-control.form__input.product__modal--input.form__phone(aria-invalid='false', placeholder="Телефон", name='phone', type='tel', data-error='Введите телефон', required)
               .col-24.col-md-12
                 button.button.form__btn.product__modal--btn(name='form', value='динамика цен', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...")!=item.form.btn
                   i.ic.ic--apple
