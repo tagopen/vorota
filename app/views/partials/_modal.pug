@@ -1,4 +1,4 @@
-#sibassa__modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel', aria-hidden='true')
+#1sibassa__modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel', aria-hidden='true')
   .modal-dialog.modal-lg
     .modal-content.modal__test
       button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
@@ -60,7 +60,6 @@
                         .form-group.col-12
                           button.test__btn.form__btn.test__btn--submit(type="submit")!= item.formGroup.submit.text
                             i(class=item.formGroup.submit.icon)
-
 #estimate.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel', aria-hidden='true')
   .modal-dialog.modal-lg
     .modal-content.modal__test
@@ -122,4 +121,54 @@
                       if (item.formGroup.submit)
                         button.test__btn.form__btn.test__btn--submit(type="submit")!= item.formGroup.submit.text
                           i(class=item.formGroup.submit.icon)
-
+each item, i in content.index.product.modals
+  .modal.fade(id="product__modal"+(i+1) tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel', aria-hidden='true')
+    .modal-dialog.product__modal--size
+      .modal-content.modal__content
+        button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+          svg(xmlns='http://www.w3.org/2000/svg', width='30', height='30', viewbox='0 0 30 30')
+            metadata
+              x:xmpmeta(xmlns:x='adobe:ns:meta/', x:xmptk='Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ')
+                rdf:rdf(xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#')
+                  rdf:description(rdf:about='')
+            defs
+            path.modal__close--icon(d='M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z', transform='translate(-1169 -156)')
+        .product__modal
+          .product__modal--heading!=item.heading
+          .product__modal--box
+            .row
+              .col-24.col-md-18
+                .row
+                  each point, i in item.points
+                    .col-24.col-md-12
+                      .product__modal--point
+                        i.ic(class!=point.icon)  
+                        .product__modal--elem!=point.text
+              .col-24.col-md-6  
+                .product__modal--point.product__modal--pointlast
+                  i.ic(class!=item.lastpoint.icon) 
+                  .product__modal--elem!=item.lastpoint.text
+          .product__modal--table
+            each row, i in item.rows
+              .row.product__modal--row
+                .col-24.col-md-12
+                  .product__modal--left!=row.textl
+                .col-24.col-md-12
+                  .product__modal--right!=row.textr  
+          .product__modal--images
+            .row.justify-content-center
+              each image, i in item.images
+                .col-8.col-md-6
+                  .product__modal--image
+                    i.ic(class!=image.icon)
+                  .product__modal--subtext!=image.text
+          form.contact__form.contactForm.product__modal--form(method='post', action='./mail/mail.php')
+            .row
+              .col-24.col-md-12.form__group
+                input.form-control.form__input.form__phone(aria-invalid='false', placeholder="Телефон", name='phone', type='tel', data-error='Введите телефон', required)
+              .col-24.col-md-12
+                button.button.form__btn.product__modal--btn(name='form', value='динамика цен', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...")!=item.form.btn
+                  i.ic.ic--apple
+              .col-24
+                .form__confident.form__confident--dark!=content.index.self.form.confident
+                                 

@@ -775,7 +775,7 @@
 .ic--check:before {
   width: 18px;
   height: 18px;
-  background: url(../img/sprite.png) -339px -94px no-repeat;
+  background: url(../img/sprite.png) -195px -260px no-repeat;
 }
 
 .ic--fail:before {
@@ -787,13 +787,13 @@
 .ic--header1:before {
   width: 25px;
   height: 18px;
-  background: url(../img/sprite.png) -307px -160px no-repeat;
+  background: url(../img/sprite.png) -160px -260px no-repeat;
 }
 
 .ic--header2:before {
   width: 21px;
   height: 26px;
-  background: url(../img/sprite.png) -246px -160px no-repeat;
+  background: url(../img/sprite.png) 0px -292px no-repeat;
 }
 
 .ic--phone:before {
@@ -805,13 +805,13 @@
 .ic--phonefff:before {
   width: 18px;
   height: 18px;
-  background: url(../img/sprite.png) -191px -205px no-repeat;
+  background: url(../img/sprite.png) -339px -94px no-repeat;
 }
 
 .ic--play:before {
   width: 20px;
   height: 24px;
-  background: url(../img/sprite.png) -277px -160px no-repeat;
+  background: url(../img/sprite.png) -31px -292px no-repeat;
 }
 
 .ic--price1:before {
@@ -832,10 +832,88 @@
   background: url(../img/sprite.png) -293px -94px no-repeat;
 }
 
+.ic--productic1:before {
+  width: 31px;
+  height: 24px;
+  background: url(../img/sprite.png) -191px -205px no-repeat;
+}
+
+.ic--productic2:before {
+  width: 27px;
+  height: 33px;
+  background: url(../img/sprite.png) -283px -160px no-repeat;
+}
+
+.ic--productic3:before {
+  width: 20px;
+  height: 19px;
+  background: url(../img/sprite.png) -91px -292px no-repeat;
+}
+
+.ic--producticon-1:before {
+  width: 30px;
+  height: 23px;
+  background: url(../img/sprite.png) -272px -205px no-repeat;
+}
+
+.ic--producticon-2:before {
+  width: 30px;
+  height: 23px;
+  background: url(../img/sprite.png) -312px -205px no-repeat;
+}
+
+.ic--producticon-3:before {
+  width: 30px;
+  height: 22px;
+  background: url(../img/sprite.png) -40px -260px no-repeat;
+}
+
+.ic--producticon-4:before {
+  width: 30px;
+  height: 23px;
+  background: url(../img/sprite.png) -232px -205px no-repeat;
+}
+
+.ic--producticon-5:before {
+  width: 30px;
+  height: 22px;
+  background: url(../img/sprite.png) -120px -260px no-repeat;
+}
+
+.ic--producticon-6:before {
+  width: 30px;
+  height: 22px;
+  background: url(../img/sprite.png) 0px -260px no-repeat;
+}
+
+.ic--producticon-7:before {
+  width: 30px;
+  height: 22px;
+  background: url(../img/sprite.png) -80px -260px no-repeat;
+}
+
+.ic--productimg1:before {
+  width: 31px;
+  height: 24px;
+  background: url(../img/sprite.png) -320px -160px no-repeat;
+}
+
+.ic--productimg2:before {
+  width: 27px;
+  height: 33px;
+  background: url(../img/sprite.png) -246px -160px no-repeat;
+}
+
+.ic--productimg3:before {
+  width: 20px;
+  height: 19px;
+  background: url(../img/sprite.png) -61px -292px no-repeat;
+}
+
 .ic--question:before {
   width: 15px;
   height: 15px;
-  background: url(../img/sprite.png) -342px -160px no-repeat;
+  background: url(../img/sprite.png) -223px -260px no-repeat;
 }
 
 .ic--start:before {
@@ -2162,6 +2240,18 @@ a:hover, a:focus {
   color: #fff;
 }
 
+.form__confident--dark {
+  color: #212121;
+}
+
+.form__confident--dark a {
+  color: #212121;
+}
+
+.form__confident--dark a:hover, .form__confident--dark a:focus {
+  color: #212121;
+}
+
 @media only screen and (min-width: 760px) {
   .self {
     padding: 140px 0;
@@ -2518,4 +2608,124 @@ a:hover, a:focus {
   .modal__test {
     min-height: 550px;
   }
+}
+
+/* ---------------------------------------- */
+/* P R O D U C T    M O D A L    S T Y L E  */
+/* ---------------------------------------- */
+.modal__content {
+  background: white;
+  border: 1px solid #f1f1f1;
+  -webkit-box-shadow: 0 0 60px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 60px rgba(0, 0, 0, 0.15);
+}
+
+.product__modal--size {
+  width: 1000px;
+  max-width: none;
+  overflow: hidden;
+}
+
+.product__modal--size .modal__close {
+  fill: #202020;
+}
+
+.product__modal--heading {
+  color: #202020;
+  font: 900 36px/40px "Circe", sans-serif;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.product__modal--box {
+  padding: 0 60px;
+  margin-bottom: 25px;
+}
+
+.product__modal--point {
+  margin-bottom: 10px;
+  display: table;
+}
+
+.product__modal--point .ic {
+  display: table-cell;
+  padding-right: 30px;
+}
+
+.product__modal--pointlast {
+  height: 100%;
+}
+
+.product__modal--pointlast .ic {
+  vertical-align: middle;
+}
+
+.product__modal--pointlast .product__modal--elem {
+  vertical-align: middle;
+}
+
+.product__modal--elem {
+  color: #202020;
+  font: 400 18px/27px "Circe", sans-serif;
+  display: table-cell;
+}
+
+.product__modal--row {
+  padding: 0 120px;
+}
+
+.product__modal--row:nth-child(odd) {
+  background-color: whitesmoke;
+}
+
+.product__modal--table {
+  margin-bottom: 20px;
+}
+
+.product__modal--left {
+  color: #202020;
+  font: 300 18px/27px "Circe", sans-serif;
+}
+
+.product__modal--right {
+  color: #202020;
+  font: 700 18px/27px "Circe", sans-serif;
+}
+
+.product__modal--images {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.product__modal--image {
+  background-color: #36539b;
+  height: 50px;
+  width: 50px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  text-align: center;
+  margin: 0 auto 20px;
+}
+
+.product__modal--image .ic {
+  line-height: 46px;
+}
+
+.product__modal--subtext {
+  color: #212121;
+  padding: 0 30px;
+  font: 300 18px/27px "Circe", sans-serif;
+}
+
+.product__modal--form {
+  padding: 0 120px;
+}
+
+.product__modal--btn {
+  background-color: #00c170;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  color: #fff;
 }

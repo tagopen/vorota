@@ -425,7 +425,7 @@ a
 +r(992)
   .product
     &__cost
-      margin-top: 20px 
+      margin-top: 20px      
 +comment("cost style")        
 .cost
   padding: 170px 0 80px
@@ -807,6 +807,13 @@ a
       &:hover,
       &:focus
         color: #fff
+    &--dark
+      color: #212121  
+      a
+        color: #212121 
+        &:hover,
+        &:focus
+          color: #212121 
 +r(760)
   .self
     padding: 140px 0 
@@ -1053,4 +1060,77 @@ a
 +r(992)
   .modal
     &__test
-      min-height: 550px    
+      min-height: 550px   
++comment("product modal style")       
+.modal
+  &__content
+    background: white
+    border: 1px solid #f1f1f1
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.15)  
+.product
+  &__modal
+    &--size
+      width: 1000px
+      max-width: none
+      overflow: hidden    
+      .modal__close
+        fill: #202020 
+    &--heading
+      color: #202020  
+      font: 900 36px/40px $font-circe
+      text-align: center
+      margin-bottom: 30px  
+    &--box
+      padding: 0 60px  
+      margin-bottom: 25px
+    &--point
+      margin-bottom: 10px  
+      display: table
+      .ic
+        display: table-cell
+        padding-right: 30px
+      &last
+        height: 100%
+        .ic
+          vertical-align: middle
+        .product__modal--elem
+          vertical-align: middle    
+    &--elem
+      color: #202020  
+      font: 400 18px/27px $font-circe
+      display: table-cell
+    &--row
+      padding: 0 120px  
+      &:nth-child(odd)
+        background-color: whitesmoke
+    &--table
+      margin-bottom: 20px    
+    &--left
+      color: #202020  
+      font: 300 18px/27px $font-circe
+    &--right 
+      color: #202020  
+      font: 700 18px/27px $font-circe
+    &--images
+      text-align: center
+      margin-bottom: 30px   
+    &--image
+      background-color: #36539b  
+      height: 50px
+      width: 50px
+      border-radius: 50%
+      text-align: center
+      margin: 0 auto 20px
+      .ic
+        line-height: 46px
+    &--subtext
+      color: #212121  
+      padding: 0 30px
+      font: 300 18px/27px $font-circe 
+    &--form
+      padding: 0 120px   
+    &--btn
+      background-color: #00c170
+      border-radius: 5px
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2)  
+      color: #fff
