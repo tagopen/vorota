@@ -58,3 +58,63 @@
                         button(type="submit")!= item.formGroup.submit.text
                           i(class=item.formGroup.submit.icon)
 
+#estimate.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel', aria-hidden='true')
+  .modal-dialog.modal-lg
+    .modal-content
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        svg(xmlns='http://www.w3.org/2000/svg', width='30', height='30', viewbox='0 0 30 30')
+          metadata
+            x:xmpmeta(xmlns:x='adobe:ns:meta/', x:xmptk='Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ')
+              rdf:rdf(xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#')
+                rdf:description(rdf:about='')
+          defs
+          path.modal__close--icon(d='M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z', transform='translate(-1169 -156)')
+      .test
+        .row.justify-content-center.align-items-stretch
+          .col.align-self-end
+          .col.col-16
+            form.contactForm(method="POST", action="mail/mail.php")
+              .tabs
+                each item, i in content.site.modal.test2.tabs.items
+                  .tabs__item(class={"tabs__item--active" : i === 0})
+                    if (item.icon)
+                      i(class=item.icon)
+                    h2.test__heading!= item.heading
+                    .progressbar
+                      .progresbar__status
+                        span.progressbar__value!= ~~(100 / (content.site.modal.test2.tabs.items.length - 1) * i)
+                    if (item.slides)
+                      .slides
+                        .slides__item
+                            input.slides__control(type="text", name=item.slides.name, data-provide="slider", data-slider-min=item.slides.minPostion, data-slider-max=item.slides.maxPostion, data-slider-step=item.slides.step, data-slider-value=item.slides.value, data-slider-tooltip="hide")
+                    if (item.descr)
+                      .tabs__text!= item.descr
+                    if (item.radiobtns)
+                      .row
+                        each radio, i in item.radiobtns
+                          .col
+                            img.radiobtns__img.img-fluid(src=radio.img.src, alt=radio.img.alt)
+                            .radiobtns
+                              input.radiobtns__control(id="radio" + (i + 1), type="radio", name=radio.name, value=radio.value)
+                              label.radiobtns__label(for="radio" + (i + 1))!= radio.value
+                    if (item.btns)
+                      .button-group.text-center
+                        if (item.btns.prev)
+                          button.button.test__btn(class=item.btns.prev.class, href="#", data-tabs-control="prev")!= item.btns.prev.text
+                            if (item.btns.prev.icon)
+                              i(class=item.btns.prev.icon)
+                        if (item.btns.next)
+                          button.button.test__btn(class=item.btns.next.class, href="#", data-tabs-control="next")!= item.btns.next.text
+                            if (item.btns.next.icon)
+                              i(class=item.btns.next.icon)
+                    if (item.formGroup)
+                      if (item.formGroup.select)
+                        select(name=item.formGroup.select.name)
+                      if (item.formGroup.inputs)
+                        each input in item.formGroup.inputs
+                          .form-group
+                            input(type=input.type, name=input.name, placeholder=input.placeholder)
+                      if (item.formGroup.submit)
+                        button(type="submit")!= item.formGroup.submit.text
+                          i(class=item.formGroup.submit.icon)
+
