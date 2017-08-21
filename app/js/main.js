@@ -122,4 +122,13 @@ $(window).scroll(function (){
     ]
   });
 
+$("#progressbar").slider({
+    ticks: [1, 2, 3, 4, 5, 6],
+    ticks_labels: ['3', '4', '5', '6', '7', '8'],
+    min: 3,
+    max: 8,
+    step: 0.5,
+    value: 2
+});
+
 })(jQuery); // End of use strict

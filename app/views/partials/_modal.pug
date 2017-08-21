@@ -23,10 +23,11 @@
                     .progressbar
                       .progressbar__status
                         span.progressbar__value!= ~~(100 / (content.site.modal.test1.tabs.items.length - 1) * i) + "%"
+
                     if (item.slides)
                       .slides
                         .slides__item
-                            input.slides__control(type="text", name=item.slides.name, data-provide="slider", data-slider-min=item.slides.minPostion, data-slider-max=item.slides.maxPostion, data-slider-step=item.slides.step, data-slider-value=item.slides.value, data-slider-tooltip="hide")
+                          input#progressbar.slides__control(type="text", name=item.slides.name, data-provide="slider", data-slider-tooltip="hide")
                     if (item.descr)
                       .tabs__text!= item.descr
                     if (item.radiobtns)
@@ -50,16 +51,17 @@
                             if (item.btns.next.icon)
                               i(class=item.btns.next.icon)
                     if (item.formGroup)
-                      if (item.formGroup.select)
-                        select(name=item.formGroup.select.name)
-                      if (item.formGroup.inputs)
-                        each input in item.formGroup.inputs
+                      .row
+                        if (item.formGroup.inputs)
                           .form-group.col-12
-                            input(type=input.type, name=input.name, placeholder=input.placeholder)
-                      if (item.formGroup.submit)
-                        .form-group.col-12
-                          button.test__btn.form__btn.test__btn--submit(type="submit")!= item.formGroup.submit.text
-                            i(class=item.formGroup.submit.icon)
+                            if (item.formGroup.select)
+                              select(name=item.formGroup.select.name)
+                            each input in item.formGroup.inputs
+                              input(type=input.type, name=input.name, placeholder=input.placeholder)
+                        if (item.formGroup.submit)
+                          .form-group.col-12
+                            button.test__btn.form__btn.test__btn--submit(type="submit")!= item.formGroup.submit.text
+                              i(class=item.formGroup.submit.icon)
 #estimate.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel', aria-hidden='true')
   .modal-dialog.modal-lg
     .modal-content.modal__test
@@ -158,14 +160,14 @@ each item, i in content.index.product.modals
           .product__modal--images
             .row.justify-content-center
               each image, i in item.images
-                .col-8.col-md-6
+                .col-24.col-md-7.col-lg-6
                   .product__modal--image
                     i.ic(class!=image.icon)
                   .product__modal--subtext!=image.text
           form.contact__form.contactForm.product__modal--form(method='post', action='./mail/mail.php')
             .row
               .col-24.col-md-12.form__group
-                input.form-control.form__input.form__phone(aria-invalid='false', placeholder="Телефон", name='phone', type='tel', data-error='Введите телефон', required)
+                input.form-control.form__input.product__modal--input.form__phone(aria-invalid='false', placeholder="Телефон", name='phone', type='tel', data-error='Введите телефон', required)
               .col-24.col-md-12
                 button.button.form__btn.product__modal--btn(name='form', value='динамика цен', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...")!=item.form.btn
                   i.ic.ic--apple
