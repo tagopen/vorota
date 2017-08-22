@@ -245,4 +245,16 @@ $(window).scroll(function (){
   });
   });
 
+  $(function () {
+    var $time = $('.form__time');
+    $time.hide();
+    $('.checkbox-btn__control').on('change click', function () {
+      if ($(this).is('#period-2')) {
+        $time.stop().fadeIn('fast');
+      } else {
+        $time.stop().fadeOut('fast');
+      }
+    });
+  });
+
 })(jQuery); // End of use strict
