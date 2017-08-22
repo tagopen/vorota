@@ -149,8 +149,7 @@ $("#progressbar").ionRangeSlider({
   step: 0.5,
   min: 2,
   max: 8,
-  from: 5,
-  values: [2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8],
+  values: [2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8],
   hide_min_max: true,
 });
 

@@ -2702,6 +2702,36 @@ a:hover, a:focus {
   color: #fff;
 }
 
+.irs-grid-pol.small {
+  display: none;
+}
+
+.irs-single {
+  display: none;
+}
+
+.irs-bar-edge {
+  border: 0;
+}
+
+.irs-bar {
+  border: 0;
+}
+
+.irs-grid-text {
+  font: 700 14px/16px "Circe", sans-serif;
+  color: #fff;
+  bottom: 0;
+}
+
+.js-grid-text-1, .js-grid-text-3, .js-grid-text-5, .js-grid-text-7, .js-grid-text-9, .js-grid-text-11 {
+  font: 700 10px/16px "Circe", sans-serif;
+}
+
+.irs-grid-pol {
+  background: #fff;
+}
+
 .slides {
   margin-bottom: 60px;
 }
