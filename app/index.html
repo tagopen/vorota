@@ -464,7 +464,15 @@
             <div class="col-24 col-lg-18">     
               <form class="contact__form contactForm contactForm--modal" method="post" action="./mail/mail.php">
                 <div class="row">
-                  <div class="col-24 col-md-8 col-lg-9 form__group">
+                  <div class="col-24 col-md-8 col-lg-9 form__group from__group--relative">
+                    <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle" id="dropdownMenuButton" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ic ic--viber"></i></button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="dropdown-item"><i class="ic ic--mail"></i></div>
+                        <div class="dropdown-item"><i class="ic ic--massenger"></i></div>
+                        <div class="dropdown-item"><i class="ic ic--telegram"></i></div>
+                      </div>
+                    </div>
                     <input class="form-control form__input form__phone" aria-invalid="false" placeholder="Телефон" name="phone" type="tel" data-error="Введите телефон" required>
                   </div>
                   <div class="col-24 col-md-16 col-lg-15">
@@ -1300,6 +1308,8 @@
     <!-- Modernizr JavaScript-->
     <script src="js/modernizr.custom.js"></script>
     <script src="js/classie.js"></script>
+    <!-- Select2 JavaScript-->
+    <script src="js/select2.full.js"></script>
     <!-- Custom JavaScript-->
     <script src="js/main.js"></script>
     <!-- endbuild-->

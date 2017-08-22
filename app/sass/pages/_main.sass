@@ -18,6 +18,10 @@ a
 .text-danger
   color: $text-danger
   text-align: left
+.form
+  &__group
+    &--relative
+      position: relative  
 .form-group.error
   .form-control
     border-color: $form-control-error-border-color
@@ -1188,3 +1192,49 @@ a
       border-radius: 5px
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2)  
       color: #fff
+.dropdown
+  display: inline-block
+  position: absolute
+  left: 0
+  top: 2px
+  &-toggle
+    position: relative
+    background-color: transparent !important
+    width: 52px
+    height: 52px
+    border: 0
+    border-radius: 0
+    box-shadow: none !important
+    .ic
+      position: relative
+    &:hover,
+    &:focus
+      background-color: #FFF !important
+    &:before
+      content: ''
+      position: absolute
+      display: block
+      height: 100%
+      width: 100%
+      left: 0
+      top: 0
+      border-radius: 50%
+      background-color: #00c170
+    &:after
+      position: relative
+      border-top: 0.3em solid #fff
+      z-index: 25
+  &-menu
+    width: 54px
+    border: 0
+    background-color: #fff
+    min-width: auto
+    margin: 0
+    border-radius: 0
+    padding: 0
+  &-item
+    padding: 0
+    text-align: center 
+    padding: 3px 0
+    position: relative
+    z-index: 25

@@ -12,7 +12,17 @@ section.self
       .col-24.col-lg-18      
         form.contact__form.contactForm.contactForm--modal(method='post', action='./mail/mail.php')
           .row
-            .col-24.col-md-8.col-lg-9.form__group
+            .col-24.col-md-8.col-lg-9.form__group.from__group--relative
+              .dropdown
+                button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                  i.ic.ic--viber
+                .dropdown-menu(aria-labelledby='dropdownMenuButton')
+                  .dropdown-item
+                    i.ic.ic--mail
+                  .dropdown-item
+                    i.ic.ic--massenger
+                  .dropdown-item
+                    i.ic.ic--telegram
               input.form-control.form__input.form__phone(aria-invalid='false', placeholder="Телефон", name='phone', type='tel', data-error='Введите телефон', required)
             .col-24.col-md-16.col-lg-15
               button.button.form__btn.self__btn(name='form', value='динамика цен', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...")!=content.index.self.form.btn
