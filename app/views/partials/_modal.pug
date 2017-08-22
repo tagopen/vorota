@@ -82,8 +82,10 @@
           path.modal__close--icon(d='M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z', transform='translate(-1169 -156)')
       .test
         .row.justify-content-center.align-items-stretch
-          .col.align-self-end
-          .col.col-16
+          .col-24.col-lg-9
+            .test__container
+              #count
+          .col-24.col-lg-15
             form.contactForm(method="POST", action="mail/mail.php")
               .tabs.test__tabs
                 each item, i in content.site.modal.test2.tabs.items

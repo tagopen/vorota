@@ -74,7 +74,6 @@ $(window).scroll(function (){
           $currentItem = $(this).closest('.tabs__item'),
           activeItem = $currentItem.index(),
           $progressbarStatus = $tabs.find('.progressbar__status');
-          console.log(activeItem);
 
       if (control === 'prev') {
         $progressbarStatus.css({
@@ -177,7 +176,7 @@ $(window).scroll(function (){
   });
 
   // countDown
-  $(function() {
+/*  $(function() {
 
   $(window).on('load', function() {
     var labels = ['weeks', 'days', 'hours', 'minutes', 'seconds'],
@@ -243,7 +242,7 @@ $(window).scroll(function (){
         }
     });
   });
-  });
+  });*/
 
   $(function () {
     var $time = $('.form__time');
@@ -256,5 +255,25 @@ $(window).scroll(function (){
       }
     });
   });
+
+
+var clock;
+    
+    $(document).ready(function() {
+      var clock;
+      clock = $('#count').FlipClock({
+            clockFace: 'MinuteCounter',
+            autoStart: false,
+            callbacks: {
+              stop: function() {
+                $('.message').html('The clock has stopped!')
+              }
+            }
+        });
+            
+        clock.setTime(60*5);
+        clock.setCountdown(true);
+        clock.start();
+    });
 
 })(jQuery); // End of use strict
