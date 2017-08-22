@@ -570,8 +570,12 @@
           </button>
           <div class="test">
             <div class="row justify-content-center align-items-stretch">
-              <div class="col align-self-end"></div>
-              <div class="col col-16">
+              <div class="col align-self-end">
+                <div class="main-example">
+                  <div class="timer countdown-container" id="main-example"></div>
+                </div>
+              </div>
+              <div class="col col-16"> 
                 <form class="contactForm" method="POST" action="mail/mail.php">
                   <div class="tabs test__tabs">
                     <div class="tabs__item tabs__item--active">
@@ -1363,15 +1367,25 @@
     <script src="js/bootstrap.js"></script>
     <!-- Old browsers reject JavaScript-->
     <script src="js/jquery.reject.js"></script>
+    <script id="main-example-template" type="text/template">
+      <div class="time <%= label %>">
+        <span class="count curr top"><%= curr %></span>
+        <span class="count next top"><%= next %></span>
+        <span class="count next bottom"><%= next %></span>
+        <span class="count curr bottom"><%= curr %></span>
+        <span class="label"><%= label.length < 6 ? label : label.substr(0, 3)  %></span>
+      </div>
+      
+    </script>
     <!-- Slick-Slider JavaScript-->
     <script src="js/slick.js"></script>
     <!-- MatchHeight JavaScript-->
     <script src="js/jquery.matchHeight.js"></script>
-    <!-- Modernizr JavaScript-->
-    <script src="js/modernizr.custom.js"></script>
-    <script src="js/classie.js"></script>
     <!-- ionRange Slider JavaScript-->
     <script src="js/ion.rangeSlider.js"></script>
+    <!-- CountDown JavaScript-->
+    <script src="js/lodash.js"></script>
+    <script src="js/jquery.countdown.js"></script>
     <!-- Custom JavaScript-->
     <script src="js/main.js"></script>
     <!-- endbuild-->
