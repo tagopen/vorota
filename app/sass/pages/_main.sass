@@ -775,6 +775,21 @@ a
       font: 400 14px/16px $font-circe 
       color: $color-dark
       letter-spacing: 1px
+    &--transparent
+      background-color: transparent 
+      color: #fff
+      font: 300 14px/16px $font-circe 
+      border: 1px solid #fff
+      +placeholder
+        color: #fff
+        font: 400 14px/16px $font-circe
+      &:focus
+        background-color: transparent 
+        color: #fff
+        font: 300 14px/16px $font-circe 
+    &__time    
+      color: #fff
+      font: 700 14px/16px $font-circe
   &__btn  
     position: relative
     color: $color-dark  
@@ -1146,7 +1161,23 @@ a
   &__content
     background: white
     border: 1px solid #f1f1f1
-    box-shadow: 0 0 60px rgba(0, 0, 0, 0.15)  
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.15) 
+    &--header
+      padding: 50px 35px
+      background-color: #36539b
+      box-shadow: 0 0 60px rgba(0, 0, 0, 0.15)
+      border: 0
+      text-align: center
+      min-width: 320px
+      margin-left: auto
+      margin-right: auto
+  &__size
+    margin-left: auto 
+    margin-right: auto     
+  &__heading
+    color: #fff
+    font: 400 20px/30px $font-circe 
+    margin-bottom: 35px  
 .product
   &__modal
     &--size
@@ -1260,3 +1291,22 @@ a
     padding: 3px 0
     position: relative
     z-index: 25
+.checkbox-btn
+  &__control
+    display: none
+    &:checked 
+      &+ .checkbox-btn__box
+        background-color: #fff
+        color: #212121
+  &__box
+    position: relative
+    padding: 17px 20px 16px
+    width: 100%
+    color: #fff
+    font: 700 18px/20px $font-circe
+    overflow: hidden
+    text-transform: uppercase
+    cursor: pointer
+    text-align: center
+    background-color: transparent
+    border: 1px solid #fff

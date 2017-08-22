@@ -74,7 +74,7 @@
             <div class="contact">
               <div class="contact__box"><a class="contact__phone" href="tel:0983452277"> <i class="ic ic--phone"></i>
                   <div class="contact__number">(098) 345-22-77</div></a></div>
-              <button class="button contact__btn text-center" type="button" data-toggle="modal" data-target="#header__modal">Заказать обратный звонок
+              <button class="button contact__btn text-center" type="button" data-toggle="modal" data-target="#call__modal">Заказать обратный звонок
               </button>
             </div>
           </div>
@@ -545,7 +545,7 @@
             <div class="contact">
               <div class="contact__box"><a class="contact__phone" href="tel:0983452277"> <i class="ic ic--phonefff"></i>
                   <div class="contact__number contact__number--fff">(098) 345-22-77</div></a></div>
-              <button class="button contact__btn contact__btn--fff text-center" type="button" data-toggle="modal" data-target="#header__modal">Заказать обратный звонок
+              <button class="button contact__btn contact__btn--fff text-center" type="button" data-toggle="modal" data-target="#call__modal">Заказать обратный звонок
               </button>
             </div>
           </div>
@@ -1290,6 +1290,63 @@
               </div>
             </form>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="call__modal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal__size"> 
+        <div class="modal-content modal__content modal__content--header">
+          <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewbox="0 0 30 30">
+              <metadata>
+                <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+                  <rdf:rdf xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:description rdf:about=""></rdf:description>
+                  </rdf:rdf>
+                </x:xmpmeta>
+              </metadata>
+              <defs></defs>
+              <path class="modal__close--icon" d="M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z" transform="translate(-1169 -156)"></path>
+            </svg>
+          </button>
+          <div class="modal__heading">Мы знаем, что у вас есть много вопросов. Оставьте контактный номер и получите ответы от нашего эксперта в удобное для вас время.<i class="ic ic--headingborderrightblack heading__icon"></i></div>
+          <form class="contact__form contactForm contactForm--modal" method="post" action="./mail/mail.php">
+            <div class="row justify-content-center">
+              <div class="col-22 form-group">
+                <input class="form-control form__input form__input--transparent form__phone" aria-invalid="false" placeholder="Телефон" name="phone" type="tel" data-error="Введите телефон" required>
+              </div>
+              <div class="col-22">
+                <div>
+                  <div class="row justify-content-between">
+                    <div class="col-24 col-md-12">
+                      <div class="checkbox-btn">
+                        <input class="checkbox-btn__control" id="period-1" type="radio" name="period[]" value="Сейчас" checked>
+                        <label class="checkbox-btn__box" for="period-1">Сейчас</label>
+                      </div>
+                    </div>
+                    <div class="col-24 col-md-12">
+                      <div class="checkbox-btn">
+                        <input class="checkbox-btn__control" id="period-2" type="radio" name="period[]" value="По времени">
+                        <label class="checkbox-btn__box" for="period-2">По времени</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-22">
+                <div>
+                  <input class="form-control form__input modal__input form__time" aria-invalid="false" placeholder="Например: завтра в 12:00" name="time" type="text" data-error="Введите, когда вам позвонить">
+                  <p class="help-block with-errors"></p>
+                </div>
+              </div>
+              <div class="col-22">   
+                <button class="button form__btn self__btn modal__btn" name="form" value="модалка в хедере" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Заказать звонок эксперта<i class="ic ic--apple"></i></button>
+              </div>
+              <div class="col-22">
+                <div class="form__confident">Мы гарантируем что не будем Вам звонить. Нажимая на кнопку, вы соглашаетесь с <a class="form__confident--link" href="#">Политикой конфиденциальности</a></div>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>

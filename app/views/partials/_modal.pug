@@ -173,5 +173,40 @@ each item, i in content.index.product.modals
                   i.ic.ic--apple
               .col-24
                 .form__confident.form__confident--dark!=content.index.self.form.confident
-                                 
-
+#call__modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal__size 
+    .modal-content.modal__content.modal__content--header
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        svg(xmlns='http://www.w3.org/2000/svg', width='30', height='30', viewbox='0 0 30 30')
+          metadata
+            x:xmpmeta(xmlns:x='adobe:ns:meta/', x:xmptk='Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ')
+              rdf:rdf(xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#')
+                rdf:description(rdf:about='')
+          defs
+          path.modal__close--icon(d='M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z', transform='translate(-1169 -156)')
+      .modal__heading!=content.index.header.modal.heading
+        i.ic.ic--headingborderrightblack.heading__icon
+      form.contact__form.contactForm.contactForm--modal(method='post', action='./mail/mail.php')
+        .row.justify-content-center
+          .col-22.form-group
+            input.form-control.form__input.form__input--transparent.form__phone(aria-invalid='false', placeholder="Телефон", name='phone', type='tel', data-error='Введите телефон', required)
+          .col-22
+            div
+              .row.justify-content-between
+                .col-24.col-md-12
+                  .checkbox-btn
+                    input#period-1.checkbox-btn__control(type='radio', name='period[]', value='Сейчас', checked)
+                    label.checkbox-btn__box(for='period-1') Сейчас
+                .col-24.col-md-12
+                  .checkbox-btn
+                    input#period-2.checkbox-btn__control(type='radio', name='period[]', value='По времени')
+                    label.checkbox-btn__box(for='period-2') По времени
+          .col-22
+            div
+              input.form-control.form__input.modal__input.form__time(aria-invalid='false', placeholder="Например: завтра в 12:00", name='time', type='text', data-error='Введите, когда вам позвонить')
+              p.help-block.with-errors
+          .col-22    
+            button.button.form__btn.self__btn.modal__btn(name='form', value='модалка в хедере', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Заказать звонок эксперта
+              i.ic.ic--apple
+          .col-22
+            .form__confident!=content.index.self.form.confident                                  

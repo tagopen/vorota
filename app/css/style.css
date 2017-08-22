@@ -2263,6 +2263,44 @@ a:hover, a:focus {
   letter-spacing: 1px;
 }
 
+.form__input--transparent {
+  background-color: transparent;
+  color: #fff;
+  font: 300 14px/16px "Circe", sans-serif;
+  border: 1px solid #fff;
+}
+
+.form__input--transparent:-ms-input-placeholder {
+  color: #fff;
+  font: 400 14px/16px "Circe", sans-serif;
+}
+
+.form__input--transparent::-moz-placeholder {
+  color: #fff;
+  font: 400 14px/16px "Circe", sans-serif;
+}
+
+.form__input--transparent::-webkit-input-placeholder {
+  color: #fff;
+  font: 400 14px/16px "Circe", sans-serif;
+}
+
+.form__input--transparent::placeholder {
+  color: #fff;
+  font: 400 14px/16px "Circe", sans-serif;
+}
+
+.form__input--transparent:focus {
+  background-color: transparent;
+  color: #fff;
+  font: 300 14px/16px "Circe", sans-serif;
+}
+
+.form__input__time {
+  color: #fff;
+  font: 700 14px/16px "Circe", sans-serif;
+}
+
 .form__btn {
   position: relative;
   color: #212121;
@@ -2810,6 +2848,29 @@ a:hover, a:focus {
           box-shadow: 0 0 60px rgba(0, 0, 0, 0.15);
 }
 
+.modal__content--header {
+  padding: 50px 35px;
+  background-color: #36539b;
+  -webkit-box-shadow: 0 0 60px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 60px rgba(0, 0, 0, 0.15);
+  border: 0;
+  text-align: center;
+  min-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal__size {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal__heading {
+  color: #fff;
+  font: 400 20px/30px "Circe", sans-serif;
+  margin-bottom: 35px;
+}
+
 .product__modal--size {
   width: 1000px;
   max-width: none;
@@ -2983,4 +3044,27 @@ a:hover, a:focus {
   padding: 3px 0;
   position: relative;
   z-index: 25;
+}
+
+.checkbox-btn__control {
+  display: none;
+}
+
+.checkbox-btn__control:checked + .checkbox-btn__box {
+  background-color: #fff;
+  color: #212121;
+}
+
+.checkbox-btn__box {
+  position: relative;
+  padding: 17px 20px 16px;
+  width: 100%;
+  color: #fff;
+  font: 700 18px/20px "Circe", sans-serif;
+  overflow: hidden;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid #fff;
 }
