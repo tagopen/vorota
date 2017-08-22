@@ -92,6 +92,18 @@ $(window).scroll(function (){
     });
   });
 
+  if( $( window ).width() >= 760 ) {
+
+    /*CSS ANIMATION*/
+    $(window).scroll(function (){ 
+      $('.animate').each(function (){
+       if ($(window).scrollTop() + $(window).height() >= $(this).offset().top){
+        $(this).addClass($(this).data('animation')); 
+      } 
+    }); 
+    });﻿
+
+  }
 
   $('.result__slider').slick({
     slidesToShow: 1,

@@ -814,7 +814,7 @@ a
         color: #212121 
         &:hover,
         &:focus
-          color: #212121 
+          color: #212121  
 +r(760)
   .self
     padding: 140px 0 
@@ -822,8 +822,20 @@ a
     &__box
       text-align: left
     &__image
-      img
+      position: relative  
+    &__img
+      &--1
+        position: relative
         max-width: 380px 
+        z-index: 25
+      &--2
+        position: absolute  
+        left: -15px
+        top: 160px
+        z-index: 20
+        width: 0
+        &--active
+          width: 199px
     &__text
       font: 400 18px/27px $font-circe
       &--span       
@@ -834,27 +846,40 @@ a
     &__btn
       text-align: left 
       .ic
-        bottom: -35px     
+        bottom: -35px  
+@keyframes widthAnimate
+  0 
+    width: 0
+  100%
+    width: 199px
+.widthAnimate
+    animation: widthAnimate 5s forwards          
 +r(992)
   .self
     padding: 180px 0 200px
     &__image
       position: relative
-      img
+    &__img
+      &--1
         max-width: none
         position: absolute
-        left: 0
+        left: 50px
         top: -100px
+      &--2
+        top: 135px  
     &__text
       font: 400 20px/30px $font-circe 
       &--span       
         font: 700 20px/30px $font-circe
 +r(1200)
   .self
-    &__image
-      img
+    &__img
+      &--1
         top: -120px    
-        left: 50px   
+        left: 100px   
+      &--2
+        left: 25px
+        top: 110px  
   .form
     &__confident   
       font: 300 14px/21px $font-circe
@@ -937,9 +962,16 @@ a
 +comment("modals style")
 .tabs
   &__item
+    position: relative
     display: none
     &--active
       display: block
+    .ic
+      &--length,
+      &--height
+        position: absolute  
+        left: -70px
+        top: -30px
   &__text
     color: #fff
     margin-bottom: 30px
@@ -984,6 +1016,7 @@ a
     text-transform: uppercase    
     margin-bottom: 20px
     text-align: center
+    padding: 0 65px
   &__btn
     background-color: white
     border-radius: 5px
@@ -1017,6 +1050,7 @@ a
   border-radius: 20px
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.36) 25%, rgba(255, 255, 255, 0) 25%, transparent 50%, rgba(255, 255, 255, 0.36) 50%, rgba(255, 255, 255, 0.36) 75%, transparent 75%, transparent)
   background-size: 10px 10px
+  margin-bottom: 25px
   &__status
     position: absolute
     top: 0

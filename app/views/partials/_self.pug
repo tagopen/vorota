@@ -7,7 +7,8 @@ section.self
           .self__text!=content.index.self.text
       .col-md-8.col-lg-10.hidden-sm-down
         .self__image
-          img(src!=content.index.self.img.src, alt!=content.index.self.img.alt)
+          img.self__img.self__img--1(src!=content.index.self.img.src, alt!=content.index.self.img.alt)
+          img.self__img.self__img--2.animate(src!=content.index.self.img1.src, alt!=content.index.self.img1.alt, data-animation="widthAnimate")
       .col-24.col-lg-18      
         form.contact__form.contactForm.contactForm--modal(method='post', action='./mail/mail.php')
           .row
