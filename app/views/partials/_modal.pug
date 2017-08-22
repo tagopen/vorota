@@ -1,5 +1,5 @@
 #sibassa__modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel', aria-hidden='true')
-  .modal-dialog.modal-lg
+  .modal-dialog.modal__test--size
     .modal-content.modal__test
       button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
         svg(xmlns='http://www.w3.org/2000/svg', width='30', height='30', viewbox='0 0 30 30')
@@ -70,7 +70,7 @@
                             button.test__btn.form__btn.test__btn--submit(type="submit")!= item.formGroup.submit.text
                               i(class=item.formGroup.submit.icon)
 #estimate.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel', aria-hidden='true')
-  .modal-dialog.modal-lg
+  .modal-dialog.modal__test--size
     .modal-content.modal__test
       button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
         svg(xmlns='http://www.w3.org/2000/svg', width='30', height='30', viewbox='0 0 30 30')
@@ -81,9 +81,12 @@
           defs
           path.modal__close--icon(d='M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z', transform='translate(-1169 -156)')
       .test
-        .row.justify-content-center.align-items-stretch
-          .col-24.col-lg-9
+        .row
+          .col-24.col-lg-9.d-flex.align-items-end.justify-content-center
             .test__container
+              .test__image
+                img(src="img/blank.png")
+              .test__count--heading Осталсь времени:
               #count
           .col-24.col-lg-15
             form.contactForm(method="POST", action="mail/mail.php")

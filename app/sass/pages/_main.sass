@@ -991,11 +991,28 @@ a
         position: absolute  
         left: -70px
         top: -30px
+        display: none
   &__text
     color: #fff
     margin-bottom: 30px
     text-align: center
-    font: 400 18px/27px $font-circe    
+    font: 400 18px/27px $font-circe  
++r(760)
+  .tabs
+    &__item
+      .ic   
+        &--length,
+        &--height   
+          left: -20px
+          top: -130px
++r(992)
+  .tabs
+    &__item
+      .ic   
+        &--length,
+        &--height   
+          left: -70px
+          top: -30px          
 .modal
   &-content
     position: relative
@@ -1027,15 +1044,36 @@ a
       position: absolute
       right: 0
       bottom: -30px
++r(760)
+  .modal
+    &__test
+      &--size
+        width: 760px
+        margin: 0 auto
+        max-width: none 
++r(992)       
+  .modal
+    &__test
+      &--size
+        width: 992px
+        margin: 0 auto
+        max-width: none      
++r(1200)       
+  .modal
+    &__test
+      &--size
+        width: 1000px
+        margin: 0 auto
+        max-width: none          
 .test
   padding: 0 15px
   &__heading
     color: #fff
-    font: 700 42px/62px $font-circe 
+    font: 700 22px/32px $font-circe 
     text-transform: uppercase    
     margin-bottom: 20px
     text-align: center
-    padding: 0 65px
+    padding: 25px 15px
   &__btn
     background-color: white
     border-radius: 5px
@@ -1063,6 +1101,28 @@ a
       &:hover,
       &:focus
         background-color: #2dca88
+  &__image
+    img
+      max-width: 100%    
+  &__tabs
+    position: relative
+    z-index: 25  
++r(760)
+  .test
+    &__heading
+      font: 700 42px/62px $font-circe 
+      padding: 30px 100px 
+  .tabs
+    &__item    
+      .ic
+        &--length,
+        &--height  
+          display: inline-block   
++r(992)
+  .test        
+    &__heading
+      padding: 0 65px 
+      margin-bottom: 40px  
 .progressbar
   position: relative
   height: 15px
@@ -1112,6 +1172,13 @@ a
   background: #fff    
 .slides
   margin-bottom: 60px  
+  &__info
+    text-align: center
+    color: #fff
+    font: 300 14px/21px $font-circe  
+    margin-bottom: 0
+    .ic
+      margin-right: 5px
 .slider  
   &-horizontal
     width: 100% !important
@@ -1160,6 +1227,8 @@ a
       min-height: 550px   
 +comment("product modal style")       
 .modal
+  &-dialog
+    margin: 0 auto
   &__content
     background: white
     border: 1px solid #f1f1f1
@@ -1312,87 +1381,40 @@ a
     text-align: center
     background-color: transparent
     border: 1px solid #fff
-+comment("countdown")
-.main-example
++comment("countdown style")    
+.test
+  &__count
+    &--heading
+      color: #fff
+      font: 700 24px/30px $font-circe 
+      margin-bottom: 20px
+      text-align: center
+.flip-clock-wrapper 
+  width: 220px
   margin: 0 auto
-  width: 355px
-  .countdown-container
-    height: 130px
-  .time
-    border-radius: 5px
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)
-    display: inline-block
-    text-align: center
-    position: relative
-    height: 80px
-    width: 65px
-    perspective: 479px
-    backface-visibility: hidden
-    transform: translateZ(0)
-    transform: translate3d(0, 0, 0)
-  .count
-    background: #202020
-    color: #f8f8f8
-    display: block
-    font-family: 'Oswald', sans-serif
-    font-size: 2em
-    line-height: 2.4em
-    overflow: hidden
-    position: absolute
-    text-align: center
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8)
-    top: 0
-    width: 100%
-    transform: translateZ(0)
-    transform-style: flat
-    &.top
-      border-top: 1px solid rgba(255, 255, 255, 0.2)
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1)
-      border-radius: 5px 5px 0 0
-      height: 50%
-      transform-origin: 50% 100%
-    &.bottom
-      background-image: linear-gradient(rgba(255, 255, 255, 0.1), transparent)
-      border-top: 1px solid #000
-      border-bottom: 1px solid #000
-      border-radius: 0 0 5px 5px
-      line-height: 0
-      height: 50%
-      top: 50%
-      transform-origin: 50% 0
-    &.next
-  .label
-    font-size: normal
-    margin-top: 5px
-    display: block
-    position: absolute
-    top: 95px
-    width: 100%
-  .count
-    &.curr.top
-      transform: rotateX(0deg)
-      z-index: 3
-    &.next.bottom
-      transform: rotateX(90deg)
-      z-index: 2
-  .flip .count
-    &.curr.top
-      transition: all 250ms ease-in-out
-      transform: rotateX(-90deg)
-    &.next.bottom
-      transform: rotateX(0deg)
-
-@media screen and (max-width: 48em)
-  .main-example
-    width: 100%
-    .countdown-container
-      height: 100px
-    .time
-      height: 70px
-      width: 48px
-    .count
-      font-size: 1.5em
-      line-height: 70px
-    .label
-      font-size: 0.8em
-      top: 72px
+  ul 
+    width: 35px
+    height: 70px
+    li 
+      a 
+        div.up 
+          div.inn
+            color: $color-dark
+            background: #fff
+        div.down
+          div.inn  
+            color: $color-dark
+            background: #fff 
+        div
+          div.inn
+            font: 300 50px/70px $font-circe      
+.flip-clock-dot
+  background-color: #fff
+.flip-clock-divider
+  height: 70px  
+.flip-clock-dot.top
+  top: 25px  
+.flip-clock-dot.bottom
+  bottom: 15px  
+.flip-clock-divider .flip-clock-label
+  display: none  
