@@ -577,7 +577,7 @@
                     <div class="tabs__item tabs__item--active">
                       <h2 class="test__heading">Чертеж для откатных ворот бесплатно?</h2>
                       <div class="progressbar">
-                        <div class="progressbar__status"><span class="progressbar__value">0%</span></div>
+                        <div class="progressbar__status"><span class="progressbar__value progressbar__value--hidden">0%</span></div>
                       </div>
                       <div class="tabs__text">Вы получите точный до миллиметра чертеж, указав размер ворот. Успейте до окончания таймера и чертеж достанется Вам совершенно бесплатно. Через 5 минут его стоимость составит 398 грн. Спешите!</div>
                       <div class="button-group text-center">
@@ -591,8 +591,10 @@
                         <div class="progressbar__status"><span class="progressbar__value">25%</span></div>
                       </div>
                       <div class="slides">
+                        <p class="slides__info info"><i class="info__icon ic ic--info"></i>Перемещайте ползунок...
+                        </p>
                         <div class="slides__item">
-                          <input class="slides__control" id="progressbar" type="text" name="range1" data-provide="slider" data-slider-tooltip="hide" value="3">
+                          <input class="slides__control" id="range1" type="text" name="range1">
                         </div>
                       </div>
                       <div class="button-group text-center">
@@ -608,8 +610,10 @@
                         <div class="progressbar__status"><span class="progressbar__value">50%</span></div>
                       </div>
                       <div class="slides">
+                        <p class="slides__info info"><i class="info__icon ic ic--info"></i>Перемещайте ползунок...
+                        </p>
                         <div class="slides__item">
-                          <input class="slides__control" id="progressbar" type="text" name="range2" data-provide="slider" data-slider-tooltip="hide" value="3">
+                          <input class="slides__control" id="range2" type="text" name="range2">
                         </div>
                       </div>
                       <div class="button-group text-center">
@@ -627,21 +631,21 @@
                       <div class="row">
                         <div class="col-8 text-center"><img class="radiobtns__img img-fluid" src="img/item-1.jpg" alt="Профнастил">
                           <div class="radiobtns">
-                            <input class="radiobtns__control" id="radio1" type="radio" name="period[]" value="Профнастил">
+                            <input class="radiobtns__control" id="radio1" type="radio" name="period[]" value="Профнастил" checked="{&quot;checked&quot;:true}">
                             <label class="radiobtns__label" for="radio1"><span class="radiobtns__check"></span>Профнастил
                             </label>
                           </div>
                         </div>
                         <div class="col-8 text-center"><img class="radiobtns__img img-fluid" src="img/item-2.jpg" alt="Дерево">
                           <div class="radiobtns">
-                            <input class="radiobtns__control" id="radio2" type="radio" name="period[]" value="Дерево">
+                            <input class="radiobtns__control" id="radio2" type="radio" name="period[]" value="Дерево" checked="{&quot;checked&quot;:false}">
                             <label class="radiobtns__label" for="radio2"><span class="radiobtns__check"></span>Дерево
                             </label>
                           </div>
                         </div>
                         <div class="col-8 text-center"><img class="radiobtns__img img-fluid" src="img/item-3.jpg" alt="Ковка">
                           <div class="radiobtns">
-                            <input class="radiobtns__control" id="radio3" type="radio" name="period[]" value="Ковка">
+                            <input class="radiobtns__control" id="radio3" type="radio" name="period[]" value="Ковка" checked="{&quot;checked&quot;:false}">
                             <label class="radiobtns__label" for="radio3"><span class="radiobtns__check"></span>Ковка
                             </label>
                           </div>
@@ -703,16 +707,16 @@
                     <div class="tabs__item tabs__item--active"><i class="ic ic--length"></i>
                       <h2 class="test__heading">Какой проем ворот (длина)?</h2>
                       <div class="progressbar">
-                        <div class="progressbar__status"><span class="progressbar__value">0%</span></div>
+                        <div class="progressbar__status"><span class="progressbar__value progressbar__value--hidden">0%</span></div>
                       </div>
                       <div class="slides">
+                        <p class="slides__info info"><i class="info__icon ic ic--info"></i>Перемещайте ползунок...
+                        </p>
                         <div class="slides__item">
-                          <input class="slides__control" type="text" name="range1" data-provide="slider" data-slider-max="8.5" data-slider-step="0.5" data-slider-value="4" data-slider-tooltip="hide">
+                          <input class="slides__control" id="range3" type="text" name="range3">
                         </div>
                       </div>
                       <div class="button-group text-center">
-                        <button class="button test__btn test__btn--prev" href="#" data-tabs-control="prev">Назад
-                        </button>
                         <button class="button test__btn test__btn--next" href="#" data-tabs-control="next">Далее
                         </button>
                       </div>
@@ -723,13 +727,14 @@
                         <div class="progressbar__status"><span class="progressbar__value">33%</span></div>
                       </div>
                       <div class="slides">
+                        <p class="slides__info info"><i class="info__icon ic ic--info"></i>Перемещайте ползунок...
+                        </p>
                         <div class="slides__item">
-                          <input class="slides__control" type="text" name="range2" data-provide="slider" data-slider-max="4.5" data-slider-step="0.5" data-slider-value="1.5" data-slider-tooltip="hide">
+                          <input class="slides__control" id="range4" type="text" name="range4">
                         </div>
                       </div>
                       <div class="button-group text-center">
-                        <button class="button test__btn test__btn--prev" href="#" data-tabs-control="prev">Назад
-                        </button>
+                        <button class="button test__btn test__btn--prev" href="#" data-tabs-control="prev">Назад</button>
                         <button class="button test__btn test__btn--next" href="#" data-tabs-control="next">Далее
                         </button>
                       </div>
@@ -742,29 +747,28 @@
                       <div class="row">
                         <div class="col"><img class="radiobtns__img img-fluid" src="img/item-1.jpg" alt="Профнастил">
                           <div class="radiobtns">
-                            <input class="radiobtns__control" id="radio11" type="radio" name="period[]" value="Профнастил">
+                            <input class="radiobtns__control" id="radio11" type="radio" name="period[]" value="Профнастил" checked="{&quot;checked&quot;:true}">
                             <label class="radiobtns__label" for="radio11"><span class="radiobtns__check"></span>Профнастил
                             </label>
                           </div>
                         </div>
                         <div class="col"><img class="radiobtns__img img-fluid" src="img/item-2.jpg" alt="Дерево">
                           <div class="radiobtns">
-                            <input class="radiobtns__control" id="radio12" type="radio" name="period[]" value="Дерево">
+                            <input class="radiobtns__control" id="radio12" type="radio" name="period[]" value="Дерево" checked="{&quot;checked&quot;:false}">
                             <label class="radiobtns__label" for="radio12"><span class="radiobtns__check"></span>Дерево
                             </label>
                           </div>
                         </div>
                         <div class="col"><img class="radiobtns__img img-fluid" src="img/item-3.jpg" alt="Ковка">
                           <div class="radiobtns">
-                            <input class="radiobtns__control" id="radio13" type="radio" name="period[]" value="Ковка">
+                            <input class="radiobtns__control" id="radio13" type="radio" name="period[]" value="Ковка" checked="{&quot;checked&quot;:false}">
                             <label class="radiobtns__label" for="radio13"><span class="radiobtns__check"></span>Ковка
                             </label>
                           </div>
                         </div>
                       </div>
                       <div class="button-group text-center">
-                        <button class="button test__btn test__btn--prev" href="#" data-tabs-control="prev">Назад
-                        </button>
+                        <button class="button test__btn test__btn--prev" href="#" data-tabs-control="prev">Назад</button>
                         <button class="button test__btn test__btn--next" href="#" data-tabs-control="next">Далее
                         </button>
                       </div>

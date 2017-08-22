@@ -22,12 +22,15 @@
                     h2.test__heading!= item.heading
                     .progressbar
                       .progressbar__status
-                        span.progressbar__value!= ~~(100 / (content.site.modal.test1.tabs.items.length - 1) * i) + "%"
+                        span.progressbar__value(class={"progressbar__value--hidden" : i === 0})!= ~~(100 / (content.site.modal.test1.tabs.items.length - 1) * i) + "%"
 
                     if (item.slides)
                       .slides
+                        p.slides__info.info
+                          i.info__icon(class=item.slides.info.icon)
+                          != item.slides.info.text
                         .slides__item
-                          input#progressbar.slides__control(type="text", name=item.slides.name, data-provide="slider", data-slider-tooltip="hide", value="3")
+                          input.slides__control(id=item.slides.id, type="text", name=item.slides.name)
                     if (item.descr)
                       .tabs__text!= item.descr
                     if (item.radiobtns)
@@ -36,16 +39,17 @@
                           .col-8.text-center
                             img.radiobtns__img.img-fluid(src=radio.img.src, alt=radio.img.alt)
                             .radiobtns
-                              input.radiobtns__control(id="radio" + (i + 1), type="radio", name=radio.name, value=radio.value)
+                              input.radiobtns__control(id="radio" + (i + 1), type="radio", name=radio.name, value=radio.value, checked={"checked" : i === 0})
                               label.radiobtns__label(for="radio" + (i + 1))
                                 span.radiobtns__check
                                 != radio.value  
                     if (item.btns)
                       .button-group.text-center
                         if (item.btns.prev)
-                          button.button.test__btn(class=item.btns.prev.class, href="#", data-tabs-control="prev")!= item.btns.prev.text
-                            if (item.btns.prev.icon)
-                              i(class=item.btns.prev.icon)
+                          if (i > 0)
+                            button.button.test__btn(class=item.btns.prev.class, href="#", data-tabs-control="prev")!= item.btns.prev.text
+                              if (item.btns.prev.icon)
+                                i(class=item.btns.prev.icon)
                         if (item.btns.next)
                           button.button.test__btn(class=item.btns.next.class, href="#", data-tabs-control="next")!= item.btns.next.text
                             if (item.btns.next.icon)
@@ -86,11 +90,14 @@
                     h2.test__heading!= item.heading
                     .progressbar
                       .progressbar__status
-                        span.progressbar__value!= ~~(100 / (content.site.modal.test2.tabs.items.length - 1) * i) + "%"
+                        span.progressbar__value(class={"progressbar__value--hidden" : i === 0})!= ~~(100 / (content.site.modal.test2.tabs.items.length - 1) * i) + "%"
                     if (item.slides)
                       .slides
+                        p.slides__info.info
+                          i.info__icon(class=item.slides.info.icon)
+                          != item.slides.info.text
                         .slides__item
-                            input.slides__control(type="text", name=item.slides.name, data-provide="slider", data-slider-min=item.slides.minPostion, data-slider-max=item.slides.maxPostion, data-slider-step=item.slides.step, data-slider-value=item.slides.value, data-slider-tooltip="hide")
+                          input.slides__control(id=item.slides.id, type="text", name=item.slides.name)
                     if (item.descr)
                       .tabs__text!= item.descr
                     if (item.radiobtns)
@@ -99,14 +106,15 @@
                           .col
                             img.radiobtns__img.img-fluid(src=radio.img.src, alt=radio.img.alt)
                             .radiobtns
-                              input.radiobtns__control(id="radio1" + (i + 1), type="radio", name=radio.name, value=radio.value)
+                              input.radiobtns__control(id="radio1" + (i + 1), type="radio", name=radio.name, value=radio.value, checked={"checked" : i === 0})
                               label.radiobtns__label(for="radio1" + (i + 1))
                                 span.radiobtns__check
                                 != radio.value
                     if (item.btns)
                       .button-group.text-center
                         if (item.btns.prev)
-                          button.button.test__btn(class=item.btns.prev.class, href="#", data-tabs-control="prev")!= item.btns.prev.text
+                          if (i > 0)
+                            button.button.test__btn(class=item.btns.prev.class, href="#", data-tabs-control="prev")!= item.btns.prev.text
                             if (item.btns.prev.icon)
                               i(class=item.btns.prev.icon)
                         if (item.btns.next)

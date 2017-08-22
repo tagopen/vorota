@@ -143,7 +143,35 @@ $("#progressbar").slider({
     value: 2
 });
 */
-$("#progressbar").ionRangeSlider({
+$("#range1").ionRangeSlider({
+  type: "single",
+  grid: true,
+  step: 0.5,
+  min: 2,
+  max: 8,
+  values: [2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8],
+  hide_min_max: true,
+});
+$("#range2").ionRangeSlider({
+  type: "single",
+  grid: true,
+  step: 0.5,
+  min: 2,
+  max: 8,
+  values: [2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8],
+  hide_min_max: true,
+});
+$("#range3").ionRangeSlider({
+  type: "single",
+  grid: true,
+  step: 0.5,
+  min: 2,
+  max: 8,
+  values: [2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8],
+  hide_min_max: true,
+});
+
+$("#range4").ionRangeSlider({
   type: "single",
   grid: true,
   step: 0.5,

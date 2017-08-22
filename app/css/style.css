@@ -2740,6 +2740,10 @@ a:hover, a:focus {
   color: #fff;
 }
 
+.progressbar__value--hidden {
+  display: none;
+}
+
 .irs-grid-pol.small {
   display: none;
 }
