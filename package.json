@@ -54,6 +54,7 @@
     "gulp-util": "^3.0.8",
     "gulp.spritesmith": "^6.4.0",
     "imagemin-pngquant": "^5.0.0",
+    "select2": "^4.0.3",
     "vinyl-ftp": "^0.6.0"
   },
   "dependencies": {
@@ -64,6 +65,8 @@
     "font-awesome": "^4.7.0",
     "ion-rangeslider": "^2.2.0",
     "jquery": "^3.2.1",
+    "jquery-countdown": "^2.2.0",
+    "lodash": "^4.17.4",
     "tether": "^1.4.0"
   }
 }

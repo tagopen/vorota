@@ -12,7 +12,10 @@
       .test
         .row.justify-content-center.align-items-stretch
           .col.align-self-end
-          .col.col-16
+            .main-example
+              .timer(class="countdown-container", id="main-example")
+
+          .col.col-16 
             form.contactForm(method="POST", action="mail/mail.php")
               .tabs.test__tabs
                 each item, i in content.site.modal.test1.tabs.items
