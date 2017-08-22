@@ -143,6 +143,10 @@ $("#progressbar").slider({
     value: 2
 });
 */
+
+
+
+
 $("#range1").ionRangeSlider({
   type: "single",
   grid: true,
