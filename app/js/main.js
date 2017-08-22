@@ -133,7 +133,7 @@ $(window).scroll(function (){
     }
     ]
   });
-
+/*
 $("#progressbar").slider({
     ticks: [1, 2, 3, 4, 5, 6],
     ticks_labels: ['3', '4', '5', '6', '7', '8'],
@@ -141,6 +141,17 @@ $("#progressbar").slider({
     max: 8,
     step: 0.5,
     value: 2
+});
+*/
+$("#progressbar").ionRangeSlider({
+  type: "single",
+  grid: true,
+  step: 0.5,
+  min: 2,
+  max: 8,
+  from: 5,
+  values: [2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8],
+  hide_min_max: true,
 });
 
 })(jQuery); // End of use strict

@@ -73,6 +73,7 @@ gulp.task('scripts', () => {
     'node_modules/select2/dist/js/select2.js',
     'node_modules/bootstrap-slider/dist/bootstrap-slider.js',
     'node_modules/bootstrap-validator/dist/validator.js',
+    'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
   ])
   .pipe($.plumber())
   .pipe(gulp.dest(path.src.js));
