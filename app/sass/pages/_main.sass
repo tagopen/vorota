@@ -24,6 +24,8 @@ a
       border-color: $form-control-error-border-color
   &--relative
     position: relative
+button
+  cursor: pointer    
 [type=submit]:disabled
   animation: progress-bar-stripes 2s linear infinite
   background-image: $btn-submit-loading-bg
@@ -42,7 +44,8 @@ a
   align-items: center
 .modal-dialog
   position: relative
-  margin: auto
+  margin-left: auto
+  margin-right: auto
 .body
   display: flex
   flex-direction: column
@@ -1242,7 +1245,7 @@ a
 +comment("product modal style")       
 .modal
   &-dialog
-    margin: 0 auto
+    margin: auto
   &__content
     background: white
     border: 1px solid #f1f1f1
@@ -1257,8 +1260,7 @@ a
       margin-left: auto
       margin-right: auto
   &__size
-    margin-left: auto 
-    margin-right: auto     
+    margin: auto     
   &__heading
     color: #fff
     font: 400 20px/30px $font-circe 
