@@ -469,18 +469,16 @@
             <div class="col-24 col-lg-18">     
               <form class="contact__form contactForm contactForm--modal" method="post" action="./mail/mail.php">
                 <div class="row">
-                  <div class="col-24 col-md-8 col-lg-9 form__group from__group--relative">
-                    <div class="dropdown">
-                      <button class="btn btn-secondary dropdown-toggle" id="dropdownMenuButton" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ic ic--viber"></i></button>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <div class="dropdown-item"><i class="ic ic--mail"></i></div>
-                        <div class="dropdown-item"><i class="ic ic--massenger"></i></div>
-                        <div class="dropdown-item"><i class="ic ic--telegram"></i></div>
-                      </div>
-                    </div>
-                    <input class="form-control form__input form__phone" aria-invalid="false" placeholder="Телефон" name="phone" type="tel" data-error="Введите телефон" required>
+                  <div class="form-group form-group--relative col-24 col-md-12">
+                    <select class="select select--dropdown" name="method">
+                      <option value="viber" data-content="&lt;i class=&quot;ic ic--viber&quot;&gt;&lt;/i&gt;">viber</option>
+                      <option value="email" data-content="&lt;i class=&quot;ic ic--mail&quot;&gt;&lt;/i&gt;">email</option>
+                      <option value="massenger" data-content="&lt;i class=&quot;ic ic--massenger&quot;&gt;&lt;/i&gt;">massenger</option>
+                      <option value="telegram" data-content="&lt;i class=&quot;ic ic--telegram&quot;&gt;&lt;/i&gt;">telegram</option>
+                    </select>
+                    <input class="form-control form__input form__phone" name="phone" placeholder="Телефон">
                   </div>
-                  <div class="col-24 col-md-16 col-lg-15">
+                  <div class="col-24 col-md-12">
                     <button class="button form__btn self__btn" name="form" value="динамика цен" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Получить доступ к инструкции <span class="form__btn--span">| PDF, 1 мб</span><i class="ic ic--apple"></i></button>
                   </div>
                   <div class="col-24">
@@ -673,14 +671,14 @@
                       </div>
                       <div class="tabs__text">Оставьте свой телефон и мы вышлем точный до миллиметра чертеж под Ваши ворота. Никаких звонков! Чертеж придет в удобный Вам мессенджер: Viber, Telegram, Facebook Messenger или WhatsApp.</div>
                       <div class="row">
-                        <div class="form-group col-12">
+                        <div class="form-group form-group--relative col-12">
                           <select class="select select--dropdown" name="method">
                             <option value="viber" data-content="&lt;i class=&quot;ic ic--viber&quot;&gt;&lt;/i&gt;">viber</option>
                             <option value="email" data-content="&lt;i class=&quot;ic ic--mail&quot;&gt;&lt;/i&gt;">email</option>
                             <option value="massenger" data-content="&lt;i class=&quot;ic ic--massenger&quot;&gt;&lt;/i&gt;">massenger</option>
                             <option value="telegram" data-content="&lt;i class=&quot;ic ic--telegram&quot;&gt;&lt;/i&gt;">telegram</option>
                           </select>
-                          <input name="phone" placeholder="Телефон">
+                          <input class="form-control form__input form__phone" name="phone" placeholder="Телефон">
                         </div>
                         <div class="form-group col-12">
                           <button class="test__btn form__btn test__btn--submit" type="submit">Получить чертеж<i class="ic ic--apple"></i></button>
@@ -801,7 +799,7 @@
                       </div>
                       <div class="tabs__text">Оставьте свой телефон и мы вышлем точный до миллиметра чертеж под Ваши ворота. Никаких звонков! Чертеж придет в удобный Вам мессенджер: Viber, Telegram, Facebook Messenger или WhatsApp.</div>
                       <div class="row">
-                        <div class="form-group form__group--relative col-12">
+                        <div class="form-group form-group--relative col-12">
                           <select class="select select--dropdown" name="method">
                             <option value="viber" data-content="&lt;i class=&quot;ic ic--viber&quot;&gt;&lt;/i&gt;">viber</option>
                             <option value="email" data-content="&lt;i class=&quot;ic ic--mail&quot;&gt;&lt;/i&gt;">email</option>

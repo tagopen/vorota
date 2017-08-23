@@ -62,13 +62,13 @@
                     if (item.formGroup)
                       .row
                         if (item.formGroup.inputs)
-                          .form-group.col-12
+                          .form-group.form-group--relative.col-12
                             if (item.formGroup.select)
                               select.select.select--dropdown(name=item.formGroup.select.name)
                                 each option in item.formGroup.select.options
                                   option(value=option.text, data-content='<i class="' + option.icon + '"></i>')!= option.text
                             each input in item.formGroup.inputs
-                              input(type=input.type, name=input.name, placeholder=input.placeholder)
+                              input.form-control.form__input.form__phone(type=input.type, name=input.name, placeholder=input.placeholder)
                         if (item.formGroup.submit)
                           .form-group.col-12
                             button.test__btn.form__btn.test__btn--submit(type="submit")!= item.formGroup.submit.text
@@ -137,7 +137,7 @@
                     if (item.formGroup)
                       .row
                         if (item.formGroup.inputs)
-                          .form-group.form__group--relative.col-12
+                          .form-group.form-group--relative.col-12
                             if (item.formGroup.select)
                               select.select.select--dropdown(name=item.formGroup.select.name)
                                 each option in item.formGroup.select.options

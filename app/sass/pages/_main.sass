@@ -18,13 +18,12 @@ a
 .text-danger
   color: $text-danger
   text-align: left
-.form
-  &__group
-    &--relative
-      position: relative  
-.form-group.error
-  .form-control
-    border-color: $form-control-error-border-color
+.form-group
+  &.error
+    .form-control
+      border-color: $form-control-error-border-color
+  &--relative
+    position: relative
 [type=submit]:disabled
   animation: progress-bar-stripes 2s linear infinite
   background-image: $btn-submit-loading-bg

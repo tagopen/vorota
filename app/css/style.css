@@ -1701,12 +1701,12 @@ a:hover, a:focus {
   text-align: left;
 }
 
-.form__group--relative {
-  position: relative;
-}
-
 .form-group.error .form-control {
   border-color: #b94a48;
+}
+
+.form-group--relative {
+  position: relative;
 }
 
 [type=submit]:disabled {

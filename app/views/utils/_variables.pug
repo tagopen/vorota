@@ -831,7 +831,40 @@
           text: "Оставьте телефон и мы вышлем Вам пошаговую инструкцию <span class=\"self__text--span\">(28 страниц)</span> для самостоятельного изготовления и установки ворот. Никаких звонков! Инструкция придет в удобный Вам мессенджер: Viber, Telegram, Facebook Messenger или WhatsApp.",
           form: {
             btn: "Получить доступ к инструкции <span class=\"form__btn--span\">| PDF, 1 мб</span>",
-            confident: "Мы гарантируем что не будем Вам звонить. Нажимая на кнопку, вы соглашаетесь с <a class=\"form__confident--link\" href=\"#\">Политикой конфиденциальности</a>"
+            confident: "Мы гарантируем что не будем Вам звонить. Нажимая на кнопку, вы соглашаетесь с <a class=\"form__confident--link\" href=\"#\">Политикой конфиденциальности</a>",
+            formGroup: {
+              select: {
+                name: "method",
+                options: [
+                  {
+                    text: "viber",
+                    icon: "ic ic--viber"
+                  },
+                  {
+                    text: "email",
+                    icon: "ic ic--mail"
+                  },
+                  {
+                    text: "massenger",
+                    icon: "ic ic--massenger"
+                  },
+                  {
+                    text: "telegram",
+                    icon: "ic ic--telegram"
+                  },
+                ]
+              },
+              inputs: [
+                {
+                  name: "phone",
+                  placeholder: "Телефон"
+                }
+              ],
+              submit: {
+                text: "Получить чертеж",
+                icon: "ic ic--apple"
+              }
+            }
           },
           img: {
             src: "img/self.png",
