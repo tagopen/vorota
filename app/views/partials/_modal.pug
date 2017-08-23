@@ -40,12 +40,16 @@
                       .tabs__text!= item.descr
                     if (item.radiobtns)
                       .row
-                        each radio, i in item.radiobtns
+                        each radio, j in item.radiobtns
                           .col-8.text-center
-                            img.radiobtns__img.img-fluid(src=radio.img.src, alt=radio.img.alt)
+                            label(for="radio" + (j + 1))
+                              img.radiobtns__img.img-fluid(src=radio.img.src, alt=radio.img.alt)
                             .radiobtns
-                              input.radiobtns__control(id="radio" + (i + 1), type="radio", name=radio.name, value=radio.value, checked={"checked" : i === 0})
-                              label.radiobtns__label(for="radio" + (i + 1))
+                              if (j === 0)
+                                input.radiobtns__control(id="radio" + (j + 1), type="radio", name=radio.name, value=radio.value, checked)
+                              else
+                                input.radiobtns__control(id="radio" + (j + 1), type="radio", name=radio.name, value=radio.value)
+                              label.radiobtns__label(for="radio" + (j + 1))
                                 span.radiobtns__check
                                 != radio.value  
                     if (item.btns)
@@ -115,12 +119,16 @@
                       .tabs__text!= item.descr
                     if (item.radiobtns)
                       .row
-                        each radio, i in item.radiobtns
+                        each radio, j in item.radiobtns
                           .col-8.text-center
-                            img.radiobtns__img.img-fluid(src=radio.img.src, alt=radio.img.alt)
+                            label(for="radio" + (j + 1))
+                              img.radiobtns__img.img-fluid(src=radio.img.src, alt=radio.img.alt)
                             .radiobtns
-                              input.radiobtns__control(id="radio" + (i + 1), type="radio", name=radio.name, value=radio.value, checked={"checked" : i === 0})
-                              label.radiobtns__label(for="radio" + (i + 1))
+                              if (j === 0)
+                                input.radiobtns__control(id="radio" + (j + 1), type="radio", name=radio.name, value=radio.value, checked)
+                              else
+                                input.radiobtns__control(id="radio" + (j + 1), type="radio", name=radio.name, value=radio.value)
+                              label.radiobtns__label(for="radio" + (j + 1))
                                 span.radiobtns__check
                                 != radio.value  
                     if (item.btns)
