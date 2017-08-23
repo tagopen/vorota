@@ -14,14 +14,14 @@ section.self
           if (content.index.self.form.formGroup)
             .row
               if (content.index.self.form.formGroup.inputs)
-                .form-group.form-group--relative.col-24.col-md-12
+                .form-group.form-group--relative.col-24.col-md-10
                   if (content.index.self.form.formGroup.select)
                     select.select.select--dropdown(name=content.index.self.form.formGroup.select.name)
                       each option in content.index.self.form.formGroup.select.options
                         option(value=option.text, data-content='<i class="' + option.icon + '"></i>')!= option.text
                   each input in content.index.self.form.formGroup.inputs
                     input.form-control.form__input.form__phone(type=input.type, name=input.name, placeholder=input.placeholder)
-              .col-24.col-md-12
+              .col-24.col-md-14
                 button.button.form__btn.self__btn(name='form', value='динамика цен', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...")!=content.index.self.form.btn
                   i.ic.ic--apple
               .col-24
