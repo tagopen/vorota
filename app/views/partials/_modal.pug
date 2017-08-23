@@ -62,7 +62,9 @@
                         if (item.formGroup.inputs)
                           .form-group.col-12
                             if (item.formGroup.select)
-                              select(name=item.formGroup.select.name)
+                              select.select.select--dropdown(name=item.formGroup.select.name)
+                                each option in item.formGroup.select.options
+                                  option(value=option.text, data-content='<i class="' + option.icon + '"></i>')!= option.text
                             each input in item.formGroup.inputs
                               input(type=input.type, name=input.name, placeholder=input.placeholder)
                         if (item.formGroup.submit)
