@@ -637,21 +637,21 @@
                       <div class="row">
                         <div class="col-8 text-center"><img class="radiobtns__img img-fluid" src="img/item-1.jpg" alt="Профнастил">
                           <div class="radiobtns">
-                            <input class="radiobtns__control" id="radio1" type="radio" name="period[]" value="Профнастил" checked="{&quot;checked&quot;:true}">
+                            <input class="radiobtns__control" id="radio1" type="radio" name="material[]" value="Профнастил" checked="{&quot;checked&quot;:true}">
                             <label class="radiobtns__label" for="radio1"><span class="radiobtns__check"></span>Профнастил
                             </label>
                           </div>
                         </div>
                         <div class="col-8 text-center"><img class="radiobtns__img img-fluid" src="img/item-2.jpg" alt="Дерево">
                           <div class="radiobtns">
-                            <input class="radiobtns__control" id="radio2" type="radio" name="period[]" value="Дерево" checked="{&quot;checked&quot;:false}">
+                            <input class="radiobtns__control" id="radio2" type="radio" name="material[]" value="Дерево" checked="{&quot;checked&quot;:false}">
                             <label class="radiobtns__label" for="radio2"><span class="radiobtns__check"></span>Дерево
                             </label>
                           </div>
                         </div>
                         <div class="col-8 text-center"><img class="radiobtns__img img-fluid" src="img/item-3.jpg" alt="Ковка">
                           <div class="radiobtns">
-                            <input class="radiobtns__control" id="radio3" type="radio" name="period[]" value="Ковка" checked="{&quot;checked&quot;:false}">
+                            <input class="radiobtns__control" id="radio3" type="radio" name="material[]" value="Ковка" checked="{&quot;checked&quot;:false}">
                             <label class="radiobtns__label" for="radio3"><span class="radiobtns__check"></span>Ковка
                             </label>
                           </div>
@@ -672,7 +672,7 @@
                       <div class="tabs__text">Оставьте свой телефон и мы вышлем точный до миллиметра чертеж под Ваши ворота. Никаких звонков! Чертеж придет в удобный Вам мессенджер: Viber, Telegram, Facebook Messenger или WhatsApp.</div>
                       <div class="row">
                         <div class="form-group col-12">
-                          <select class="select select--dropdown" name="method1">
+                          <select class="select select--dropdown" name="method">
                             <option value="viber" data-content="&lt;i class=&quot;ic ic--viber&quot;&gt;&lt;/i&gt;">viber</option>
                             <option value="email" data-content="&lt;i class=&quot;ic ic--mail&quot;&gt;&lt;/i&gt;">email</option>
                             <option value="massenger" data-content="&lt;i class=&quot;ic ic--massenger&quot;&gt;&lt;/i&gt;">massenger</option>
@@ -730,7 +730,7 @@
                         <p class="slides__info info"><i class="info__icon ic ic--info"></i>Перемещайте ползунок, чтобы выбрать подходящую Вам высоту. Наиболее распространенная высота ворот  от 1,5 до 2 метров.
                         </p>
                         <div class="slides__item">
-                          <input class="slides__control" id="range3" type="text" name="range3">
+                          <input class="slides__control" id="range3" type="text" name="range1">
                         </div>
                       </div>
                       <div class="button-group text-center">
@@ -747,7 +747,7 @@
                         <p class="slides__info info"><i class="info__icon ic ic--info"></i>Перемещайте ползунок, чтобы выбрать подходящую Вам высоту. Наиболее распространенная высота ворот  от 1,5 до 2 метров.
                         </p>
                         <div class="slides__item">
-                          <input class="slides__control" id="range4" type="text" name="range4">
+                          <input class="slides__control" id="range4" type="text" name="range2">
                         </div>
                       </div>
                       <div class="button-group text-center">
@@ -764,21 +764,21 @@
                       <div class="row">
                         <div class="col"><img class="radiobtns__img img-fluid" src="img/item-1.jpg" alt="Профнастил">
                           <div class="radiobtns">
-                            <input class="radiobtns__control" id="radio11" type="radio" name="period[]" value="Профнастил" checked="{&quot;checked&quot;:true}">
+                            <input class="radiobtns__control" id="radio11" type="radio" name="material[]" value="Профнастил" checked="{&quot;checked&quot;:true}">
                             <label class="radiobtns__label" for="radio11"><span class="radiobtns__check"></span>Профнастил
                             </label>
                           </div>
                         </div>
                         <div class="col"><img class="radiobtns__img img-fluid" src="img/item-2.jpg" alt="Дерево">
                           <div class="radiobtns">
-                            <input class="radiobtns__control" id="radio12" type="radio" name="period[]" value="Дерево" checked="{&quot;checked&quot;:false}">
+                            <input class="radiobtns__control" id="radio12" type="radio" name="material[]" value="Дерево" checked="{&quot;checked&quot;:false}">
                             <label class="radiobtns__label" for="radio12"><span class="radiobtns__check"></span>Дерево
                             </label>
                           </div>
                         </div>
                         <div class="col"><img class="radiobtns__img img-fluid" src="img/item-3.jpg" alt="Ковка">
                           <div class="radiobtns">
-                            <input class="radiobtns__control" id="radio13" type="radio" name="period[]" value="Ковка" checked="{&quot;checked&quot;:false}">
+                            <input class="radiobtns__control" id="radio13" type="radio" name="material[]" value="Ковка" checked="{&quot;checked&quot;:false}">
                             <label class="radiobtns__label" for="radio13"><span class="radiobtns__check"></span>Ковка
                             </label>
                           </div>
@@ -1400,6 +1400,9 @@
     <script src="js/flipclock.js">   </script>
     <!-- Select2 JavaScript-->
     <script src="js/select2.js">   </script>
+    <!-- ContactForm JavaScript-->
+    <script src="js/validator.js"> </script>
+    <script src="js/contact_me.js">   </script>
     <!-- Custom JavaScript-->
     <script src="js/main.js"></script>
     <!-- endbuild-->
