@@ -753,7 +753,8 @@
                         </div>
                       </div>
                       <div class="button-group text-center">
-                        <button class="button test__btn test__btn--prev" href="#" data-tabs-control="prev">Назад</button>
+                        <button class="button test__btn test__btn--prev" href="#" data-tabs-control="prev">Назад
+                        </button>
                         <button class="button test__btn test__btn--next" href="#" data-tabs-control="next">Далее
                         </button>
                       </div>
@@ -764,30 +765,31 @@
                         <div class="progressbar__status"><span class="progressbar__value">66%</span></div>
                       </div>
                       <div class="row">
-                        <div class="col"><img class="radiobtns__img img-fluid" src="img/item-1.jpg" alt="Профнастил">
+                        <div class="col-8 text-center"><img class="radiobtns__img img-fluid" src="img/item-1.jpg" alt="Профнастил">
                           <div class="radiobtns">
-                            <input class="radiobtns__control" id="radio11" type="radio" name="material[]" value="Профнастил" checked="{&quot;checked&quot;:true}">
-                            <label class="radiobtns__label" for="radio11"><span class="radiobtns__check"></span>Профнастил
+                            <input class="radiobtns__control" id="radio1" type="radio" name="material[]" value="Профнастил" checked="{&quot;checked&quot;:true}">
+                            <label class="radiobtns__label" for="radio1"><span class="radiobtns__check"></span>Профнастил
                             </label>
                           </div>
                         </div>
-                        <div class="col"><img class="radiobtns__img img-fluid" src="img/item-2.jpg" alt="Дерево">
+                        <div class="col-8 text-center"><img class="radiobtns__img img-fluid" src="img/item-2.jpg" alt="Дерево">
                           <div class="radiobtns">
-                            <input class="radiobtns__control" id="radio12" type="radio" name="material[]" value="Дерево" checked="{&quot;checked&quot;:false}">
-                            <label class="radiobtns__label" for="radio12"><span class="radiobtns__check"></span>Дерево
+                            <input class="radiobtns__control" id="radio2" type="radio" name="material[]" value="Дерево" checked="{&quot;checked&quot;:false}">
+                            <label class="radiobtns__label" for="radio2"><span class="radiobtns__check"></span>Дерево
                             </label>
                           </div>
                         </div>
-                        <div class="col"><img class="radiobtns__img img-fluid" src="img/item-3.jpg" alt="Ковка">
+                        <div class="col-8 text-center"><img class="radiobtns__img img-fluid" src="img/item-3.jpg" alt="Ковка">
                           <div class="radiobtns">
-                            <input class="radiobtns__control" id="radio13" type="radio" name="material[]" value="Ковка" checked="{&quot;checked&quot;:false}">
-                            <label class="radiobtns__label" for="radio13"><span class="radiobtns__check"></span>Ковка
+                            <input class="radiobtns__control" id="radio3" type="radio" name="material[]" value="Ковка" checked="{&quot;checked&quot;:false}">
+                            <label class="radiobtns__label" for="radio3"><span class="radiobtns__check"></span>Ковка
                             </label>
                           </div>
                         </div>
                       </div>
                       <div class="button-group text-center">
-                        <button class="button test__btn test__btn--prev" href="#" data-tabs-control="prev">Назад</button>
+                        <button class="button test__btn test__btn--prev" href="#" data-tabs-control="prev">Назад
+                        </button>
                         <button class="button test__btn test__btn--next" href="#" data-tabs-control="next">Далее
                         </button>
                       </div>
@@ -798,11 +800,20 @@
                         <div class="progressbar__status"><span class="progressbar__value">100%</span></div>
                       </div>
                       <div class="tabs__text">Оставьте свой телефон и мы вышлем точный до миллиметра чертеж под Ваши ворота. Никаких звонков! Чертеж придет в удобный Вам мессенджер: Viber, Telegram, Facebook Messenger или WhatsApp.</div>
-                      <select name="method"></select>
-                      <div class="form-group">
-                        <input name="phone" placeholder="Телефон">
+                      <div class="row">
+                        <div class="form-group col-12">
+                          <select class="select select--dropdown" name="method">
+                            <option value="viber" data-content="&lt;i class=&quot;ic ic--viber&quot;&gt;&lt;/i&gt;">viber</option>
+                            <option value="email" data-content="&lt;i class=&quot;ic ic--mail&quot;&gt;&lt;/i&gt;">email</option>
+                            <option value="massenger" data-content="&lt;i class=&quot;ic ic--massenger&quot;&gt;&lt;/i&gt;">massenger</option>
+                            <option value="telegram" data-content="&lt;i class=&quot;ic ic--telegram&quot;&gt;&lt;/i&gt;">telegram</option>
+                          </select>
+                          <input name="phone" placeholder="Телефон">
+                        </div>
+                        <div class="form-group col-12">
+                          <button class="test__btn form__btn test__btn--submit" type="submit">Получить чертеж<i class="ic ic--apple"></i></button>
+                        </div>
                       </div>
-                      <button class="test__btn form__btn test__btn--submit" type="submit">Получить чертеж<i class="ic ic--apple"></i></button>
                     </div>
                   </div>
                 </form>

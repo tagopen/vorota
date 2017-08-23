@@ -280,7 +280,25 @@
                   descr: "Оставьте свой телефон и мы вышлем точный до миллиметра чертеж под Ваши ворота. Никаких звонков! Чертеж придет в удобный Вам мессенджер: Viber, Telegram, Facebook Messenger или WhatsApp.",
                   formGroup: {
                     select: {
-                      name: "method"
+                      name: "method",
+                      options: [
+                        {
+                          text: "viber",
+                          icon: "ic ic--viber"
+                        },
+                        {
+                          text: "email",
+                          icon: "ic ic--mail"
+                        },
+                        {
+                          text: "massenger",
+                          icon: "ic ic--massenger"
+                        },
+                        {
+                          text: "telegram",
+                          icon: "ic ic--telegram"
+                        },
+                      ]
                     },
                     inputs: [
                       {

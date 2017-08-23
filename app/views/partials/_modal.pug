@@ -103,6 +103,7 @@
                     .progressbar
                       .progressbar__status
                         span.progressbar__value(class={"progressbar__value--hidden" : i === 0})!= ~~(100 / (content.site.modal.test2.tabs.items.length - 1) * i) + "%"
+                    
                     if (item.slides)
                       .slides
                         p.slides__info.info
@@ -115,34 +116,38 @@
                     if (item.radiobtns)
                       .row
                         each radio, i in item.radiobtns
-                          .col
+                          .col-8.text-center
                             img.radiobtns__img.img-fluid(src=radio.img.src, alt=radio.img.alt)
                             .radiobtns
-                              input.radiobtns__control(id="radio1" + (i + 1), type="radio", name=radio.name, value=radio.value, checked={"checked" : i === 0})
-                              label.radiobtns__label(for="radio1" + (i + 1))
+                              input.radiobtns__control(id="radio" + (i + 1), type="radio", name=radio.name, value=radio.value, checked={"checked" : i === 0})
+                              label.radiobtns__label(for="radio" + (i + 1))
                                 span.radiobtns__check
-                                != radio.value
+                                != radio.value  
                     if (item.btns)
                       .button-group.text-center
                         if (item.btns.prev)
                           if (i > 0)
                             button.button.test__btn(class=item.btns.prev.class, href="#", data-tabs-control="prev")!= item.btns.prev.text
-                            if (item.btns.prev.icon)
-                              i(class=item.btns.prev.icon)
+                              if (item.btns.prev.icon)
+                                i(class=item.btns.prev.icon)
                         if (item.btns.next)
                           button.button.test__btn(class=item.btns.next.class, href="#", data-tabs-control="next")!= item.btns.next.text
                             if (item.btns.next.icon)
                               i(class=item.btns.next.icon)
                     if (item.formGroup)
-                      if (item.formGroup.select)
-                        select(name=item.formGroup.select.name)
-                      if (item.formGroup.inputs)
-                        each input in item.formGroup.inputs
-                          .form-group
-                            input(type=input.type, name=input.name, placeholder=input.placeholder)
-                      if (item.formGroup.submit)
-                        button.test__btn.form__btn.test__btn--submit(type="submit")!= item.formGroup.submit.text
-                          i(class=item.formGroup.submit.icon)
+                      .row
+                        if (item.formGroup.inputs)
+                          .form-group.col-12
+                            if (item.formGroup.select)
+                              select.select.select--dropdown(name=item.formGroup.select.name)
+                                each option in item.formGroup.select.options
+                                  option(value=option.text, data-content='<i class="' + option.icon + '"></i>')!= option.text
+                            each input in item.formGroup.inputs
+                              input(type=input.type, name=input.name, placeholder=input.placeholder)
+                        if (item.formGroup.submit)
+                          .form-group.col-12
+                            button.test__btn.form__btn.test__btn--submit(type="submit")!= item.formGroup.submit.text
+                              i(class=item.formGroup.submit.icon)
 each item, i in content.index.product.modals
   .modal.fade(id="product__modal"+(i+1) tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel', aria-hidden='true')
     .modal-dialog.product__modal--size
