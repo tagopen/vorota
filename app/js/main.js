@@ -132,11 +132,8 @@ $(window).scroll(function (){
     }
     ]
   });
-
-
-
-
-
+  
+  // Range ion Slider
   $("#range1").ionRangeSlider({
     type: "single",
     grid: true,
@@ -147,6 +144,7 @@ $(window).scroll(function (){
     hide_min_max: true,
   });
 
+  // Range ion Slider
   $("#range2").ionRangeSlider({
     type: "single",
     grid: true,
@@ -157,6 +155,7 @@ $(window).scroll(function (){
     hide_min_max: true,
   });
 
+  // Range ion Slider
   $("#range3").ionRangeSlider({
     type: "single",
     grid: true,
@@ -167,6 +166,7 @@ $(window).scroll(function (){
     hide_min_max: true,
   });
 
+  // Range ion Slider
   $("#range4").ionRangeSlider({
     type: "single",
     grid: true,
@@ -177,6 +177,7 @@ $(window).scroll(function (){
     hide_min_max: true,
   });
 
+  // 
   $(function () {
     var $time = $('.form__time');
     $time.hide();
@@ -189,7 +190,7 @@ $(window).scroll(function (){
     });
   });
 
-    
+  // Countdown #1
   $(function() {
     var clock;
     clock = $('#count').FlipClock({
@@ -201,13 +202,35 @@ $(window).scroll(function (){
         }
       }
     });
-
     clock.setTime(60*5);
     clock.setCountdown(true);
-    clock.start();
+    
+    $('#estimate').on('shown.bs.modal', function (e) {
+      clock.start();
+    });
   });
 
-  // Select
+  // Countdown #2
+  $(function() {
+    var clock;
+    clock = $('#count2').FlipClock({
+      clockFace: 'MinuteCounter',
+      autoStart: false,
+      callbacks: {
+        stop: function() {
+          $('.message').html('The clock has stopped!')
+        }
+      }
+    });
+    clock.setTime(60*5);
+    clock.setCountdown(true);
+
+    $('#sibassa__modal').on('shown.bs.modal', function (e) {
+      clock.start();
+    });
+  });
+
+  // Select2
   $(function() {
     function formatState (state) {
       if (!state.id) { return state.text; }
