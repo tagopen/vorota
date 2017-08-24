@@ -21,6 +21,14 @@
     });
   });
 
+  var firstModalOpen = $("body").hasClass("modal-open");
+
+  $("#confident__modal").on('hidden.bs.modal', function()
+  {
+    if (!firstModalOpen)
+      $("body").addClass("modal-open");
+  });
+  
   $('.implement__image').matchHeight({
     byRow: false,
     property: 'height',

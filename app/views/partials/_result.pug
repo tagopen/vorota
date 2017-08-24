@@ -13,7 +13,7 @@ section.result
               each item, i in content.index.result.slides 
                 .result__item
                   .result__video
-                    img.img-fluid(src!=item.video)
+                    iframe.result__iframe(src=item.video, frameborder="0", allowfullscreen)
                   .result__text!=item.text 
           .col-24.col-md-3
             .result__dots
