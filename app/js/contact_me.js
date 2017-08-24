@@ -20,7 +20,7 @@ $(function() {
           period             = new Array(),
           material           = new Array();
 
-      $("[name^=\"period\"]:checked").each(function() {
+      $form.find("[name^=\"period\"]:checked").each(function() {
         if ($(this).prop("checked")) {
           var radioText = $(this).siblings().text();
 
@@ -28,11 +28,11 @@ $(function() {
         }
       });
 
-      $("[name^=\"material\"]:checked").each(function() {
+      $form.find("[name^=\"material\"]:checked").each(function() {
         if ($(this).prop("checked")) {
           var radioText = $(this).siblings().text();
 
-          period.push($.trim(radioText));
+          material.push($.trim(radioText));
         }
       });
 
