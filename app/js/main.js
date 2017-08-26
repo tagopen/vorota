@@ -258,7 +258,7 @@ $(window).scroll(function (){
     $(".select--dropdown").select2({
       templateResult: formatState,
       templateSelection: formatState,
-      minimumResultsForSearch: Infinity,
+      minimumResultsForSearch: Infinity
     });
   });
 

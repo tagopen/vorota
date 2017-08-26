@@ -327,6 +327,33 @@
           }
         }
       }, //- site
+      success: {
+        hostname: "success.html",
+        title: "Главная страница",
+        meta: {
+          description: "",
+          keywords: "",
+          openGraph: {
+            title: "Site name",
+            siteName: "Site name",
+            description: "Описание сайта",
+            type: "website",
+            locale: "ru_RU",
+            image: "microformat.png",
+            imageType: "image/png",
+            url: hostname
+          },
+          twitter: {
+            card: "summary",
+            site: "@flickr",
+            title: "My Site",
+            description: "My Site is cool",
+            image: hostname + "/img/logo/microformat.png"
+          }
+        },
+        title: "Спасибо, что обратились к нам!",
+        subtitle: "Скоро Вы получите материалы выбранным вами способом. Сейчас переходите на наш YouTube канал. Тут много полезных роликов и положительных видео-отзывов."
+      },
       index: {
         hostname: "index.html",
         title: "Главная страница",
@@ -444,6 +471,7 @@
         },
         product: {
           heading: "Товары",
+          confident: "Мы гарантируем безопасность Ваших данных. Нажимая на кнопку, вы соглашаетесь с <a data-toggle=\"modal\" class=\"form__confident--link\" href=\"#confident__modal\">Политикой конфиденциальности</a>",
           content: [
             {
               img: {

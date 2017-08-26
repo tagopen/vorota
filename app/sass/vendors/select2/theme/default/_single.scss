@@ -29,7 +29,7 @@
     width: 20px;
 
     b {
-      border-color: #888 transparent transparent transparent;
+      border-color: #fff transparent transparent transparent;
       border-style: solid;
       border-width: 5px 4px 0 4px;
 
@@ -75,7 +75,7 @@
   .select2-selection--single {
     .select2-selection__arrow {
       b {
-        border-color: transparent transparent #888 transparent;
+        border-color: transparent transparent #fff transparent;
         border-width: 0 4px 5px 4px;
       }
     }

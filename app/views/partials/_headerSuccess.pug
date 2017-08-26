@@ -1,0 +1,38 @@
+header.header.success__header
+  .container
+    .row.justify-content-between
+      .col-24.col-md-14.col-lg-10.col-xl-8
+        .logo.header__logo
+          .row
+            .col-24.col-sm-9.col-md-8.col-lg-7.text-center
+              a.logo__link
+                img.img-fluid.logo__img(src!=content.index.header.logo.src, alt!=content.index.header.logo.alt)
+            .col-24.col-sm-15.col-md-16.col-lg-17
+              .logo__text!=content.index.header.logo.text
+      .col-24.col-md-10.col-lg-7.col-xl-6
+        .contact
+          .contact__box
+            a.contact__phone(href!=content.index.header.contact.phone.href)  
+              i.ic.ic--phone
+              .contact__number!=content.index.header.contact.phone.text
+          button.button.contact__btn.text-center(type='button', data-toggle="modal", data-target="#call__modal")
+            !=content.index.header.contact.btn     
+    .row
+      .col-24.col-lg-14.lg-offset-2              
+        h1.success__title!=content.success.title
+        h2.success__subtitle!=content.success.subtitle
+      .col-24.col-lg-8.text-center
+        div(class="g-ytsubscribe" data-channelid="UC2ZXh5irnwBGlEdeBOnhrtA" data-layout="full" data-count="default" data-onytevent="onYtEvent")
+        script(src='https://apis.google.com/js/platform.js')
+        script.
+          function onYtEvent(payload) {
+          if (payload.eventType == 'subscribe') {
+          // Add code to handle subscribe event.
+          } else if (payload.eventType == 'unsubscribe') {
+          // Add code to handle unsubscribe event.
+          }
+          if (window.console) { // for debugging only
+          window.console.log('YT event: ', payload);
+          }
+          }
+        
