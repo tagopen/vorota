@@ -172,17 +172,13 @@ each item, i in content.index.product.modals
           .product__modal--heading!=item.heading
           .product__modal--box
             .row
-              .col-24.col-md-18
-                .row
+              .col-24.col-lg-22
+                .row.justify-content-center
                   each point, i in item.points
-                    .col-24.col-md-12
+                    .col-12.col-md-3
                       .product__modal--point
                         i.ic(class!=point.icon)  
                         .product__modal--elem!=point.text
-              .col-24.col-md-6  
-                .product__modal--point.product__modal--pointlast
-                  i.ic(class!=item.lastpoint.icon) 
-                  .product__modal--elem!=item.lastpoint.text
           .product__modal--table
             each row, i in item.rows
               .row.product__modal--row
@@ -193,9 +189,10 @@ each item, i in content.index.product.modals
           .product__modal--images
             .row.justify-content-center
               each image, i in item.images
-                .col-24.col-md-7.col-lg-6
+                .col-24.col-md-7.col-lg-6.product__modal--margin
                   .product__modal--image
-                    i.ic(class!=image.icon)
+                    .product__modal--krug
+                      i.ic(class!=image.icon)
                   .product__modal--subtext!=image.text
           form.contact__form.contactForm.product__modal--form(method='post', action='./mail/mail.php')
             .row
@@ -255,7 +252,7 @@ each item, i in content.index.product.modals
           defs
           path.modal__close--icon(d='M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z', transform='translate(-1169 -156)')
       .video__elem
-        iframe(src="https://www.youtube.com/embed/h-zmX_jHi0E", frameborder="0", allowfullscreen)
+        iframe(frameborder="0", allowfullscreen)
 #confident__modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
   .modal-dialog.modal__confident--size
     .modal-content.modal__content

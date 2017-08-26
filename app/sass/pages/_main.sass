@@ -447,8 +447,10 @@ button
         transition: all .3s ease
     &__info
       transition: all .3s ease
+      position: relative
       &:hover,
       &:focus
+        z-index: 25
         box-shadow: 0 20px 80px rgba(0, 0, 0, 0.2)  
         transition: all .3s ease
     &__cost
@@ -793,7 +795,7 @@ button
     z-index: 25
     cursor: pointer    
   .select2-container   
-    width: 54px
+    width: 54px !important
   .select2-container .select2-selection--single
     background-color: #00c170 
 .form
@@ -950,14 +952,11 @@ button
     margin-bottom: 15px 
   &__col
     background-color: #f0f0f0
-  &__slider
-    padding-bottom: 40px
   &__item
     text-align: center
     outline: none
   &__video
     position: relative
-    margin-bottom: 30px
     height: 300px
   &__iframe
     position: absolute
@@ -993,8 +992,6 @@ button
   .result
     &__subheading     
       font: 400 24px/37px $font-circe 
-    &__slider
-      padding-bottom: 60px 
     &__video
       height: 395px  
     &__dots
@@ -1319,26 +1316,46 @@ button
       text-align: center
       margin-bottom: 30px  
     &--box
-      padding: 0 60px  
-      margin-bottom: 25px
+      padding: 0 15px 
+      margin-bottom: 45px
     &--point
-      margin-bottom: 10px  
-      display: table
-      .ic
-        display: table-cell
-        padding-right: 30px
-      &last
-        height: 100%
-        .ic
-          vertical-align: middle
+      position: relative
+      margin-bottom: 10px 
+      transition: all .3s ease  
+      cursor: pointer
+      text-align: center
+      &:hover,
+      &:focus
         .product__modal--elem
-          vertical-align: middle    
+          opacity: 1
+          visibility: visible   
     &--elem
+      position: absolute
+      top: 12px
+      left: 0
       color: #202020  
-      font: 400 18px/27px $font-circe
-      display: table-cell
+      opacity: 0
+      visibility: hidden
+      font: 300 14px/20px $font-circe
+      background-color: whitesmoke
+      padding: 3px 5px
+      transition: all .3s ease 
+      z-index: 25
+      border-left: 2px solid #36539b
+      &:before
+        content: ''
+        display: block
+        position: absolute
+        left: -10px
+        top: 50%
+        margin-top: -8px
+        width: 0px
+        height: 0px
+        border-top: 8px solid transparent
+        border-bottom: 8px solid transparent
+        border-right: 8px solid #36539b
     &--row
-      padding: 0 120px  
+      padding: 0 15px  
       &:nth-child(odd)
         background-color: whitesmoke
     &--table
@@ -1353,25 +1370,49 @@ button
       text-align: center
       margin-bottom: 30px   
     &--image
+      display: table-cell
+      padding-left: 7px
+    &--krug
       background-color: #36539b  
       height: 50px
       width: 50px
       border-radius: 50%
       text-align: center
-      margin: 0 auto 20px
       .ic
         line-height: 46px
+    &--margin
+      margin-bottom: 20px    
     &--subtext
+      display: table-cell
+      text-align: left
       color: #212121  
-      padding: 0 30px
+      padding: 0 10px
       font: 300 18px/27px $font-circe 
     &--form
-      padding: 0 120px   
+      padding: 0 30px   
     &--btn
       background-color: #00c170
       border-radius: 5px
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2)  
       color: #fff
++r(760)
+  .product
+    &__modal
+      &--form
+        padding: 0 120px 
+      &--image
+        padding-left: 0   
+      &--row
+        padding: 0 30px  
++r(1200) 
+  .product
+    &__modal    
+      &--row
+        padding: 0 120px
+      &--box
+        padding: 0 15px 0 60px 
+      &--elem
+        width: 230px   
 .dropdown
   display: inline-block
   position: absolute
