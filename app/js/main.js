@@ -88,7 +88,7 @@ $(window).scroll(function (){
 
   $(function() {
     $("[data-tabs-control]").on('click', function(e) {
-      let control = $(this).data('tabs-control'),
+      var control = $(this).data('tabs-control'),
           $tabs = $(this).closest('.tabs'),
           $item = $tabs.find('.tabs__item'),
           $currentItem = $(this).closest('.tabs__item'),
