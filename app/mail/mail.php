@@ -100,7 +100,8 @@
   $mail->CharSet = "UTF-8";
   $mail->IsSendmail();
   $from = "no-repeat@tagopen.com";
-  $to   = "Artem2431@gmail.com";
+  $to   = "website4you.dp@gmail.com";
+  $to   = "furnituravoronka@gmail.com";
   $mail->SetFrom($from, HOST_NAME);
   $mail->AddAddress($to);
   $mail->isHTML(false);

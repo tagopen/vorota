@@ -1620,10 +1620,21 @@ button
   &__info
     position: absolute
     left: 100%
-    top: 0
+    top: 10px
+    font: 400 12px/12px $font-circe
+    color: #36539b
+    background: #fff
+    padding: 5px
+    visibility: hidden
+    opacity: 1
 .select2-results
   &__option
     position: relative
+    &:hover,
+    &:focus
+      .select2__info
+        opacity: 1
+        visibility: visible
 .select2-container--default .select2-results > .select2-results__options
   overflow: visible
 .select2-selection__rendered

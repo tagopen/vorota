@@ -4229,11 +4229,22 @@ button {
 .select2__info {
   position: absolute;
   left: 100%;
-  top: 0;
+  top: 10px;
+  font: 400 12px/12px "Circe", sans-serif;
+  color: #36539b;
+  background: #fff;
+  padding: 5px;
+  visibility: hidden;
+  opacity: 1;
 }
 
 .select2-results__option {
   position: relative;
+}
+
+.select2-results__option:hover .select2__info, .select2-results__option:focus .select2__info {
+  opacity: 1;
+  visibility: visible;
 }
 
 .select2-container--default .select2-results > .select2-results__options {
