@@ -140,7 +140,7 @@
     echo "Что-то пошло не так. " . $mail->ErrorInfo;
     return false;
   } else {
-    //header("Location: ../success.html");
+    header("Location: ../success.html");
     return true;
   }
 ?>
