@@ -4231,3 +4231,15 @@ button {
   left: 100%;
   top: 0;
 }
+
+.select2-results__option {
+  position: relative;
+}
+
+.select2-container--default .select2-results > .select2-results__options {
+  overflow: visible;
+}
+
+.select2-selection__rendered .select2__info {
+  display: none;
+}
