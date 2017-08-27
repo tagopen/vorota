@@ -72,10 +72,10 @@
                                 each option in item.formGroup.select.options
                                   option(value=option.text, data-content='<i class="' + option.icon + '"></i><span class="select2__info">'+ option.text +'</span>')!= option.text
                             each input in item.formGroup.inputs
-                              input.form-control.form__input.form__phone(type=input.type, name=input.name, placeholder=input.placeholder)
+                              input.form-control.form__input.form__phone.form__input--phone(type=input.type, name=input.name, placeholder="+38 (___) ___-__-__")
                         if (item.formGroup.submit)
                           .form-group.col-12
-                            button.test__btn.form__btn.test__btn--submit(type="submit")!= item.formGroup.submit.text
+                            button.test__btn.form__btn.test__btn--submit(type="submit", name='form', value='Чертеж')!= item.formGroup.submit.text
                               i(class=item.formGroup.submit.icon)
 #estimate.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel', aria-hidden='true')
   .modal-dialog.modal__test--size
@@ -93,7 +93,7 @@
           .col-24.col-lg-9.d-flex.align-items-end.justify-content-center
             .test__container
               .test__image
-                img(src="img/blank.png")
+                img(src="img/book.png")
           .col-24.col-lg-15
             form.contactForm(method="POST", action="mail/mail.php")
               .tabs.test__tabs
@@ -119,14 +119,14 @@
                       .row
                         each radio, j in item.radiobtns
                           .col-8.text-center
-                            label(for="radio" + (j + 1))
+                            label(for="radio1" + (j + 1))
                               img.radiobtns__img.img-fluid(src=radio.img.src, alt=radio.img.alt)
                             .radiobtns
                               if (j === 0)
-                                input.radiobtns__control(id="radio" + (j + 1), type="radio", name=radio.name, value=radio.value, checked)
+                                input.radiobtns__control(id="radio1" + (j + 1), type="radio", name=radio.name, value=radio.value, checked)
                               else
-                                input.radiobtns__control(id="radio" + (j + 1), type="radio", name=radio.name, value=radio.value)
-                              label.radiobtns__label(for="radio" + (j + 1))
+                                input.radiobtns__control(id="radio1" + (j + 1), type="radio", name=radio.name, value=radio.value)
+                              label.radiobtns__label(for="radio1" + (j + 1))
                                 span.radiobtns__check
                                 != radio.value  
                     if (item.btns)
@@ -149,10 +149,10 @@
                                 each option in item.formGroup.select.options
                                   option(value=option.text, data-content='<i class="' + option.icon + '"></i><span class="select2__info">'+ option.text +'</span>')!= option.text
                             each input in item.formGroup.inputs
-                              input.form-control.form__input.form__phone(type=input.type, name=input.name, placeholder=input.placeholder)
+                              input.form-control.form__input.form__phone.form__input--phone(type=input.type, name=input.name, placeholder="+38 (___) ___-__-__")
                         if (item.formGroup.submit)
                           .form-group.col-12
-                            button.test__btn.form__btn.test__btn--submit(type="submit")!= item.formGroup.submit.text
+                            button.test__btn.form__btn.test__btn--submit(type="submit", name='form', value='Смета на стоимость и материалы')!= item.formGroup.submit.text
                               i(class=item.formGroup.submit.icon)
 each item, i in content.index.product.modals
   .modal.fade(id="product__modal"+(i+1) tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel', aria-hidden='true')
@@ -195,9 +195,9 @@ each item, i in content.index.product.modals
           form.contact__form.contactForm.product__modal--form(method='post', action='./mail/mail.php')
             .row
               .col-24.col-md-12.form__group
-                input.form-control.form__input.product__modal--input.form__phone(aria-invalid='false', placeholder="Телефон", name='phone', type='tel', data-error='Введите телефон', required)
+                input.form-control.form__input.product__modal--input.form__phone.form__input--phone(aria-invalid='false', placeholder="+38 (___) ___-__-__", name='phone', type='tel', data-error='Введите телефон', required)
               .col-24.col-md-12
-                button.button.form__btn.product__modal--btn(name='form', value='динамика цен', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...")!=item.form.btn
+                button.button.form__btn.product__modal--btn(name='form', value='Заявка на покупку +' +item.name, type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...")!=item.form.btn
                   i.ic.ic--apple
               .col-24
                 .form__confident.form__confident--dark!=content.index.product.confident
@@ -217,7 +217,7 @@ each item, i in content.index.product.modals
       form.contact__form.contactForm.contactForm--modal(method='post', action='./mail/mail.php')
         .row.justify-content-center
           .col-22.form-group
-            input.form-control.form__input.form__input--transparent.form__phone(aria-invalid='false', placeholder="Телефон", name='phone', type='tel', data-error='Введите телефон', required)
+            input.form-control.form__input.form__input--phone.form__input--transparent.form__phone(aria-invalid='false', placeholder="+38 (___) ___-__-__", name='phone', type='tel', data-error='Введите телефон', required)
           .col-22
             div
               .row.justify-content-between
@@ -234,7 +234,7 @@ each item, i in content.index.product.modals
               input.form-control.form__input.modal__input.form__time(aria-invalid='false', placeholder="Например: завтра в 12:00", name='time', type='text', data-error='Введите, когда вам позвонить')
               p.help-block.with-errors
           .col-22    
-            button.button.form__btn.self__btn.modal__btn(name='form', value='модалка в хедере', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Заказать звонок эксперта
+            button.button.form__btn.self__btn.modal__btn(name='form', value='Обратный звонок', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Заказать звонок эксперта
               i.ic.ic--apple
           .col-22
             .form__confident!=content.index.self.form.confident

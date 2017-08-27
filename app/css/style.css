@@ -1460,7 +1460,7 @@
 .ic--check:before {
   width: 18px;
   height: 18px;
-  background: url(../img/sprite.png) -210px -237px no-repeat;
+  background: url(../img/sprite.png) -209px -273px no-repeat;
 }
 
 .ic--fail:before {
@@ -1500,15 +1500,15 @@
 }
 
 .ic--mail:before {
-  width: 15px;
+  width: 16px;
   height: 17px;
-  background: url(../img/sprite.png) -492px -384px no-repeat;
+  background: url(../img/sprite.png) -492px -355px no-repeat;
 }
 
 .ic--massenger:before {
   width: 15px;
   height: 17px;
-  background: url(../img/sprite.png) -492px -355px no-repeat;
+  background: url(../img/sprite.png) -392px -289px no-repeat;
 }
 
 .ic--phone:before {
@@ -1520,7 +1520,7 @@
 .ic--phonefff:before {
   width: 18px;
   height: 18px;
-  background: url(../img/sprite.png) -209px -273px no-repeat;
+  background: url(../img/sprite.png) -210px -237px no-repeat;
 }
 
 .ic--play:before {
@@ -1550,7 +1550,7 @@
 .ic--productic1:before {
   width: 31px;
   height: 24px;
-  background: url(../img/sprite.png) -179px -203px no-repeat;
+  background: url(../img/sprite.png) -368px -251px no-repeat;
 }
 
 .ic--productic2:before {
@@ -1694,7 +1694,7 @@
 .ic--productimg1:before {
   width: 31px;
   height: 24px;
-  background: url(../img/sprite.png) -368px -251px no-repeat;
+  background: url(../img/sprite.png) -179px -203px no-repeat;
 }
 
 .ic--productimg2:before {
@@ -1730,7 +1730,7 @@
 .ic--viber:before {
   width: 15px;
   height: 17px;
-  background: url(../img/sprite.png) -392px -289px no-repeat;
+  background: url(../img/sprite.png) -492px -384px no-repeat;
 }
 
 .ic {
@@ -1998,8 +1998,12 @@ button {
     min-height: 100vh;
     padding-bottom: 250px;
   }
+  .header--success {
+    height: 100vh;
+  }
   .header__image {
     position: relative;
+    padding-bottom: 100px;
   }
   .header__image img {
     position: absolute;
@@ -3045,7 +3049,7 @@ button {
   -webkit-border-radius: 5px;
           border-radius: 5px;
   padding: 18px 20px 18px 50px;
-  font: 300 14px/16px "Circe", sans-serif;
+  font: 400 14px/16px "Circe", sans-serif;
   letter-spacing: 1px;
 }
 
@@ -3076,7 +3080,7 @@ button {
 .form__input--transparent {
   background-color: transparent;
   color: #fff;
-  font: 300 14px/16px "Circe", sans-serif;
+  font: 400 14px/16px "Circe", sans-serif;
   border: 1px solid #fff;
 }
 
@@ -3103,7 +3107,7 @@ button {
 .form__input--transparent:focus {
   background-color: transparent;
   color: #fff;
-  font: 300 14px/16px "Circe", sans-serif;
+  font: 400 14px/16px "Circe", sans-serif;
 }
 
 .form__input__time {
@@ -3658,13 +3662,13 @@ button {
 }
 
 .irs-grid-text {
-  font: 700 14px/16px "Circe", sans-serif;
+  font: 700 10px/16px "Circe", sans-serif;
   color: #fff;
   bottom: 0;
 }
 
-.js-grid-text-1, .js-grid-text-3, .js-grid-text-5, .js-grid-text-7, .js-grid-text-9, .js-grid-text-11 {
-  font: 700 10px/16px "Circe", sans-serif;
+.js-grid-text-0, .js-grid-text-4, .js-grid-text-8, .js-grid-text-12, .js-grid-text-16 {
+  font: 700 14px/16px "Circe", sans-serif;
 }
 
 .irs-grid-pol {
@@ -4205,6 +4209,7 @@ button {
 @media only screen and (min-width: 760px) {
   .success__box {
     position: relative;
+    padding-top: 50px;
   }
   .success__box .ic {
     position: absolute;

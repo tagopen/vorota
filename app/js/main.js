@@ -21,6 +21,11 @@
     });
   });
 
+  // Masked phone
+  $(function($){
+    $(".form__input--phone").mask("+38 (999) 999-99-99");
+  });
+
   $('#video__modal').on('shown.bs.modal', function() {
     $(".video__elem iframe").attr('src', 'https://www.youtube.com/embed/h-zmX_jHi0E?ecver=1&autoplay=1&showinfo=0&mute=0&iv_load_policy=3&showsearch=0');
   })
@@ -152,10 +157,10 @@ $(window).scroll(function (){
   $("#range1").ionRangeSlider({
     type: "single",
     grid: true,
-    step: 0.5,
+    step: 0.25,
     min: 2,
-    max: 8,
-    values: [2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8],
+    max: 6,
+    values: [2, 2.25, 2.5, 2.75, 3, 3.25, 3.5, 3.75, 4, 4.25, 4.5, 4.75, 5, 5.25, 5.5, 5.75, 6],
     hide_min_max: true,
   });
 
@@ -163,10 +168,10 @@ $(window).scroll(function (){
   $("#range2").ionRangeSlider({
     type: "single",
     grid: true,
-    step: 0.5,
-    min: 2,
-    max: 8,
-    values: [2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8],
+    step: 0.25,
+    min: 1,
+    max: 4,
+    values: [0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.25, 2.5, 2.75, 3, 3.25, 3.5, 3.75, 4],
     hide_min_max: true,
   });
 
@@ -176,8 +181,8 @@ $(window).scroll(function (){
     grid: true,
     step: 0.5,
     min: 2,
-    max: 8,
-    values: [2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8],
+    max: 6,
+    values: [2, 2.25, 2.5, 2.75, 3, 3.25, 3.5, 3.75, 4, 4.25, 4.5, 4.75, 5, 5.25, 5.5, 5.75, 6],
     hide_min_max: true,
   });
 
@@ -185,10 +190,10 @@ $(window).scroll(function (){
   $("#range4").ionRangeSlider({
     type: "single",
     grid: true,
-    step: 0.5,
-    min: 2,
-    max: 8,
-    values: [2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8],
+    step: 0.25,
+    min: 1,
+    max: 4,
+    values: [0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.25, 2.5, 2.75, 3, 3.25, 3.5, 3.75, 4],
     hide_min_max: true,
   });
 
