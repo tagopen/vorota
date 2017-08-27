@@ -18,7 +18,7 @@ section.self
                   if (content.index.self.form.formGroup.select)
                     select.select.select--dropdown(name=content.index.self.form.formGroup.select.name)
                       each option in content.index.self.form.formGroup.select.options
-                        option(value=option.text, data-content='<i class="' + option.icon + '"></i>')!= option.text
+                        option(value=option.text, data-content='<i class="' + option.icon + '"></i><span class="select2__info">'+ option.text +'</span>')!= option.text
                   each input in content.index.self.form.formGroup.inputs
                     input.form-control.form__input.form__phone(type=input.type, name=input.name, placeholder=input.placeholder)
               .col-24.col-md-14

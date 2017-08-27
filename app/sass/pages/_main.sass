@@ -527,7 +527,7 @@ button
     transition: all 1s ease
     height: 100%
     &--hidden  
-      top: -152%
+      top: -170%
     &--visible
       top: 0
       background-color: rgba(247, 247, 247, .95)
@@ -575,6 +575,13 @@ button
     color: $color-dark
     font: 700 13px/21px $font-circe     
     text-align: center 
++r(500)
+  .fail
+    &__row
+      &--hidden  
+        top: -250%  
+      &--visible
+        top: 0    
 +r(760)
   .fail
     padding: 90px 0 60px 
@@ -1056,7 +1063,7 @@ button
 .modal
   &-content
     position: relative
-    padding: 50px 0
+    padding: 40px 0
     box-shadow: 0 0 60px rgba(0, 0, 0, 0.15)
     background: #00c170 url(../img/modalbg.png) no-repeat
     background-size: cover
@@ -1588,14 +1595,29 @@ button
     color: $color-dark
     font: 700 24px/30px $font-circe  
     text-transform: uppercase
-    margin-bottom: 20px
+    margin: 20px 0
   &__subtitle  
     color: $color-dark
     font: 700 20px/30px $font-circe  
 +r(760)    
   .success
+    &__box
+      position: relative
+      .ic
+        position: absolute
+        top: 60%
+        right: -40px
+    &__container
+      height: 100%
+    &__row
+      height: 100%  
     &__title
       font: 700 48px/50px $font-circe  
-      margin-bottom: 30px
+      margin: 0 0 30px
     &__subtitle  
-      font: 700 24px/36px $font-circe  
+      font: 700 24px/36px $font-circe         
+.select2
+  &__info
+    position: absolute
+    left: 100%
+    top: 0    

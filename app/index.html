@@ -15,8 +15,8 @@
     <meta name="MobileOptimized" content="320"/>
     <!--[if IEMobile]><meta http-equiv='cleartype' content='on' /><![endif]-->
     <!-- Replace favicon.ico and apple-touch-icon.png-->
-    <link rel="shortcut icon" type="image/png" href="img/logo/favicon.png">
-    <link rel="apple-touch-icon" type="image/png" href="img/logo/apple-touch-icon.png">
+    <link rel="shortcut icon" type="image/png" href="img/logo/favicon.ico">
+    <link rel="apple-touch-icon" type="image/png" href="img/logo/apple-touch-icon.ico">
     <!-- Disables automatic  of possible phone numbers and address in Safari on iOS-->
     <meta name="format-detection" content="telephone=no"/>
     <meta name="format-detection" content="address=no"/>
@@ -471,10 +471,10 @@
                 <div class="row">
                   <div class="form-group form-group--relative col-24 col-md-10">
                     <select class="select select--dropdown" name="method">
-                      <option value="viber" data-content="&lt;i class=&quot;ic ic--viber&quot;&gt;&lt;/i&gt;">viber</option>
-                      <option value="email" data-content="&lt;i class=&quot;ic ic--mail&quot;&gt;&lt;/i&gt;">email</option>
-                      <option value="massenger" data-content="&lt;i class=&quot;ic ic--massenger&quot;&gt;&lt;/i&gt;">massenger</option>
-                      <option value="telegram" data-content="&lt;i class=&quot;ic ic--telegram&quot;&gt;&lt;/i&gt;">telegram</option>
+                      <option value="viber" data-content="&lt;i class=&quot;ic ic--viber&quot;&gt;&lt;/i&gt;&lt;span class=&quot;select2__info&quot;&gt;viber&lt;/span&gt;">viber</option>
+                      <option value="email" data-content="&lt;i class=&quot;ic ic--mail&quot;&gt;&lt;/i&gt;&lt;span class=&quot;select2__info&quot;&gt;email&lt;/span&gt;">email</option>
+                      <option value="messenger" data-content="&lt;i class=&quot;ic ic--massenger&quot;&gt;&lt;/i&gt;&lt;span class=&quot;select2__info&quot;&gt;messenger&lt;/span&gt;">messenger</option>
+                      <option value="telegram" data-content="&lt;i class=&quot;ic ic--telegram&quot;&gt;&lt;/i&gt;&lt;span class=&quot;select2__info&quot;&gt;telegram&lt;/span&gt;">telegram</option>
                     </select>
                     <input class="form-control form__input form__phone" name="phone" placeholder="Телефон">
                   </div>
@@ -735,8 +735,6 @@
               <div class="col-24 col-lg-9 d-flex align-items-end justify-content-center">
                 <div class="test__container">
                   <div class="test__image"><img src="img/blank.png"></div>
-                  <div class="test__count--heading">Осталось времени:</div>
-                  <div id="count"></div>
                 </div>
               </div>
               <div class="col-24 col-lg-15">

@@ -1,5 +1,5 @@
-header.header.success__header
-  .container
+header.header
+  .container.success__container
     .row.justify-content-between
       .col-24.col-md-14.col-lg-10.col-xl-8
         .logo.header__logo
@@ -17,11 +17,13 @@ header.header.success__header
               .contact__number!=content.index.header.contact.phone.text
           button.button.contact__btn.text-center(type='button', data-toggle="modal", data-target="#call__modal")
             !=content.index.header.contact.btn     
-    .row
-      .col-24.col-lg-14.lg-offset-2              
-        h1.success__title!=content.success.title
-        h2.success__subtitle!=content.success.subtitle
-      .col-24.col-lg-8.text-center
+    .row.success__row
+      .col-24.col-lg-12.offset-lg-2.align-self-center
+        .success__box              
+          h1.success__title!=content.success.title
+          h2.success__subtitle!=content.success.subtitle
+          i.ic.ic--arrowsuccess.hidden-md-down
+      .col-24.col-lg-8.text-center.align-self-center
         div(class="g-ytsubscribe" data-channelid="UC2ZXh5irnwBGlEdeBOnhrtA" data-layout="full" data-count="default" data-onytevent="onYtEvent")
         script(src='https://apis.google.com/js/platform.js')
         script.
