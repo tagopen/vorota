@@ -99,11 +99,10 @@
   $mail = new PHPMailer();
   $mail->CharSet = "UTF-8";
   $mail->IsSendmail();
-  $from = "no-repeat@tagopen.com";
-  $to   = "website4you.dp@gmail.com";
-  $to   = "furnituravoronka@gmail.com";
+  $from = "no-repeat@vorota-furnitura.com";
   $mail->SetFrom($from, HOST_NAME);
-  $mail->AddAddress($to);
+  $mail->AddAddress("website4you.dp@gmail.com");
+  $mail->AddAddress("furnituravoronka@gmail.com");
   $mail->isHTML(false);
   $mail->Subject = HOST_NAME;
   $mail->Body    = $body;
