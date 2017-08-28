@@ -1,7 +1,7 @@
 footer.footer
   .container
     .row.justify-content-between
-      .col-24.col-md-14.col-lg-10.col-xl-8
+      .col-24.col-md-10.col-lg-10.col-xl-8
         .logo.header__logo
           .row
             .col-24.col-sm-9.col-md-8.col-lg-7.text-center
@@ -9,7 +9,12 @@ footer.footer
                 img.img-fluid.logo__img(src!=content.index.header.logo.src, alt!=content.index.header.logo.alt)
             .col-24.col-sm-15.col-md-16.col-lg-17
               .logo__text.logo__text--fff!=content.index.header.logo.text
-      .col-24.col-md-10.col-lg-7.col-xl-6
+      .col-24.col-md-5.col-lg-10.text-center
+        .footer__creater
+          .footer__text Сделано с душой студией
+          a(href="http://well-done.com.ua/?utm_source=website&utm_medium=clientfooter&utm_campaign=avtovorota")
+            img.img-fluid(src="img/well.png")
+      .col-24.col-md-9.col-lg-7.col-xl-6
         .contact
           .contact__box
             a.contact__phone(href!=content.index.header.contact.phone.href)  

@@ -38,4 +38,5 @@ header.header
                       .header__point--text!=item.text   
         .header__info
           .header__text!=content.index.header.text 
-            i.ic.ic--arrowdown.hidden-sm-down             
+          button.button.header__btn(OnClick="javascript:jivo_api.open();")!=content.index.header.btn.text
+            i.ic.ic--jiv      
