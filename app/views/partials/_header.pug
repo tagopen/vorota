@@ -6,20 +6,20 @@ header.header
           .row
             .col-24.col-sm-9.col-md-8.col-lg-7.text-center
               a.logo__link
-                img.img-fluid.logo__img(src!=content.index.header.logo.src, alt!=content.index.header.logo.alt)
+                img.img-fluid.logo__img(src!=page.header.logo.src, alt!=page.header.logo.alt)
             .col-24.col-sm-15.col-md-16.col-lg-17
-              .logo__text!=content.index.header.logo.text
+              .logo__text!=page.header.logo.text
       .col-24.col-md-10.col-lg-7.col-xl-6
         .contact
           .contact__box
-            a.contact__phone(href!=content.index.header.contact.phone.href)  
+            a.contact__phone(href!=page.header.contact.phone.href)  
               i.ic.ic--phone
-              .contact__number!=content.index.header.contact.phone.text
+              .contact__number!=page.header.contact.phone.text
           button.button.contact__btn.text-center(type='button', data-toggle="modal", data-target="#call__modal")
-            !=content.index.header.contact.btn     
+            !=page.header.contact.btn     
     .row.justify-content-center
       .col-24.col-lg-20                 
-        h1.title!=content.index.header.title
+        h1.title!=page.header.title
     .row
       .col-24.col-md-12
         .header__image
@@ -27,7 +27,7 @@ header.header
       .col-24.col-md-12
         .header__box
           .row
-            each item, i in content.index.header.content 
+            each item, i in page.header.content 
               .col-24.col-lg-12
                 .header__point
                   .row
@@ -37,6 +37,6 @@ header.header
                     .col-18.col-lg-16.col-xl-15.align-self-center
                       .header__point--text!=item.text   
         .header__info
-          .header__text!=content.index.header.text 
-          button.button.header__btn(OnClick="javascript:jivo_api.open();")!=content.index.header.btn.text
+          .header__text!=page.header.text 
+          button.button.header__btn(OnClick="javascript:jivo_api.open();")!=page.header.btn.text
             i.ic.ic--jiv      
