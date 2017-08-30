@@ -1,4 +1,5 @@
 $(function() {
+  $('.contactForm').removeAttr('novalidate');
   $('.contactForm').validator().on('submit', function (e) {
     var $form = $(this);
     if (e.isDefaultPrevented()) {

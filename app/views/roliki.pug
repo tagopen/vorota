@@ -1,0 +1,31 @@
+extends base/_layout.pug
+block variables
+
+block styles
+
+block scripts
+  script#main-example-template(type='text/template').
+    <div class="time <%= label %>">
+      <span class="count curr top"><%= curr %></span>
+      <span class="count next top"><%= next %></span>
+      <span class="count next bottom"><%= next %></span>
+      <span class="count curr bottom"><%= curr %></span>
+      <span class="label"><%= label.length < 6 ? label : label.substr(0, 3)  %></span>
+    </div>
+   
+block header
+  include partials/_header.pug
+block content
+  include partials/_implement.pug
+  include partials/_intro.pug
+  include partials/_price.pug
+  include partials/_product.pug
+  include partials/_cost.pug
+  include partials/_fail.pug
+  include partials/_delivery.pug
+  include partials/_self.pug
+  include partials/_result.pug
+block footer
+  include partials/_footer.pug
+block modal
+  include partials/_modal.pug

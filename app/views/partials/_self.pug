@@ -1,27 +1,27 @@
 section.self
   .container
     .row
-      .col-24.col-md-16.col-lg-14
+      .col-24.col-md-16.col-lg-12.offset-lg-2
         .self__box
           h2.heading.heading--fff.self__heading!=content.index.self.heading
           .self__text!=content.index.self.text
+            i.ic.ic--arrowvniz
       .col-md-8.col-lg-10.hidden-sm-down
         .self__image
           img.self__img.self__img--1(src!=content.index.self.img.src, alt!=content.index.self.img.alt)
-          img.self__img.self__img--2.animate(src!=content.index.self.img1.src, alt!=content.index.self.img1.alt, data-animation="widthAnimate")
-      .col-24.col-lg-18      
-        form.contact__form.contactForm.contactForm--modal(method='post', action='./mail/mail.php')
+      .col-24.col-md-15.offset-md-1.col-lg-11.offset-lg-2   
+        form.contact__form.contactForm.contactForm--modal(method='post', action='./mail/mail.php', novalidate="false")
           if (content.index.self.form.formGroup)
             .row
               if (content.index.self.form.formGroup.inputs)
-                .form-group.form-group--relative.col-24.col-md-10
+                .form-group.form-group--relative.col-20.offset-3.col-md-23.offset-md-1
                   if (content.index.self.form.formGroup.select)
                     select.select.select--dropdown(name=content.index.self.form.formGroup.select.name)
                       each option in content.index.self.form.formGroup.select.options
                         option(value=option.text, data-content='<i class="' + option.icon + '"></i><span class="select2__info">'+ option.text +'</span>')!= option.text
                   each input in content.index.self.form.formGroup.inputs
                     input.form-control.form__input.form__phone.form__input--phone(type=input.type, name=input.name, placeholder="+38 (___) ___-__-__")
-              .col-24.col-md-14
+              .col-24
                 button.button.form__btn.self__btn(name='form', value='Инструкция по изготовлению', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...")!=content.index.self.form.btn
                   i.ic.ic--apple
               .col-24

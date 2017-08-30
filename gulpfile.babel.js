@@ -4,9 +4,10 @@ import gulp             from 'gulp';
 import browserSync      from 'browser-sync';
 import del              from 'del';
 import pngquant         from 'imagemin-pngquant';
-import critical         from 'critical';
 import ftp              from 'vinyl-ftp';
 import gulpLoadPlugins  from 'gulp-load-plugins';
+import critical         from 'critical';
+
 
 const $ = gulpLoadPlugins({scope: 'devDependencies', lazy: 'false'});
 
@@ -23,7 +24,7 @@ const path = {
     img:            dirs.dest + '/img/',
     fonts:          dirs.dest + '/fonts/',
     mail:           dirs.dest + '/mail/',
-    critical:       dirs.dest + 'dist/css/bundle.min.css'
+    critical:       dirs.dest + '/css/bundle.min.css'
   },
   src: {
     html:           dirs.src + '/',
@@ -72,9 +73,7 @@ gulp.task('scripts', () => {
     'node_modules/slick-carousel/slick/slick.js',
     'node_modules/select2/dist/js/select2.js',
     'node_modules/bootstrap-validator/dist/validator.js',
-    'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
-    'node_modules/jquery-countdown/dist/jquery.countdown.js',
-    'node_modules/lodash/lodash.js'
+    'node_modules/jquery.cookie/jquery.cookie.js',
   ])
   .pipe($.plumber())
   .pipe(gulp.dest(path.src.js));
@@ -170,8 +169,8 @@ gulp.task('browser-sync',  ['pug', 'sass'], function() {
 
 // Generate & Inline Critical-path CSS
 gulp.task('critical', function () {
- return gulp.src(path.build.html)
-   .pipe(critical({
+ return gulp.src('dist/*.html/')
+   .pipe(critical.stream({
      base: 'dist/', 
      inline: true, 
      dimensions: [{
@@ -184,12 +183,12 @@ gulp.task('critical', function () {
        width: 1280,
        height: 960
      }],
-       css: [path.dest.critical],
+       css: ['dist/css/bundle.min.css'],
        minify: true,
        extract: false,
        ignore: ['font-face']
      }))
-   .pipe(gulp.dest(dirs.dest));
+   .pipe(gulp.dest('dist'));
 });
 
 gulp.task('clean', function () {
@@ -285,7 +284,7 @@ gulp.task('dev', ['clean', 'pug', 'fonts', 'sprite', 'img', 'sass', 'scripts'], 
       searchPath: dirs.src
     }))
     .pipe($.if(
-      '*.js', $.uglifyjs()
+      '*.js', $.javascriptObfuscator()
     ))
     .pipe($.if(
       '*.css', $.cssnano({
