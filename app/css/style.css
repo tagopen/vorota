@@ -4332,3 +4332,28 @@ button {
 .select2-selection__rendered .select2__info {
   display: none;
 }
+
+/* ---------------------------------------- */
+/* T E S T O    S T Y L E                   */
+/* ---------------------------------------- */
+.testo__heading {
+  color: #212121;
+  font: 700 20px/30px "Circe", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 760px) {
+  .testo__heading {
+    font: 700 30px/40px "Circe", sans-serif;
+    margin-bottom: 40px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .testo__heading {
+    font: 700 36px/54px "Circe", sans-serif;
+    margin-bottom: 50px;
+  }
+}

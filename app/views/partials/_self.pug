@@ -20,7 +20,7 @@ section.self
                       each option in content.index.self.form.formGroup.select.options
                         option(value=option.text, data-content='<i class="' + option.icon + '"></i><span class="select2__info">'+ option.text +'</span>')!= option.text
                   each input in content.index.self.form.formGroup.inputs
-                    input.form-control.form__input.form__phone.form__input--phone(type=input.type, name=input.name, placeholder="+38 (___) ___-__-__")
+                    input.form-control.form__input.form__phone.form__input--phone(type=input.type, name=input.name, placeholder="+38 (___) ___-__-__", required)
               .col-24
                 button.button.form__btn.self__btn(name='form', value='Инструкция по изготовлению', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...")!=content.index.self.form.btn
                   i.ic.ic--apple

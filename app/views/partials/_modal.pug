@@ -75,7 +75,7 @@
                                 each option in item.formGroup.select.options
                                   option(value=option.text, data-content='<i class="' + option.icon + '"></i><span class="select2__info">'+ option.text +'</span>')!= option.text
                             each input in item.formGroup.inputs
-                              input.form-control.form__input.form__phone.form__input--phone(type=input.type, name=input.name, placeholder="+38 (___) ___-__-__")
+                              input.form-control.form__input.form__phone.form__input--phone(type=input.type,  name=input.name, placeholder="+38 (___) ___-__-__", data-error="Введите телефон", required)
                         if (item.formGroup.submit)
                           .form-group.col-24.col-md-12
                             button.test__btn.form__btn.test__btn--submit(type="submit", name='form', value='Чертеж')!= item.formGroup.submit.text
@@ -155,7 +155,7 @@
                                 each option in item.formGroup.select.options
                                   option(value=option.text, data-content='<i class="' + option.icon + '"></i><span class="select2__info">'+ option.text +'</span>')!= option.text
                             each input in item.formGroup.inputs
-                              input.form-control.form__input.form__phone.form__input--phone(type=input.type, name=input.name, placeholder="+38 (___) ___-__-__")
+                              input.form-control.form__input.form__phone.form__input--phone(type=input.type, name=input.name, placeholder="+38 (___) ___-__-__",data-error="Введите телефон", required)
                         if (item.formGroup.submit)
                           .form-group.col-24.col-md-12
                             button.test__btn.form__btn.test__btn--submit(type="submit", name='form', value='Смета на стоимость и материалы')!= item.formGroup.submit.text
@@ -200,7 +200,7 @@ each item, i in content.index.product.modals
                   .product__modal--subtext!=image.text
           form.contact__form.contactForm.product__modal--form(method='post', action='./mail/mail.php')
             .row
-              .col-24.col-md-12.form__group
+              .col-24.col-md-12.form__group.form-group
                 input.form-control.form__input.product__modal--input.form__phone.form__input--phone(aria-invalid='false', placeholder="+38 (___) ___-__-__", name='phone', type='tel', data-error='Введите телефон', required)
               .col-24.col-md-12
                 button.button.form__btn.product__modal--btn(name='form', value='Заявка на покупку +' +item.name, type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...")!=item.form.btn
