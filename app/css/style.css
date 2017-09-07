@@ -4344,16 +4344,212 @@ button {
   margin-bottom: 30px;
 }
 
+.testo__title {
+  font: 700 30px/36px "Circe", sans-serif;
+  color: #212121;
+  margin-bottom: 25px;
+}
+
+.testo__progressbar {
+  background: #2dca88;
+}
+
+.testo__progressbar .progressbar__value {
+  color: #2dca88;
+}
+
+.testo__video {
+  height: 200px;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.testo__video iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.testo__slides {
+  background: #fff url(../img/testobg.png) no-repeat;
+  background-size: cover;
+  padding: 30px 0 30px;
+  margin: 40px -15px 0;
+}
+
+.testo__text {
+  font: 700 24px/28px "Circe", sans-serif;
+  color: #212121;
+  margin-bottom: 20px;
+}
+
+.testo__subtext {
+  font: 600 24px/28px "Circe", sans-serif;
+  color: #212121;
+  margin: 40px 0;
+}
+
+.testo__list {
+  padding-left: 30px;
+  list-style-type: none;
+  margin-bottom: 25px;
+}
+
+.testo__it {
+  position: relative;
+  margin-bottom: 10px;
+  font: 400 20px/24px "Circe", sans-serif;
+  color: #212121;
+}
+
+.testo__it .ic {
+  position: absolute;
+  left: -30px;
+  top: 0;
+}
+
+.testo__it .ic__testo1 {
+  display: inline-block;
+  background: url(../img/testo1.png) no-repeat;
+  height: 25px;
+  width: 19px;
+}
+
+.testo__it .ic__testo2 {
+  display: inline-block;
+  background: url(../img/testo2.png) no-repeat;
+  height: 25px;
+  width: 20px;
+}
+
+.testo__it .ic__testo3 {
+  display: inline-block;
+  background: url(../img/testo3.png) no-repeat;
+  height: 25px;
+  width: 19px;
+}
+
+.testo__it .ic__checkblue {
+  display: inline-block;
+  background: url(../img/checkblue.png) no-repeat;
+  height: 20px;
+  width: 20px;
+}
+
+.testo__text {
+  color: #212121;
+  text-align: left;
+}
+
+.testo__start {
+  position: relative;
+  width: 100%;
+  background: #2dca88;
+}
+
+.testo__start:hover .ic, .testo__start:focus .ic {
+  -webkit-transform: rotate(-35deg);
+      -ms-transform: rotate(-35deg);
+          transform: rotate(-35deg);
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.testo__start .ic {
+  bottom: -30px;
+  right: 5px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.testo__start .test__btn--text {
+  color: #fff;
+}
+
+.testo__elem {
+  margin-bottom: 40px;
+}
+
+.testo__elem .irs-slider {
+  border: 1px solid #00c170;
+  background: #00c170;
+  -webkit-box-shadow: 1.4px 1.4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 1.4px 1.4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.testo__elem .irs-line {
+  background: #00c170;
+}
+
+.testo__elem .irs-grid-text {
+  color: #212121;
+}
+
+.testo__elem .irs-grid-pol {
+  background: #212121;
+}
+
+.testo__prog {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.36) 25%, rgba(255, 255, 255, 0) 25%, transparent 50%, rgba(255, 255, 255, 0.36) 50%, rgba(75, 255, 102, 0.4) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.36) 25%, rgba(255, 255, 255, 0) 25%, transparent 50%, rgba(255, 255, 255, 0.36) 50%, rgba(75, 255, 102, 0.4) 75%, transparent 75%, transparent);
+}
+
+.testo__label {
+  font: 500 16px/20px "Circe", sans-serif;
+  color: #212121;
+  background-color: white;
+  border: 5px solid #00c170;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  padding: 25px 0;
+  width: 100%;
+  margin: 0;
+}
+
+.testo__radio .radiobtns__control:checked + .testo__label {
+  background: #00c170;
+}
+
+.testo__radio .radiobtns__control:checked + .testo__label .testo__check {
+  color: #fff;
+}
+
+.testo__group {
+  margin: 50px auto 0;
+}
+
+.tabs__item .select2-container .select2-selection--single {
+  background-color: #00c170;
+}
+
+.slides__info--dark {
+  color: #212121;
+}
+
 @media only screen and (min-width: 760px) {
   .testo__heading {
     font: 700 30px/40px "Circe", sans-serif;
     margin-bottom: 40px;
+  }
+  .testo__slides {
+    padding: 60px 10px 130px;
+    margin-top: 60px;
+  }
+  .testo__video {
+    height: 320px;
+  }
+  .testo__label {
+    font: 500 20px/24px "Circe", sans-serif;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .testo__heading {
     font: 700 36px/54px "Circe", sans-serif;
-    margin-bottom: 50px;
+  }
+  .testo__slides {
+    padding: 60px 100px 130px;
   }
 }

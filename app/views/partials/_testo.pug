@@ -20,66 +20,152 @@ header.header.header--success
         .test
           .row.justify-content-center.align-items-stretch
             .col-24
-              form.contactForm(method="POST", action="mail/mail.php")
+              form.contactForm(method='POST', action='mail/mail.php')
                 .tabs.test__tabs
-                  each item, i in content.site.modal.test1.tabs.items
-                    .tabs__item(class={"tabs__item--active" : i === 0})
-                      if (item.icon)
-                        i(class=item.icon)
-                      h2.testo__heading
-                        | Пройдите тест за 1 минуту и узнайте стоимость самостоятельного изготовления и установки откатных ворот
-                      .progressbar
-                        .progressbar__status
-                          span.progressbar__value(class={"progressbar__value--hidden" : i === 0})!= ~~(100 / (content.site.modal.test1.tabs.items.length - 1) * i) + "%"
-
-                      if (item.slides)
-                        .slides
-                          p.slides__info.info
-                            i.info__icon(class=item.slides.info.icon)
-                            != item.slides.info.text
-                          .slides__item
-                            input.slides__control(id=item.slides.id, type="text", name=item.slides.name)
-                      if (item.descr)
-                        .tabs__text!= item.descr
-                      if (item.radiobtns)
+                  .tabs__item.tabs__item--active
+                    h2.testo__heading Пройдите тест за 1 минуту и узнайте стоимость самостоятельного изготовления и установки откатных ворот
+                    .slides
+                      .row
+                        .col-24.col-lg-12
+                          .testo__video
+                            iframe(src="https://www.youtube.com/embed/yp1C3ThPktI" frameborder="0" allowfullscreen)
+                        .col-24.col-lg-12
+                          .testo__title Выберете параметры Ваших ворот и получите: 
+                          ul.testo__list
+                            li.testo__it Смету на изготовление откатных ворот; 
+                              i.ic.ic__testo1
+                            li.testo__it Пошаговую инструкцию по их установке;
+                              i.ic.ic__testo2  
+                            li.testo__it Сертификат на покупку фурнитуры;
+                              i.ic.ic__testo3  
+                          button.button.test__btn.test__btn--next.testo__start(href='#', data-tabs-control='next')
+                            .test__btn--text Пройти тест и получить материалы
+                            i.ic.ic--fail
+                  .tabs__item
+                    h2.testo__heading Какой проем ворот (длина)?
+                    .progressbar.testo__prog
+                      .progressbar__status.testo__progressbar
+                        span.progressbar__value 20%
+                    .slides.testo__slides
+                      .row
+                        .col-24.col-md-12.flex-md-last
+                          .testo__image
+                            img.img-fluid(src="img/testow.png", alt="Длина")
+                        .col-24.col-md-12  
+                          p.slides__info.slides__info--dark.info
+                            | Перемещайте ползунок, чтобы выбрать подходящую Вам длину. Наиболее распространенный проем ворот - 4 метра.
+                          .slides__item.testo__elem
+                            input#range1.slides__control(type='text', name='range1')
+                          .button-group.text-center
+                            button.button.test__btn.test__btn--prev(href='#', data-tabs-control='prev')
+                              .test__btn--text Назад
+                            button.button.test__btn.test__btn--next(href='#', data-tabs-control='next')
+                              .test__btn--text Далее      
+                  .tabs__item
+                    h2.testo__heading Какой высота от земли
+                    .progressbar.testo__prog
+                      .progressbar__status.testo__progressbar
+                        span.progressbar__value 40%
+                    .slides.testo__slides
+                      .row
+                        .col-24.col-md-12.flex-md-last
+                          .testo__image
+                            img.img-fluid(src="img/testol.png", alt="Длина")
+                        .col-24.col-md-12  
+                          p.slides__info.slides__info--dark.info
+                            | Перемещайте ползунок, чтобы выбрать подходящую Вам высоту. Наиболее распространенная высота ворот  от 1,5 до 2 метров. 
+                          .slides__item.testo__elem
+                            input#range2.slides__control(type='text', name='range2')
+                          .button-group.text-center
+                            button.button.test__btn.test__btn--prev(href='#', data-tabs-control='prev')
+                              .test__btn--text Назад
+                            button.button.test__btn.test__btn--next(href='#', data-tabs-control='next')
+                              .test__btn--text Далее      
+                  .tabs__item
+                    h2.testo__heading Планируете ли вы ставить автоматику?
+                    .progressbar.testo__prog
+                      .progressbar__status.testo__progressbar
+                        span.progressbar__value 60%
+                    .slides.testo__slides    
+                      .row.justify-content-center
+                        .col-24.col-md-18.col-lg-14
+                          .row
+                            .col-12.text-center
+                              .radiobtns.testo__radio
+                                input#radio1.radiobtns__control(type='radio', name='plan[]', value='Да, собираюсь ставить', checked='')
+                                label.radiobtns__label.testo__label(for='radio1')
+                                  .testo__check Да, собираюсь ставить
+                            .col-12.text-center
+                              .radiobtns.testo__radio
+                                input#radio2.radiobtns__control(type='radio', name='plan[]', value='Пока не планировал')
+                                label.radiobtns__label.testo__label(for='radio2')
+                                  .testo__check Пока не планировал
+                            .button-group.text-center.testo__group
+                              button.button.test__btn.test__btn--prev(href='#', data-tabs-control='prev')
+                                .test__btn--text Назад
+                              button.button.test__btn.test__btn--next(href='#', data-tabs-control='next')
+                                .test__btn--text Далее
+                  .tabs__item
+                    h2.testo__heading Когда планируете делать ворота?
+                    .progressbar.testo__prog
+                      .progressbar__status.testo__progressbar
+                        span.progressbar__value 80%
+                    .slides.testo__slides    
+                      .row.justify-content-center
+                        .col-24.col-md-18.col-lg-14
+                          .row
+                            .col-12.text-center
+                              .radiobtns.testo__radio
+                                input#radio3.radiobtns__control(type='radio', name='when[]', value='Уже делаю', checked='')
+                                label.radiobtns__label.testo__label(for='radio3')
+                                  .testo__check Уже делаю
+                            .col-12.text-center
+                              .radiobtns.testo__radio
+                                input#radio4.radiobtns__control(type='radio', name='when[]', value='Через неделю')
+                                label.radiobtns__label.testo__label(for='radio4')
+                                  .testo__check Через неделю
+                            .col-12.text-center
+                              .radiobtns.testo__radio
+                                input#radio5.radiobtns__control(type='radio', name='when[]', value='Через месяц')
+                                label.radiobtns__label.testo__label(for='radio5')
+                                  .testo__check Через месяц
+                            .col-12.text-center
+                              .radiobtns.testo__radio
+                                input#radio6.radiobtns__control(type='radio', name='when[]', value='Через 3 месяца')
+                                label.radiobtns__label.testo__label(for='radio6')
+                                  .testo__check Через 3 месяца            
+                            .button-group.text-center.testo__group
+                              button.button.test__btn.test__btn--prev(href='#', data-tabs-control='prev')
+                                .test__btn--text Назад
+                              button.button.test__btn.test__btn--next(href='#', data-tabs-control='next')
+                                .test__btn--text Далее              
+                  .tabs__item
+                    h2.testo__heading куда высылать материалы?
+                    .row
+                      .col-24.col-lg-16
                         .row
-                          each radio, j in item.radiobtns
-                            .col-8.text-center
-                              label(for="radio" + (j + 1))
-                                img.radiobtns__img.img-fluid(src=radio.img.src, alt=radio.img.alt)
-                              .radiobtns
-                                if (j === 0)
-                                  input.radiobtns__control(id="radio" + (j + 1), type="radio", name=radio.name, value=radio.value, checked)
-                                else
-                                  input.radiobtns__control(id="radio" + (j + 1), type="radio", name=radio.name, value=radio.value)
-                                label.radiobtns__label(for="radio" + (j + 1))
-                                  span.radiobtns__check
-                                  != radio.value  
-                      if (item.btns)
-                        .button-group.text-center
-                          if (item.btns.prev)
-                            if (i > 0)
-                              button.button.test__btn(class=item.btns.prev.class, href="#", data-tabs-control="prev")
-                                .test__btn--text!= item.btns.prev.text
-                                if (item.btns.prev.icon)
-                                  i(class=item.btns.prev.icon)
-                          if (item.btns.next)
-                            button.button.test__btn(class=item.btns.next.class, href="#", data-tabs-control="next")
-                              .test__btn--text!= item.btns.next.text
-                              if (item.btns.next.icon)
-                                i(class=item.btns.next.icon)
-                      if (item.formGroup)
-                        .row
-                          if (item.formGroup.inputs)
-                            .form-group.form-group--relative.col-21.offset-3.col-md-11.offset-md-1
-                              i.ic.ic--arrowvniz
-                              if (item.formGroup.select)
-                                select.select.select--dropdown(name=item.formGroup.select.name)
-                                  each option in item.formGroup.select.options
-                                    option(value=option.text, data-content='<i class="' + option.icon + '"></i><span class="select2__info">'+ option.text +'</span>')!= option.text
-                              each input in item.formGroup.inputs
-                                input.form-control.form__input.form__phone.form__input--phone(type=input.type,  name=input.name, placeholder="+38 (___) ___-__-__", data-error="Введите телефон", required)
-                          if (item.formGroup.submit)
-                            .form-group.col-24.col-md-12
-                              button.test__btn.form__btn.test__btn--submit(type="submit", name='form', value='Чертеж')!= item.formGroup.submit.text
-                                i(class=item.formGroup.submit.icon)
+                          .col-24
+                            .testo__text
+                              | Оставьте свой телефон и мы вышлем точную:
+                            ul.testo__list
+                              li.testo__it Смету на изготовление откатных ворот;
+                                i.ic.ic__checkblue   
+                              li.testo__it Пошаговую инструкцию по их установке;
+                                i.ic.ic__checkblue 
+                              li.testo__it Сертификат на покупку фурнитуры;  
+                                i.ic.ic__checkblue 
+                            .testo__subtext Никаких звонков! Материалы придут в удобный Вам мессенджер: Viber, Telegram, Facebook Messenger или WhatsApp.  
+                          .form-group.form-group--relative.col-23.col-md-12.col-lg-8.offset-1
+                            select.select.select--dropdown(name='method')
+                              option(value='viber', data-content='<i class="ic ic--viber"></i><span class="select2__info">viber</span>') viber
+                              option(value='whatsapp', data-content='<i class="ic ic--mail"></i><span class="select2__info">whatsapp</span>') whatsapp
+                              option(value='messenger', data-content='<i class="ic ic--massenger"></i><span class="select2__info">messenger</span>') messenger
+                              option(value='telegram', data-content='<i class="ic ic--telegram"></i><span class="select2__info">telegram</span>') telegram
+                            input.form-control.form__input.form__phone.form__input--phone(name='phone', placeholder='+38 (___) ___-__-__', data-error='Введите телефон', required='')
+                          .form-group.col-24.col-md-12.col-lg-15
+                            button.test__btn.form__btn.test__btn--submit(type='submit', name='form', value='Отдельная страница теста')
+                              | Получить смету инструкцию и сертификат
+                              i.ic.ic--fail
+                      .col-lg-8.hidden-md-down
+                        .testo__image
+                          img.img-fluid(src="img/blocker.png", alt="Каталог")          

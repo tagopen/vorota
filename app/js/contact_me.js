@@ -20,6 +20,8 @@ $(function() {
           range2             = $form.find('[name=range2]').val(),
           period             = new Array(),
           material           = new Array();
+          plan               = new Array();
+          when               = new Array();
 
       $form.find("[name^=\"period\"]:checked").each(function() {
         if ($(this).prop("checked")) {
@@ -37,6 +39,22 @@ $(function() {
         }
       });
 
+      $form.find("[name^=\"plan\"]:checked").each(function() {
+        if ($(this).prop("checked")) {
+          var radioText = $(this).siblings().text();
+
+          plan.push($.trim(radioText));
+        }
+      });
+
+      $form.find("[name^=\"when\"]:checked").each(function() {
+        if ($(this).prop("checked")) {
+          var radioText = $(this).siblings().text();
+
+          when.push($.trim(radioText));
+        }
+      });
+
       $.ajax({
         url: "./mail/mail.php",
         type: "POST",
@@ -50,6 +68,8 @@ $(function() {
           time: $.trim(time),
           period: period,
           material: material,
+          when: when,
+          plan: plan,
           range1: range1,
           range2: range2,
         },

@@ -88,116 +88,203 @@
                     <div class="tabs test__tabs">
                       <div class="tabs__item tabs__item--active">
                         <h2 class="testo__heading">Пройдите тест за 1 минуту и узнайте стоимость самостоятельного изготовления и установки откатных ворот</h2>
-                        <div class="progressbar">
-                          <div class="progressbar__status"><span class="progressbar__value progressbar__value--hidden">0%</span></div>
-                        </div>
-                        <div class="tabs__text">Вы получите точный до миллиметра чертеж, указав размер ворот. Успейте до окончания таймера и чертеж достанется Вам совершенно бесплатно. Через 5 минут его стоимость составит 398 грн. Спешите!</div>
-                        <div class="button-group text-center">
-                          <button class="button test__btn" href="#" data-tabs-control="next">
-                            <div class="test__btn--text">Указать размер ворот и получить чертеж</div><i class="ic ic--start"></i>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="tabs__item"><i class="ic ic--length"></i>
-                        <h2 class="testo__heading">Пройдите тест за 1 минуту и узнайте стоимость самостоятельного изготовления и установки откатных ворот</h2>
-                        <div class="progressbar">
-                          <div class="progressbar__status"><span class="progressbar__value">25%</span></div>
-                        </div>
                         <div class="slides">
-                          <p class="slides__info info"><i class="info__icon ic ic--info"></i>Перемещайте ползунок, чтобы выбрать подходящую Вам длину. Наиболее распространенный проем ворот - 4 метра.
-                          </p>
-                          <div class="slides__item">
-                            <input class="slides__control" id="range1" type="text" name="range1">
+                          <div class="row">
+                            <div class="col-24 col-lg-12">
+                              <div class="testo__video">
+                                <iframe src="https://www.youtube.com/embed/yp1C3ThPktI" frameborder="0" allowfullscreen></iframe>
+                              </div>
+                            </div>
+                            <div class="col-24 col-lg-12">
+                              <div class="testo__title">Выберете параметры Ваших ворот и получите: </div>
+                              <ul class="testo__list">
+                                <li class="testo__it">Смету на изготовление откатных ворот; <i class="ic ic__testo1"></i></li>
+                                <li class="testo__it">Пошаговую инструкцию по их установке;<i class="ic ic__testo2"> </i></li>
+                                <li class="testo__it">Сертификат на покупку фурнитуры;<i class="ic ic__testo3"> </i></li>
+                              </ul>
+                              <button class="button test__btn test__btn--next testo__start" href="#" data-tabs-control="next">
+                                <div class="test__btn--text">Пройти тест и получить материалы</div><i class="ic ic--fail"></i>
+                              </button>
+                            </div>
                           </div>
-                        </div>
-                        <div class="button-group text-center">
-                          <button class="button test__btn test__btn--prev" href="#" data-tabs-control="prev">
-                            <div class="test__btn--text">Назад</div>
-                          </button>
-                          <button class="button test__btn test__btn--next" href="#" data-tabs-control="next">
-                            <div class="test__btn--text">Далее</div>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="tabs__item"><i class="ic ic--height"></i>
-                        <h2 class="testo__heading">Пройдите тест за 1 минуту и узнайте стоимость самостоятельного изготовления и установки откатных ворот</h2>
-                        <div class="progressbar">
-                          <div class="progressbar__status"><span class="progressbar__value">50%</span></div>
-                        </div>
-                        <div class="slides">
-                          <p class="slides__info info"><i class="info__icon ic ic--info"></i>Перемещайте ползунок, чтобы выбрать подходящую Вам высоту. Наиболее распространенная высота ворот  от 1,5 до 2 метров.
-                          </p>
-                          <div class="slides__item">
-                            <input class="slides__control" id="range2" type="text" name="range2">
-                          </div>
-                        </div>
-                        <div class="button-group text-center">
-                          <button class="button test__btn test__btn--prev" href="#" data-tabs-control="prev">
-                            <div class="test__btn--text">Назад</div>
-                          </button>
-                          <button class="button test__btn test__btn--next" href="#" data-tabs-control="next">
-                            <div class="test__btn--text">Далее</div>
-                          </button>
                         </div>
                       </div>
                       <div class="tabs__item">
-                        <h2 class="testo__heading">Пройдите тест за 1 минуту и узнайте стоимость самостоятельного изготовления и установки откатных ворот</h2>
-                        <div class="progressbar">
-                          <div class="progressbar__status"><span class="progressbar__value">75%</span></div>
+                        <h2 class="testo__heading">Какой проем ворот (длина)?</h2>
+                        <div class="progressbar testo__prog">
+                          <div class="progressbar__status testo__progressbar"><span class="progressbar__value">20%</span></div>
                         </div>
-                        <div class="row">
-                          <div class="col-8 text-center">
-                            <label for="radio1"><img class="radiobtns__img img-fluid" src="img/item-1.jpg" alt="Профнастил"></label>
-                            <div class="radiobtns">
-                              <input class="radiobtns__control" id="radio1" type="radio" name="material[]" value="Профнастил" checked>
-                              <label class="radiobtns__label" for="radio1"><span class="radiobtns__check"></span>Профнастил
-                              </label>
+                        <div class="slides testo__slides">
+                          <div class="row">
+                            <div class="col-24 col-md-12 flex-md-last">
+                              <div class="testo__image"><img class="img-fluid" src="img/testow.png" alt="Длина"></div>
+                            </div>
+                            <div class="col-24 col-md-12"> 
+                              <p class="slides__info slides__info--dark info">Перемещайте ползунок, чтобы выбрать подходящую Вам длину. Наиболее распространенный проем ворот - 4 метра.</p>
+                              <div class="slides__item testo__elem">
+                                <input class="slides__control" id="range1" type="text" name="range1">
+                              </div>
+                              <div class="button-group text-center">
+                                <button class="button test__btn test__btn--prev" href="#" data-tabs-control="prev">
+                                  <div class="test__btn--text">Назад</div>
+                                </button>
+                                <button class="button test__btn test__btn--next" href="#" data-tabs-control="next">
+                                  <div class="test__btn--text">Далее      </div>
+                                </button>
+                              </div>
                             </div>
                           </div>
-                          <div class="col-8 text-center">
-                            <label for="radio2"><img class="radiobtns__img img-fluid" src="img/item-2.jpg" alt="Дерево"></label>
-                            <div class="radiobtns">
-                              <input class="radiobtns__control" id="radio2" type="radio" name="material[]" value="Дерево">
-                              <label class="radiobtns__label" for="radio2"><span class="radiobtns__check"></span>Дерево
-                              </label>
-                            </div>
-                          </div>
-                          <div class="col-8 text-center">
-                            <label for="radio3"><img class="radiobtns__img img-fluid" src="img/item-3.jpg" alt="Ковка"></label>
-                            <div class="radiobtns">
-                              <input class="radiobtns__control" id="radio3" type="radio" name="material[]" value="Ковка">
-                              <label class="radiobtns__label" for="radio3"><span class="radiobtns__check"></span>Ковка
-                              </label>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="button-group text-center">
-                          <button class="button test__btn test__btn--prev" href="#" data-tabs-control="prev">
-                            <div class="test__btn--text">Назад</div>
-                          </button>
-                          <button class="button test__btn test__btn--next" href="#" data-tabs-control="next">
-                            <div class="test__btn--text">Далее</div>
-                          </button>
                         </div>
                       </div>
                       <div class="tabs__item">
-                        <h2 class="testo__heading">Пройдите тест за 1 минуту и узнайте стоимость самостоятельного изготовления и установки откатных ворот</h2>
-                        <div class="progressbar">
-                          <div class="progressbar__status"><span class="progressbar__value">100%</span></div>
+                        <h2 class="testo__heading">Какой высота от земли</h2>
+                        <div class="progressbar testo__prog">
+                          <div class="progressbar__status testo__progressbar"><span class="progressbar__value">40%</span></div>
                         </div>
-                        <div class="tabs__text">Оставьте свой телефон и мы вышлем точный до миллиметра чертеж под Ваши ворота. Никаких звонков! Чертеж придет в удобный Вам мессенджер: Viber, Telegram, Messenger или WhatsApp.</div>
-                        <div class="row">
-                          <div class="form-group form-group--relative col-21 offset-3 col-md-11 offset-md-1"><i class="ic ic--arrowvniz"></i>
-                            <select class="select select--dropdown" name="method">
-                              <option value="viber" data-content="&lt;i class=&quot;ic ic--viber&quot;&gt;&lt;/i&gt;&lt;span class=&quot;select2__info&quot;&gt;viber&lt;/span&gt;">viber</option>
-                              <option value="whatsapp" data-content="&lt;i class=&quot;ic ic--mail&quot;&gt;&lt;/i&gt;&lt;span class=&quot;select2__info&quot;&gt;whatsapp&lt;/span&gt;">whatsapp</option>
-                              <option value="messenger" data-content="&lt;i class=&quot;ic ic--massenger&quot;&gt;&lt;/i&gt;&lt;span class=&quot;select2__info&quot;&gt;messenger&lt;/span&gt;">messenger</option>
-                              <option value="telegram" data-content="&lt;i class=&quot;ic ic--telegram&quot;&gt;&lt;/i&gt;&lt;span class=&quot;select2__info&quot;&gt;telegram&lt;/span&gt;">telegram</option>
-                            </select>
-                            <input class="form-control form__input form__phone form__input--phone" name="phone" placeholder="+38 (___) ___-__-__" data-error="Введите телефон" required>
+                        <div class="slides testo__slides">
+                          <div class="row">
+                            <div class="col-24 col-md-12 flex-md-last">
+                              <div class="testo__image"><img class="img-fluid" src="img/testol.png" alt="Длина"></div>
+                            </div>
+                            <div class="col-24 col-md-12"> 
+                              <p class="slides__info slides__info--dark info">Перемещайте ползунок, чтобы выбрать подходящую Вам высоту. Наиболее распространенная высота ворот  от 1,5 до 2 метров. </p>
+                              <div class="slides__item testo__elem">
+                                <input class="slides__control" id="range2" type="text" name="range2">
+                              </div>
+                              <div class="button-group text-center">
+                                <button class="button test__btn test__btn--prev" href="#" data-tabs-control="prev">
+                                  <div class="test__btn--text">Назад</div>
+                                </button>
+                                <button class="button test__btn test__btn--next" href="#" data-tabs-control="next">
+                                  <div class="test__btn--text">Далее      </div>
+                                </button>
+                              </div>
+                            </div>
                           </div>
-                          <div class="form-group col-24 col-md-12">
-                            <button class="test__btn form__btn test__btn--submit" type="submit" name="form" value="Чертеж">Получить чертеж<i class="ic ic--apple"></i></button>
+                        </div>
+                      </div>
+                      <div class="tabs__item">
+                        <h2 class="testo__heading">Планируете ли вы ставить автоматику?</h2>
+                        <div class="progressbar testo__prog">
+                          <div class="progressbar__status testo__progressbar"><span class="progressbar__value">60%</span></div>
+                        </div>
+                        <div class="slides testo__slides">   
+                          <div class="row justify-content-center">
+                            <div class="col-24 col-md-18 col-lg-14">
+                              <div class="row">
+                                <div class="col-12 text-center">
+                                  <div class="radiobtns testo__radio">
+                                    <input class="radiobtns__control" id="radio1" type="radio" name="plan[]" value="Да, собираюсь ставить" checked="">
+                                    <label class="radiobtns__label testo__label" for="radio1">
+                                      <div class="testo__check">Да, собираюсь ставить</div>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="col-12 text-center">
+                                  <div class="radiobtns testo__radio">
+                                    <input class="radiobtns__control" id="radio2" type="radio" name="plan[]" value="Пока не планировал">
+                                    <label class="radiobtns__label testo__label" for="radio2">
+                                      <div class="testo__check">Пока не планировал</div>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="button-group text-center testo__group">
+                                  <button class="button test__btn test__btn--prev" href="#" data-tabs-control="prev">
+                                    <div class="test__btn--text">Назад</div>
+                                  </button>
+                                  <button class="button test__btn test__btn--next" href="#" data-tabs-control="next">
+                                    <div class="test__btn--text">Далее</div>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs__item">
+                        <h2 class="testo__heading">Когда планируете делать ворота?</h2>
+                        <div class="progressbar testo__prog">
+                          <div class="progressbar__status testo__progressbar"><span class="progressbar__value">80%</span></div>
+                        </div>
+                        <div class="slides testo__slides">   
+                          <div class="row justify-content-center">
+                            <div class="col-24 col-md-18 col-lg-14">
+                              <div class="row">
+                                <div class="col-12 text-center">
+                                  <div class="radiobtns testo__radio">
+                                    <input class="radiobtns__control" id="radio3" type="radio" name="when[]" value="Уже делаю" checked="">
+                                    <label class="radiobtns__label testo__label" for="radio3">
+                                      <div class="testo__check">Уже делаю</div>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="col-12 text-center">
+                                  <div class="radiobtns testo__radio">
+                                    <input class="radiobtns__control" id="radio4" type="radio" name="when[]" value="Через неделю">
+                                    <label class="radiobtns__label testo__label" for="radio4">
+                                      <div class="testo__check">Через неделю</div>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="col-12 text-center">
+                                  <div class="radiobtns testo__radio">
+                                    <input class="radiobtns__control" id="radio5" type="radio" name="when[]" value="Через месяц">
+                                    <label class="radiobtns__label testo__label" for="radio5">
+                                      <div class="testo__check">Через месяц</div>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="col-12 text-center">
+                                  <div class="radiobtns testo__radio">
+                                    <input class="radiobtns__control" id="radio6" type="radio" name="when[]" value="Через 3 месяца">
+                                    <label class="radiobtns__label testo__label" for="radio6">
+                                      <div class="testo__check">Через 3 месяца            </div>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="button-group text-center testo__group">
+                                  <button class="button test__btn test__btn--prev" href="#" data-tabs-control="prev">
+                                    <div class="test__btn--text">Назад</div>
+                                  </button>
+                                  <button class="button test__btn test__btn--next" href="#" data-tabs-control="next">
+                                    <div class="test__btn--text">Далее              </div>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs__item">
+                        <h2 class="testo__heading">куда высылать материалы?</h2>
+                        <div class="row">
+                          <div class="col-24 col-lg-16">
+                            <div class="row">
+                              <div class="col-24">
+                                <div class="testo__text">Оставьте свой телефон и мы вышлем точную:</div>
+                                <ul class="testo__list">
+                                  <li class="testo__it">Смету на изготовление откатных ворот;<i class="ic ic__checkblue">  </i></li>
+                                  <li class="testo__it">Пошаговую инструкцию по их установке;<i class="ic ic__checkblue"> </i></li>
+                                  <li class="testo__it">Сертификат на покупку фурнитуры;  <i class="ic ic__checkblue"> </i></li>
+                                </ul>
+                                <div class="testo__subtext">Никаких звонков! Материалы придут в удобный Вам мессенджер: Viber, Telegram, Facebook Messenger или WhatsApp.  </div>
+                              </div>
+                              <div class="form-group form-group--relative col-23 col-md-12 col-lg-8 offset-1">
+                                <select class="select select--dropdown" name="method">
+                                  <option value="viber" data-content="&lt;i class=&quot;ic ic--viber&quot;&gt;&lt;/i&gt;&lt;span class=&quot;select2__info&quot;&gt;viber&lt;/span&gt;">viber</option>
+                                  <option value="whatsapp" data-content="&lt;i class=&quot;ic ic--mail&quot;&gt;&lt;/i&gt;&lt;span class=&quot;select2__info&quot;&gt;whatsapp&lt;/span&gt;">whatsapp</option>
+                                  <option value="messenger" data-content="&lt;i class=&quot;ic ic--massenger&quot;&gt;&lt;/i&gt;&lt;span class=&quot;select2__info&quot;&gt;messenger&lt;/span&gt;">messenger</option>
+                                  <option value="telegram" data-content="&lt;i class=&quot;ic ic--telegram&quot;&gt;&lt;/i&gt;&lt;span class=&quot;select2__info&quot;&gt;telegram&lt;/span&gt;">telegram</option>
+                                </select>
+                                <input class="form-control form__input form__phone form__input--phone" name="phone" placeholder="+38 (___) ___-__-__" data-error="Введите телефон" required="">
+                              </div>
+                              <div class="form-group col-24 col-md-12 col-lg-15">
+                                <button class="test__btn form__btn test__btn--submit" type="submit" name="form" value="Отдельная страница теста">Получить смету инструкцию и сертификат<i class="ic ic--fail"></i></button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-8 hidden-md-down">
+                            <div class="testo__image"><img class="img-fluid" src="img/blocker.png" alt="Каталог"></div>
                           </div>
                         </div>
                       </div>

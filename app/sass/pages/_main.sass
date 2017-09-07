@@ -1703,13 +1703,143 @@ button
     text-align: center
     text-transform: uppercase
     margin-bottom: 30px
+  &__title
+    font: 700 30px/36px $font-circe 
+    color: $color-dark  
+    margin-bottom: 25px 
+  &__progressbar  
+    background: #2dca88
+    .progressbar__value
+      color: #2dca88
+  &__video
+    height: 200px
+    position: relative
+    margin-bottom: 25px
+    iframe
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%    
+  &__slides
+    background: #fff url(../img/testobg.png) no-repeat
+    background-size: cover
+    padding: 30px 0 30px
+    margin: 40px -15px 0  
+  &__text
+    font: 700 24px/28px $font-circe   
+    color: $color-dark
+    margin-bottom: 20px
+  &__subtext
+    font: 600 24px/28px $font-circe   
+    color: $color-dark
+    margin: 40px 0
+  &__list
+    padding-left: 30px
+    list-style-type: none
+    margin-bottom: 25px
+  &__it
+    position: relative
+    margin-bottom: 10px
+    font: 400 20px/24px $font-circe 
+    color: $color-dark 
+    .ic
+      position: absolute
+      left: -30px
+      top: 0
+      &__testo1
+        display: inline-block
+        background: url(../img/testo1.png) no-repeat
+        height: 25px
+        width: 19px 
+      &__testo2
+        display: inline-block
+        background: url(../img/testo2.png) no-repeat
+        height: 25px
+        width: 20px 
+      &__testo3
+        display: inline-block
+        background: url(../img/testo3.png) no-repeat
+        height: 25px
+        width: 19px
+      &__checkblue
+        display: inline-block   
+        background: url(../img/checkblue.png) no-repeat
+        height: 20px
+        width: 20px
+  &__text
+    color: $color-dark    
+    text-align: left     
+  &__start
+    position: relative
+    width: 100%
+    background: #2dca88  
+    &:hover,
+    &:focus
+      .ic
+        transform: rotate(-35deg)
+        transition: all .3s ease
+    .ic
+      bottom: -30px
+      right: 5px
+      transition: all .3s ease
+    .test__btn--text
+      color: #fff   
+  &__elem
+    margin-bottom: 40px  
+    .irs
+      &-slider
+        border: 1px solid #00c170
+        background: #00c170
+        box-shadow: 1.4px 1.4px 4px rgba(0, 0, 0, 0.25)     
+      &-line
+       background: #00c170 
+      &-grid-text
+        color: $color-dark
+      &-grid-pol
+        background: $color-dark
+  &__prog
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.36) 25%, rgba(255, 255, 255, 0) 25%, transparent 50%, rgba(255, 255, 255, 0.36) 50%, rgba(75, 255, 102, 0.4) 75%, transparent 75%, transparent)       
+  &__label   
+    font: 500 16px/20px $font-circe  
+    color: $color-dark 
+    background-color: white
+    border: 5px solid #00c170
+    border-radius: 5px
+    padding: 25px 0
+    width: 100% 
+    margin: 0   
+  &__radio
+    .radiobtns__control   
+      &:checked+.testo__label
+        background: #00c170
+        .testo__check
+          color: #fff   
+  &__group
+    margin: 50px auto 0     
+.tabs__item 
+  .select2-container 
+    .select2-selection--single   
+      background-color: #00c170  
+.slides
+  &__info
+    &--dark
+      color: $color-dark           
 +r(760)
   .testo
     &__heading
       font: 700 30px/40px $font-circe 
       margin-bottom: 40px
+    &__slides
+      padding: 60px 10px 130px
+      margin-top: 60px
+    &__video
+      height: 320px    
+    &__label
+      font: 500 20px/24px $font-circe  
 +r(1200)
   .testo
     &__heading
       font: 700 36px/54px $font-circe 
-      margin-bottom: 50px
+    &__slides
+      padding: 60px 100px 130px
